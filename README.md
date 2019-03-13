@@ -35,16 +35,16 @@ Tags can be implemented in a couple of ways.  Let's start simple: you have a bun
 
 1. In Interface Builder, create a container view in your ViewController and then delete its child from the storyboard:
 
-[!](https://i.imgur.com/NIOwIMR.png)
+![Interface Builder container view](https://i.imgur.com/NIOwIMR.png)
 
 2. Import TaggerKit into your view controller and create an outlet for the container view
 
 	```swift
 	import TaggerKit
 
-	class ViewController: UIViewController {
+		class ViewController: UIViewController {
 
-	@IBOutlet var containerView: UIView!
+			@IBOutlet var containerView: UIView!
 
 	```
 
@@ -54,15 +54,15 @@ Tags can be implemented in a couple of ways.  Let's start simple: you have a bun
 	var tagCollection: TKCollectionView()
 
 	override func viewDidLoad() {
-	super.viewDidLoad()
+		super.viewDidLoad()
 
-	add(tagCollection, toView: containerView)
+		add(tagCollection, toView: containerView)
 	```
 
 4. Give the collection view some tags:
 
 	```swift
-	tagCollection.tags = ["Some", "Tag", "For", "You"]
+		tagCollection.tags = ["Some", "Tag", "For", "You"]
 	```
 
 5. Done!
@@ -79,11 +79,11 @@ Tags can be implemented in a couple of ways.  Let's start simple: you have a bun
 
 ```swift
 // Custom font
-tagCollection.customFont = UIFont.boldSystemFont(ofSize: 14)
+	tagCollection.customFont = UIFont.boldSystemFont(ofSize: 14)
 // Corner radius of tags	
-tagCollection.customCornerRadius = 14.0		
+	tagCollection.customCornerRadius = 14.0		
 // Spacing between cells					
-tagCollection.customSpacing = 20.0	
+	tagCollection.customSpacing = 20.0	
 // Background of cells						
-tagCollection.customBackgroundColor = UIColor.red	
+	tagCollection.customBackgroundColor = UIColor.red	
 ```
