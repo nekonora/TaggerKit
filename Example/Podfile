@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TaggerKit_Example' do
+  pod 'TaggerKit', :path => '../'
+
+  target 'TaggerKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
