@@ -1,9 +1,9 @@
 {
   "name": "TaggerKit",
-  "version": "0.1.0",
-  "summary": "A short description of TaggerKit.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/registration.fi.za@outlook.com/TaggerKit",
+  "version": "0.2.0",
+  "summary": "TaggerKit is a straightforward library that helps you implement tags in your iOS project.",
+  "description": "This library helps you to quickly implement tags in your iOS apps, so you can go on and test your idea without having to worry about logic and custom collection layouts.",
+  "homepage": "https://github.com/nekonora/TaggerKit",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,19 @@
     "registration.fi.za@outlook.com": "registration.fi.za@outlook.com"
   },
   "source": {
-    "git": "https://github.com/registration.fi.za@outlook.com/TaggerKit.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/nekonora/TaggerKit.git",
+    "tag": "0.2.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "12.0"
   },
-  "source_files": "TaggerKit/Classes/**/*"
+  "swift_versions": "4.2",
+  "source_files": "TaggerKit/Classes/**/*",
+  "resource_bundles": {
+    "TaggerKit": [
+      "TaggerKit/Assets/*.png"
+    ]
+  },
+  "resources": "TaggerKit/Resources/**/*.{png,storyboard}",
+  "frameworks": "UIKit"
 }
