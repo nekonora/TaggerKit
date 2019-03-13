@@ -1,0 +1,22 @@
+{
+  "name": "TaggerKit",
+  "version": "0.1.0",
+  "summary": "A short description of TaggerKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/registration.fi.za@outlook.com/TaggerKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "registration.fi.za@outlook.com": "registration.fi.za@outlook.com"
+  },
+  "source": {
+    "git": "https://github.com/registration.fi.za@outlook.com/TaggerKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "TaggerKit/Classes/**/*"
+}

@@ -1,0 +1,6 @@
+framework module Pods_TaggerKit_Example {
+  umbrella header "Pods-TaggerKit_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

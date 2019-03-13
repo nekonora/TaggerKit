@@ -1,0 +1,16 @@
+PODS:
+  - TaggerKit (0.1.0)
+
+DEPENDENCIES:
+  - TaggerKit (from `../`)
+
+EXTERNAL SOURCES:
+  TaggerKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TaggerKit: c8103d8c2f89f7c3573ee2b3971020185bc4c1b0
+
+PODFILE CHECKSUM: 2fe3ff104c7ffd81fe71e75b1a5c1d7cce68062b
+
+COCOAPODS: 1.5.3

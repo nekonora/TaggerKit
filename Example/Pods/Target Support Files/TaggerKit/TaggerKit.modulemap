@@ -1,0 +1,6 @@
+framework module TaggerKit {
+  umbrella header "TaggerKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
