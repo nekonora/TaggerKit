@@ -25,6 +25,6 @@
       "TaggerKit/Assets/*.png"
     ]
   },
-  "resources": "TaggerKit/Resources/**/*.{png,storyboard}",
+  "resources": "TaggerKit/Assets/**/*.{png,storyboard}",
   "frameworks": "UIKit"
 }

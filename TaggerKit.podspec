@@ -37,7 +37,7 @@ This library helps you to quickly implement tags in your iOS apps, so you can go
      'TaggerKit' => ['TaggerKit/Assets/*.png']
   }
 
-  s.resources = 'TaggerKit/Resources/**/*.{png,storyboard}'
+  s.resources = 'TaggerKit/Assets/**/*.{png,storyboard}'
   
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
