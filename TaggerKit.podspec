@@ -26,10 +26,10 @@ This library helps you to quickly implement tags in your iOS apps, so you can go
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'registration.fi.za@outlook.com' => 'registration.fi.za@outlook.com' }
   s.source           = { :git => 'https://github.com/nekonora/TaggerKit.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/_nknr'
+  s.social_media_url = 'https://twitter.com/_nknr'
 
   s.ios.deployment_target = '12.0'
-  s.swift_version = '4.2'
+  # s.swift_version = '4.2'
 
   s.source_files = 'TaggerKit/Classes/**/*'
   
