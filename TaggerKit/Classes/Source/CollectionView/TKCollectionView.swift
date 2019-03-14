@@ -45,7 +45,7 @@ public class TKCollectionView: UIViewController {
 	}
 	
 	var longTagIndex	: Int { return 1 }
-	public var tags 			= [String]()
+	public var tags 	= [String]()
 	
 	// MARK: - Lifecycle methods
     public override func viewDidLoad() {
@@ -77,5 +77,4 @@ public class TKCollectionView: UIViewController {
 	
 	
 }
-
 

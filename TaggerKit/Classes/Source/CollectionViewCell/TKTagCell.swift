@@ -29,7 +29,6 @@ class TKTagCell: UICollectionViewCell {
 		let label 										= UILabel()
 		label.textColor 								= UIColor.darkGray
 		label.textAlignment 							= .center
-		
 		return label
 	}()
 	
@@ -121,5 +120,6 @@ class TKTagCell: UICollectionViewCell {
 		}
 		return nil
 	}
+	
 	
 }

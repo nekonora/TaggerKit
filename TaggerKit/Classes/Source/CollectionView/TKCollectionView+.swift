@@ -37,17 +37,17 @@ extension TKCollectionView: UICollectionViewDataSource {
 	}
 	
 	
-	public func addNewTag(named: String?, to collection: TKCollectionView?) {
-		guard collection != nil else { return }
-		if let tagToAppend = named {
-			guard tagToAppend.count > 0 else { return }
-			if collection!.tags.contains(tagToAppend) {
+	public func addNewTag(named: String?) {
+		guard receiver != nil else { return }
+		if let tagToAdd = named {
+			guard tagToAdd.count > 0 else { return }
+			if receiver!.tags.contains(tagToAdd) {
 				return
 			} else {
-				collection!.tags.insert(tagToAppend, at: 0)
+				receiver!.tags.insert(tagToAdd, at: 0)
 				let indexPath = IndexPath(item: 0, section: 0)
-				collection!.tagsCollectionView.performBatchUpdates({
-					collection!.tagsCollectionView.insertItems(at: [indexPath])
+				receiver!.tagsCollectionView.performBatchUpdates({
+					receiver!.tagsCollectionView.insertItems(at: [indexPath])
 				}, completion: nil)
 			}
 		}
@@ -130,7 +130,7 @@ extension TKCollectionView: TagCellDelegate {
 		
 		switch action {
 		case .addTag:
-			addNewTag(named: name, to: receiver)
+			addNewTag(named: name)
 			delegate?.tagIsBeingAdded(name: name)
 		case .removeTag:
 			removeOldTag(named: name)

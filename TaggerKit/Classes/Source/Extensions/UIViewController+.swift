@@ -36,8 +36,8 @@ public extension UIViewController {
 
 extension UIViewController: TKCollectionViewDelegate {
 	
-	@objc public func tagIsBeingAdded(name: String?) { }
+	@objc open func tagIsBeingAdded(name: String?) { }
 	
-	@objc public func tagIsBeingRemoved(name: String?) { }
+	@objc open func tagIsBeingRemoved(name: String?) { }
 	
 }

@@ -21,8 +21,8 @@ class ViewController: UIViewController {
 	
 	
 	// We want the whole experience, let's create two TKCollectionViews
-	let testCollection 		= TKCollectionView()
-	let searchCollection 	= TKCollectionView()
+	let productTags = TKCollectionView()
+	let allTags 	= TKCollectionView()
 	
 	
 	// MARK: - Lifecycle Methods
@@ -38,34 +38,35 @@ class ViewController: UIViewController {
 		
 		
 		// These are the tags already added by the user, give an aray of strings to the collection
-		testCollection.tags = ["Tech", "Design", "Humor", "Travel", "Music", "Writing", "Social Media"]
-		searchCollection.tags = [""] 	// I do this only to show the empty tag prompt at the start
+		productTags.tags = ["Tech", "Design", "Writing", "Social Media"]
+		
+		// These are intended to be all the tags the user has added in the app, which are going to be filtered
+		allTags.tags = ["Cars", "Skateboard", "Freetime", "Humor", "Travel", "Music", "Places", "Journalism", "Music", "Sports"]
 		
 		/*
 		We set this collection's action to .removeTag,
 		becasue these are supposed to be the tags the user has already added
 		*/
-		testCollection.action = .removeTag
+		productTags.action = .removeTag
 		
 		
 		// Set the current controller as the delegate of both collections
-		testCollection.delegate = self
-		searchCollection.delegate = self
+		productTags.delegate = self
+		allTags.delegate = self
 		
 		// "testCollection" takes the tags sent by "searchCollection"
-		searchCollection.receiver = testCollection
+		allTags.receiver = productTags
 		
 		// The tags in "searchCollection" are going to be added, so we set the action to addTag
-		searchCollection.action = .addTag
+		allTags.action = .addTag
 		
 		
 		// Set the sender and receiver of the TextField
-		addTagsTextField.sender 	= searchCollection
-		addTagsTextField.receiver 	= testCollection
+		addTagsTextField.sender 	= allTags
+		addTagsTextField.receiver 	= productTags
 		
-		add(testCollection, toView: testContainer)
-		add(searchCollection, toView: searchContainer)
-		
+		add(productTags, toView: testContainer)
+		add(allTags, toView: searchContainer)
 	}
 	
 	
@@ -73,12 +74,13 @@ class ViewController: UIViewController {
 	These methods come from UIViewController now conforming to TKCollectionViewDelegate,
 	You use these to do whatever you want when a tag is added or removed (e.g. save to file, etc)
 	*/
-//	override func tagIsBeingAdded(name: String?) {
-//		// Example: save testCollection.tags to UserDefault
-//	}
-//	
-//	override func tagIsBeingRemoved(name: String?) {
-//		
-//	}
+	override func tagIsBeingAdded(name: String?) {
+		// Example: save testCollection.tags to UserDefault
+		print("added \(name!)")
+	}
+	
+	override func tagIsBeingRemoved(name: String?) {
+		print("removed \(name!)")
+	}
 	
 }
