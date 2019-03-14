@@ -78,7 +78,7 @@ Do this if you want what you saw in the preview GIF.
 2. For both collection views set their `.action` property accordingly. For example: if you are in a view displaying a product to which your user has already added some tags, these tags should be removable, hence that collection's action should be `.removeAction` (more on how to be notified of tags events later).
 
 	```swift
-	productTagsCollection.action 	= .removeAction
+	productTagsCollection.action 	= .removeTag
 	```
 
 3. Create a Text Field outlet and set its custom class to `TKTextField`
@@ -93,7 +93,7 @@ Do this if you want what you saw in the preview GIF.
 5. If you want the "filter" collection to be able to add tags, set these properties:
 
 	```swift
-	allTagsCollection.action = .addAction
+	allTagsCollection.action = .addTag
 	productTagsCollection.receiver = allTagsCollection
 	```
 	
