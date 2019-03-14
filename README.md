@@ -4,6 +4,7 @@
 [![License](https://img.shields.io/cocoapods/l/TaggerKit.svg?style=flat)](https://cocoapods.org/pods/TaggerKit)
 [![Platform](https://img.shields.io/cocoapods/p/TaggerKit.svg?style=flat)](https://cocoapods.org/pods/TaggerKit)
 
+![](https://media.giphy.com/media/ReBiPS298yk3MlXqTg/giphy.gif)
 
 TaggerKit helps you quickly integrate tags into your iOS projects. It provides a collection view for displaying tags and a text field for adding them to another collection view. The custom layout used by TaggerKit is based on [TagCellLayout](https://github.com/riteshhgupta/TagCellLayout) by Ritesh Gupta.
 
@@ -70,7 +71,44 @@ Tags can be implemented in a couple of ways.  Let's start simple: you have a bun
 
 ### Dynamic tags
 
-*Coming soon (really soon)!*
+Do this if you want what you saw in the preview GIF.
+
+1. Follow the instructions above and create two collection views, putting them into two different containers
+
+2. For both collection views set their `.action` property accordingly. For example: if you are in a view displaying a product to which your user has already added some tags, these tags should be removable, hence that collection's action should be `.removeAction` (more on how to be notified of tags events later).
+
+	```swift
+	productTagsCollection.action 	= .removeAction
+	```
+
+3. Create a Text Field outlet and set its custom class to `TKTextField`
+
+4. Set the text field's `.sender ` and  `.receiver` properties. This enables the text field to add tags to a collection. The sender is a collection view that is displaying tags from the textfield (tags that should be filtered), while the receiver is the collection receiving the tags:
+
+	```swift
+	textField.sender = allTagsCollection
+	textField.receiver = productTagsCollection
+	```
+
+5. If you want the "filter" collection to be able to add tags, set these properties:
+
+	```swift
+	allTagsCollection.action = .addAction
+	productTagsCollection.receiver = allTagsCollection
+	```
+	
+6. Lastly, you probably want to be notified and act upon tags being added or removed from a collection. For this purpose, TaggerKit lets you override these two methods in order to add your functionality:
+
+	```swift
+	override func tagIsBeingAdded(name: String?) {
+		// Example: save testCollection.tags to UserDefault
+		print("added \(name!)")
+	}
+	
+	override func tagIsBeingRemoved(name: String?) {
+		print("removed \(name!)")
+	}
+	```
 
 
 ## Customisation
