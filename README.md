@@ -97,9 +97,13 @@ Do this if you want what you saw in the preview GIF.
 	productTagsCollection.receiver = allTagsCollection
 	```
 	
-6. Lastly, you probably want to be notified and act upon tags being added or removed from a collection. For this purpose, TaggerKit lets you override these two methods in order to add your functionality:
+6. Lastly, you probably want to be notified and act upon tags being added or removed from a collection. For this purpose, TaggerKit lets you override these two methods in order to add your functionality (your controller must the delegate of the collections):
 
 	```swift
+	allTagsCollection.delegate 	= self
+	productTagsCollection.delegate 	= self
+	
+	
 	override func tagIsBeingAdded(name: String?) {
 		// Example: save testCollection.tags to UserDefault
 		print("added \(name!)")
