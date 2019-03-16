@@ -94,7 +94,7 @@ Do this if you want what you saw in the preview GIF.
 
 	```swift
 	allTagsCollection.action = .addTag
-	productTagsCollection.receiver = allTagsCollection
+	allTagsCollection.receiver = productTagsCollection
 	```
 	
 6. Lastly, you probably want to be notified and act upon tags being added or removed from a collection. For this purpose, TaggerKit lets you override these two methods in order to add your functionality (your controller must the delegate of the collections):
