@@ -1,5 +1,5 @@
 PODS:
-  - TaggerKit (0.4.0)
+  - TaggerKit (0.4.1)
 
 DEPENDENCIES:
   - TaggerKit (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  TaggerKit: 1815e3ab26b13fb4571329759f0516221f427635
+  TaggerKit: d9e6b222a5b6878c3a35376eabb7dd079c37c75a
 
 PODFILE CHECKSUM: 2fe3ff104c7ffd81fe71e75b1a5c1d7cce68062b
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.7.0.beta.2

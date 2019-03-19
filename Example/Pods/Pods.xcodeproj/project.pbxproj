@@ -7,31 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D13A4C861F33D1C9BF0C2AB54477171 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F95D79DE337AF6DF801C822E405BC7C /* UIViewController+.swift */; };
-		0E862D12BBBECA575A8E8A5AC3EE44D8 /* TKTagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45C1FC5EB021147C44C279D73850B3 /* TKTagButton.swift */; };
-		1A5271024F41E3F59A4D14C77B5D354F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
-		1C5C998F22CA9D3D18EBCDDFC4DEA906 /* TKCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF01A2B3C1BE0B4E5ED4D62988CDB308 /* TKCollectionView.swift */; };
-		1FA92E63147A85469150A35ECCFC15E1 /* TaggerKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F9C38A5FED254EF07D7303A216E5B40 /* TaggerKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29EA7ACF855308D48A6D07BDA8E926B1 /* removeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ABF29DAFCCBA68ADDB444BD0C66004E /* removeIcon.png */; };
-		2BF1C9AA2ABBD191CBF7658CF21B8A1F /* Pods-TaggerKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C42A120C1E0BCFBCA0780E85292C44 /* Pods-TaggerKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B6BF5B6EBFF53B8D3C1659EC8E83A55 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */; };
+		2355ACB4ADCC6510D1F2062D065DCF25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
+		2BF1C9AA2ABBD191CBF7658CF21B8A1F /* Pods-TaggerKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 36679015E6E7AE6A0F12F8FD884FEB20 /* Pods-TaggerKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B75AB83280060B290598E4D016F28F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */; };
 		3D623B9715B6CC9C751D859F7707C182 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
-		40AD3D653662A3943E65907643AB4F26 /* Pods-TaggerKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E4DDA85E98B2A32D22AEA73C3C486 /* Pods-TaggerKit_Example-dummy.m */; };
-		55A5CAA395268E6918E11F5BF1A40632 /* TaggerKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E4332E5FBB7325CBA7640975ED150DA1 /* TaggerKit.bundle */; };
-		5B5B1BC467CCFC7D24696ACFAD2D2678 /* removeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ABF29DAFCCBA68ADDB444BD0C66004E /* removeIcon.png */; };
-		675A7EEA5611DD9DA48757852C9F9B09 /* TKTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E06DFA5759BF8C9D8D62764D473578C /* TKTextField.swift */; };
-		7AA7657F783F5867577EFB5A0F78AAC5 /* TagCellLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E32E0773010B46B708E628E1675DDD1 /* TagCellLayoutDelegate.swift */; };
+		40AD3D653662A3943E65907643AB4F26 /* Pods-TaggerKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7DD3DB540F74FF9ABAC62432AA96A /* Pods-TaggerKit_Example-dummy.m */; };
+		4420166E77689745266A8E279853906B /* removeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D1618F59B12D174B97A6A75AF01B7D4 /* removeIcon.png */; };
+		4A8659CE59AB5143564EE05749BAD12C /* TagCellLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD44D08AE7CD642052F53FE7B63FE3A1 /* TagCellLayoutDelegate.swift */; };
+		536BF5729CBAE7451B0D6DF402C702EA /* LayoutInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C57E1D3A28D0ACAE9FA6CB17F6F52 /* LayoutInfo.swift */; };
+		5AA51D05DE01748ECCB1CBF70099BBC1 /* TKCollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7851F30D836C2668322B11BB23D8E /* TKCollectionView+.swift */; };
+		627C3BD1B61168FFA2243883ABBCEA1E /* TaggerKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C58F5718A041C99DADB447B2619757 /* TaggerKit-dummy.m */; };
+		63C863205A034D1F5D90EBAC3E4EFC3F /* removeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D1618F59B12D174B97A6A75AF01B7D4 /* removeIcon.png */; };
+		68789ABBEAA8BBD10D99B25D3A161A55 /* TaggerKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC756660230852215A5ED59902C1D8 /* TaggerKit.bundle */; };
+		7633EDBDC33A888EB3A5505B69E7DE2E /* TaggerKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6691538120233F5C64B275C22EFA7DA6 /* TaggerKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7640A494A3FF25A244AC92E52DAE56A1 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA5932DDD9E373B9A8FBBA013636C6 /* UIViewController+.swift */; };
+		787EA5E3752F9AD866194A47748C8A34 /* TKTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912CA897156E2485F0D1124B8C3713E8 /* TKTextField.swift */; };
 		80576089B6DD1CAF52DD4AEB0019D2A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
-		89C2281FBB579237EBA74FE9F659A684 /* TaggerKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E5073B5561AE34CB583408C101A240B4 /* TaggerKit-dummy.m */; };
-		91322F6A130FC7D9D9B975811895FD4D /* LayoutAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76F1506CBA2BFB43B412DA0E7F8D60 /* LayoutAlignment.swift */; };
-		A2B8E81E4A2097B54FBFE94446AC0846 /* TKCollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5E6357BCE884D4275253D01B264D49 /* TKCollectionView+.swift */; };
-		BF8AFF4D08A7F83CE7EDF81F6910627D /* addIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF2BE3003DC0BBD5CA0100D71E3F211 /* addIcon.png */; };
-		C1C625292ED6110F024A7D77EA66CBFB /* Pods-TaggerKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C1557E90E721BAFE6FADE86539508C5 /* Pods-TaggerKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C61C1007BC948228396EE325A2C17A8C /* LayoutInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C13958909226C5C3E759DEF31FF975 /* LayoutInfo.swift */; };
-		C678F1738C8B9F48D2AD7300C77DC0B5 /* addIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF2BE3003DC0BBD5CA0100D71E3F211 /* addIcon.png */; };
-		D21F03995405EF30032C7C7EC7409ADC /* TagCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2076B83A030B4DF6117B014255447E6 /* TagCellLayout.swift */; };
-		E2E4DE1140B0A161DF6248D1D87EBF6E /* TKTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4C6A5425998A0E55C2F0F363DDD588 /* TKTagCell.swift */; };
-		F2281D7244F6CD83C4F0885583A29671 /* Pods-TaggerKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC667C7ABF0641FE710CF32F9837663 /* Pods-TaggerKit_Tests-dummy.m */; };
+		8AC5D9728F5FDD5D196D3F4DE2D6681A /* TKCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD670FBAC48CBA499FBA9B58C90553F /* TKCollectionView.swift */; };
+		94A2C72880366C95F390DFF586736F20 /* addIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D2E84402677D5EC963D3D58C29265490 /* addIcon.png */; };
+		9B85A8C2BA5D44A4CB4BCA2943646DB0 /* TagCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508A2610083BE261EE53A58ABC77FD8 /* TagCellLayout.swift */; };
+		ABBC83E1E6E8B76A905BF1B1DE080C36 /* LayoutAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654F72AC7C936FABA2B49FB5450FEFC2 /* LayoutAlignment.swift */; };
+		C1C625292ED6110F024A7D77EA66CBFB /* Pods-TaggerKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA043D47D3353563BF0B661420B0369A /* Pods-TaggerKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD2122E50984BD0BDA2ACDD4580C2D4D /* TKTagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A780BC8E0D4AE16BCA476C8BEF7DABBE /* TKTagButton.swift */; };
+		DEAE6744341253449DC7E10183B69D70 /* addIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D2E84402677D5EC963D3D58C29265490 /* addIcon.png */; };
+		E576C85265473111F7C5F1E0213D9801 /* TKTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FFE98623EC9FAD68A9626BF0C52FF /* TKTagCell.swift */; };
+		F2281D7244F6CD83C4F0885583A29671 /* Pods-TaggerKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F634FFE07861587FC11384E547CE78A3 /* Pods-TaggerKit_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,72 +39,72 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8F70D862A29CF09B452CDD7DFA5B19AA;
+			remoteGlobalIDString = 4AA90466907443E8370758A4640976D1;
 			remoteInfo = TaggerKit;
 		};
-		64EF403C3AC79EE34621C562C0B70282 /* PBXContainerItemProxy */ = {
+		54F2FE8509DEC8569C3B0875E000E2B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 774B96E5952B814856E65145BC9CDDDF;
+			remoteGlobalIDString = 841537762199BA2C6653A72C1E5480E1;
 			remoteInfo = "TaggerKit-TaggerKit";
 		};
 		D4BE25B86481D52081DB85B6CBF1D6F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D0F0C800AB106454D487652D16A53ACA;
+			remoteGlobalIDString = 295E3624F2608B1E8DA588306741753F;
 			remoteInfo = "Pods-TaggerKit_Example";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01F42A416843CB898644744C2B1629FA /* Pods-TaggerKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaggerKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1970AB67AEBBADDCD68D2313EDD0DF5E /* TaggerKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TaggerKit.xcconfig; sourceTree = "<group>"; };
-		1AA4FD74D722B278AF870103186A9D84 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		1F95D79DE337AF6DF801C822E405BC7C /* UIViewController+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
-		20E9D19F612269D1A462E76535DC18D2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		356DB38850599E7A676A52055DE92FB1 /* Pods-TaggerKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TaggerKit_Example-frameworks.sh"; sourceTree = "<group>"; };
-		3704166954EECBBC2E4A85A99D1DF553 /* Pods_TaggerKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TaggerKit_Example.framework; path = "Pods-TaggerKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		37C42A120C1E0BCFBCA0780E85292C44 /* Pods-TaggerKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaggerKit_Tests-umbrella.h"; sourceTree = "<group>"; };
-		3817357041D49F9CDCF732C4666651D3 /* Pods-TaggerKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaggerKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		393072722D6E33FD99E7EBA75377BAD4 /* Pods-TaggerKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaggerKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		3997DFE502DC5B69A8A1459538DC7BFE /* TaggerKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TaggerKit.modulemap; sourceTree = "<group>"; };
-		3EC667C7ABF0641FE710CF32F9837663 /* Pods-TaggerKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaggerKit_Tests-dummy.m"; sourceTree = "<group>"; };
+		12839B034A898B54D2811D451A3375A0 /* Pods-TaggerKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TaggerKit_Example.modulemap"; sourceTree = "<group>"; };
+		16936F99A38BB8DBD8D1707D79D19B6C /* TaggerKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TaggerKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		17DF255689C4F13924094CCDE94F0FF5 /* TaggerKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TaggerKit-Info.plist"; sourceTree = "<group>"; };
+		1E5275AA13FAEEC64C3FD7E4C61420B5 /* Pods-TaggerKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaggerKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		21EA6AE8FAFDE24C7B21701BCF96D0D6 /* Pods-TaggerKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaggerKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		25C7DD3DB540F74FF9ABAC62432AA96A /* Pods-TaggerKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaggerKit_Example-dummy.m"; sourceTree = "<group>"; };
+		2D1618F59B12D174B97A6A75AF01B7D4 /* removeIcon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = removeIcon.png; path = TaggerKit/Assets/removeIcon.png; sourceTree = "<group>"; };
+		36679015E6E7AE6A0F12F8FD884FEB20 /* Pods-TaggerKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaggerKit_Tests-umbrella.h"; sourceTree = "<group>"; };
+		36B162732869D64F8A090FB35E1F8C40 /* Pods-TaggerKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaggerKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3BE061DE629F390F564E0FED3FD52854 /* TaggerKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TaggerKit.xcconfig; sourceTree = "<group>"; };
 		40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		447B097B37FE42F487F56D1EF27D2BE3 /* ResourceBundle-TaggerKit-TaggerKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-TaggerKit-TaggerKit-Info.plist"; sourceTree = "<group>"; };
-		4F28A7F2D5AB08B263C7C6C60CAB98F6 /* Pods-TaggerKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TaggerKit_Tests.modulemap"; sourceTree = "<group>"; };
-		5B71806316A6D0911BE597359EF06959 /* TaggerKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TaggerKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		5E06DFA5759BF8C9D8D62764D473578C /* TKTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKTextField.swift; sourceTree = "<group>"; };
-		61C13958909226C5C3E759DEF31FF975 /* LayoutInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LayoutInfo.swift; sourceTree = "<group>"; };
-		6D76F1506CBA2BFB43B412DA0E7F8D60 /* LayoutAlignment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LayoutAlignment.swift; sourceTree = "<group>"; };
-		727968B6C463EE33C00134246265B712 /* TaggerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TaggerKit.framework; path = TaggerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		74930D46D83E841B29FB1CF9048C6D28 /* TaggerKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TaggerKit-prefix.pch"; sourceTree = "<group>"; };
-		767367E8A95547502AED5B22E7D586C8 /* Pods_TaggerKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TaggerKit_Tests.framework; path = "Pods-TaggerKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7924B10909A827F63F180A713787D4AB /* Pods-TaggerKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaggerKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		7B45C1FC5EB021147C44C279D73850B3 /* TKTagButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKTagButton.swift; sourceTree = "<group>"; };
-		7C1557E90E721BAFE6FADE86539508C5 /* Pods-TaggerKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaggerKit_Example-umbrella.h"; sourceTree = "<group>"; };
-		82FE750A13311FEFD5523C6A5105106E /* Pods-TaggerKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TaggerKit_Example.modulemap"; sourceTree = "<group>"; };
-		8E32E0773010B46B708E628E1675DDD1 /* TagCellLayoutDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TagCellLayoutDelegate.swift; sourceTree = "<group>"; };
-		8F9C38A5FED254EF07D7303A216E5B40 /* TaggerKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TaggerKit-umbrella.h"; sourceTree = "<group>"; };
-		9ABF29DAFCCBA68ADDB444BD0C66004E /* removeIcon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = removeIcon.png; path = TaggerKit/Assets/removeIcon.png; sourceTree = "<group>"; };
+		42114C308FB4C9223404B60D1D40C558 /* Pods-TaggerKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TaggerKit_Tests.modulemap"; sourceTree = "<group>"; };
+		42C7851F30D836C2668322B11BB23D8E /* TKCollectionView+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "TKCollectionView+.swift"; sourceTree = "<group>"; };
+		50CB4C7C69D2DEBF81D1C0395CC18A0F /* Pods-TaggerKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaggerKit_Tests-Info.plist"; sourceTree = "<group>"; };
+		5F0C57E1D3A28D0ACAE9FA6CB17F6F52 /* LayoutInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LayoutInfo.swift; sourceTree = "<group>"; };
+		654F72AC7C936FABA2B49FB5450FEFC2 /* LayoutAlignment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LayoutAlignment.swift; sourceTree = "<group>"; };
+		6691538120233F5C64B275C22EFA7DA6 /* TaggerKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TaggerKit-umbrella.h"; sourceTree = "<group>"; };
+		68A608EC78843A74E350DAACF9FF0583 /* Pods-TaggerKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaggerKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		6EE4B73BD035972A0B28D76F6E936C07 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		6F30F3A1ED5B057094C9810C99C699BE /* Pods-TaggerKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaggerKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		763793F0C5CC8B62D1D51B2EB75F72C9 /* TaggerKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TaggerKit.modulemap; sourceTree = "<group>"; };
+		83DA5932DDD9E373B9A8FBBA013636C6 /* UIViewController+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		8B4F1C757737AC715B44159932FD73CB /* TaggerKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TaggerKit-prefix.pch"; sourceTree = "<group>"; };
+		912CA897156E2485F0D1124B8C3713E8 /* TKTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKTextField.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A09E4DDA85E98B2A32D22AEA73C3C486 /* Pods-TaggerKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaggerKit_Example-dummy.m"; sourceTree = "<group>"; };
-		A87C904E774258901B622244300CE78F /* Pods-TaggerKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaggerKit_Example-Info.plist"; sourceTree = "<group>"; };
-		AA4C6A5425998A0E55C2F0F363DDD588 /* TKTagCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKTagCell.swift; sourceTree = "<group>"; };
-		AC54040B849D5576B3AD9720BC56D69C /* Pods-TaggerKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaggerKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		ADF2BE3003DC0BBD5CA0100D71E3F211 /* addIcon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = addIcon.png; path = TaggerKit/Assets/addIcon.png; sourceTree = "<group>"; };
-		BB5E6357BCE884D4275253D01B264D49 /* TKCollectionView+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "TKCollectionView+.swift"; sourceTree = "<group>"; };
-		C11B77106998FC6566960E1C03864DB1 /* Pods-TaggerKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaggerKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		C2076B83A030B4DF6117B014255447E6 /* TagCellLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TagCellLayout.swift; sourceTree = "<group>"; };
-		CF01A2B3C1BE0B4E5ED4D62988CDB308 /* TKCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKCollectionView.swift; sourceTree = "<group>"; };
-		D2451E146C68663F793632EEBCA9D79E /* Pods-TaggerKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaggerKit_Tests-Info.plist"; sourceTree = "<group>"; };
-		D460511E9FFFE1A224673F8000E06969 /* Pods-TaggerKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaggerKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E3636D8356DC426AF0188F74CD6D38A9 /* Pods-TaggerKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaggerKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		E4332E5FBB7325CBA7640975ED150DA1 /* TaggerKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TaggerKit.bundle; path = "TaggerKit-TaggerKit.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5073B5561AE34CB583408C101A240B4 /* TaggerKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TaggerKit-dummy.m"; sourceTree = "<group>"; };
-		EA7E0E20232E85A6E860806CFDEC084A /* TaggerKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TaggerKit-Info.plist"; sourceTree = "<group>"; };
+		9FCC756660230852215A5ED59902C1D8 /* TaggerKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TaggerKit.bundle; path = "TaggerKit-TaggerKit.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0D58AC66BED9E29DA2DADECD774EE66 /* Pods-TaggerKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TaggerKit_Example-frameworks.sh"; sourceTree = "<group>"; };
+		A2149F123F89D77C5A7B911E216084F7 /* Pods_TaggerKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TaggerKit_Example.framework; path = "Pods-TaggerKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A780BC8E0D4AE16BCA476C8BEF7DABBE /* TKTagButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKTagButton.swift; sourceTree = "<group>"; };
+		B4C58F5718A041C99DADB447B2619757 /* TaggerKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TaggerKit-dummy.m"; sourceTree = "<group>"; };
+		B5765A35624EAA3924677892358F5EB6 /* Pods-TaggerKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaggerKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		BE193BAC42A792C8B26B023FC636B19D /* ResourceBundle-TaggerKit-TaggerKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-TaggerKit-TaggerKit-Info.plist"; sourceTree = "<group>"; };
+		C0248D7B850B777EC021CD8CACD3CA52 /* TaggerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TaggerKit.framework; path = TaggerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAABCB5E473658E9E9FA82793AA31224 /* Pods-TaggerKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaggerKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		CDFFFD8240A6E20C042A7703DAA26892 /* Pods-TaggerKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaggerKit_Example-Info.plist"; sourceTree = "<group>"; };
+		D0688F60BF01D3FFE5F95AD3869E7D40 /* Pods-TaggerKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaggerKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D2E84402677D5EC963D3D58C29265490 /* addIcon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = addIcon.png; path = TaggerKit/Assets/addIcon.png; sourceTree = "<group>"; };
+		D9F7982D1167CB19124ED8C9048FD1A5 /* Pods_TaggerKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TaggerKit_Tests.framework; path = "Pods-TaggerKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD44D08AE7CD642052F53FE7B63FE3A1 /* TagCellLayoutDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TagCellLayoutDelegate.swift; sourceTree = "<group>"; };
+		E9D206B4D36A0B9FA4AA1B246E1F2C40 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		EA043D47D3353563BF0B661420B0369A /* Pods-TaggerKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaggerKit_Example-umbrella.h"; sourceTree = "<group>"; };
+		EAD670FBAC48CBA499FBA9B58C90553F /* TKCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKCollectionView.swift; sourceTree = "<group>"; };
 		ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		ED1FFE98623EC9FAD68A9626BF0C52FF /* TKTagCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKTagCell.swift; sourceTree = "<group>"; };
+		F508A2610083BE261EE53A58ABC77FD8 /* TagCellLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TagCellLayout.swift; sourceTree = "<group>"; };
+		F634FFE07861587FC11384E547CE78A3 /* Pods-TaggerKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaggerKit_Tests-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,13 +116,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A30E1961527E552C857F6839574CBAD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		73E483935E1AFFB90A5B1D5DF1874FC7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -131,12 +124,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8E1C26815B278A48303811440094B30C /* Frameworks */ = {
+		BFD303F7F853AE5B68B9C5686E55E167 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A5271024F41E3F59A4D14C77B5D354F /* Foundation.framework in Frameworks */,
-				3B6BF5B6EBFF53B8D3C1659EC8E83A55 /* UIKit.framework in Frameworks */,
+				2355ACB4ADCC6510D1F2062D065DCF25 /* Foundation.framework in Frameworks */,
+				3B75AB83280060B290598E4D016F28F6 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB8FC231701D9826822916DAAF9FAD51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,139 +151,145 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		17D765D1032F42069761CF451E290B77 /* Pods-TaggerKit_Example */ = {
+		243F480E0167891CF23FAB3F82961CA5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				82FE750A13311FEFD5523C6A5105106E /* Pods-TaggerKit_Example.modulemap */,
-				AC54040B849D5576B3AD9720BC56D69C /* Pods-TaggerKit_Example-acknowledgements.markdown */,
-				C11B77106998FC6566960E1C03864DB1 /* Pods-TaggerKit_Example-acknowledgements.plist */,
-				A09E4DDA85E98B2A32D22AEA73C3C486 /* Pods-TaggerKit_Example-dummy.m */,
-				356DB38850599E7A676A52055DE92FB1 /* Pods-TaggerKit_Example-frameworks.sh */,
-				A87C904E774258901B622244300CE78F /* Pods-TaggerKit_Example-Info.plist */,
-				7C1557E90E721BAFE6FADE86539508C5 /* Pods-TaggerKit_Example-umbrella.h */,
-				D460511E9FFFE1A224673F8000E06969 /* Pods-TaggerKit_Example.debug.xcconfig */,
-				393072722D6E33FD99E7EBA75377BAD4 /* Pods-TaggerKit_Example.release.xcconfig */,
+				A2149F123F89D77C5A7B911E216084F7 /* Pods_TaggerKit_Example.framework */,
+				D9F7982D1167CB19124ED8C9048FD1A5 /* Pods_TaggerKit_Tests.framework */,
+				9FCC756660230852215A5ED59902C1D8 /* TaggerKit.bundle */,
+				C0248D7B850B777EC021CD8CACD3CA52 /* TaggerKit.framework */,
 			);
-			name = "Pods-TaggerKit_Example";
-			path = "Target Support Files/Pods-TaggerKit_Example";
+			name = Products;
 			sourceTree = "<group>";
 		};
-		26F8BB0F07CF952DD3AF729C1AD1DB19 /* Pod */ = {
+		39A3B49B5D2C632ADE3FE6E4DEEE6830 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				20E9D19F612269D1A462E76535DC18D2 /* LICENSE */,
-				1AA4FD74D722B278AF870103186A9D84 /* README.md */,
-				5B71806316A6D0911BE597359EF06959 /* TaggerKit.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		3734E9C8E6F56003DCD46C5721D12999 /* Pods-TaggerKit_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				4F28A7F2D5AB08B263C7C6C60CAB98F6 /* Pods-TaggerKit_Tests.modulemap */,
-				01F42A416843CB898644744C2B1629FA /* Pods-TaggerKit_Tests-acknowledgements.markdown */,
-				3817357041D49F9CDCF732C4666651D3 /* Pods-TaggerKit_Tests-acknowledgements.plist */,
-				3EC667C7ABF0641FE710CF32F9837663 /* Pods-TaggerKit_Tests-dummy.m */,
-				D2451E146C68663F793632EEBCA9D79E /* Pods-TaggerKit_Tests-Info.plist */,
-				37C42A120C1E0BCFBCA0780E85292C44 /* Pods-TaggerKit_Tests-umbrella.h */,
-				7924B10909A827F63F180A713787D4AB /* Pods-TaggerKit_Tests.debug.xcconfig */,
-				E3636D8356DC426AF0188F74CD6D38A9 /* Pods-TaggerKit_Tests.release.xcconfig */,
-			);
-			name = "Pods-TaggerKit_Tests";
-			path = "Target Support Files/Pods-TaggerKit_Tests";
-			sourceTree = "<group>";
-		};
-		3B449DE4C86C3C158974D258D9A8FE4A /* CollectionViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				7B45C1FC5EB021147C44C279D73850B3 /* TKTagButton.swift */,
-				AA4C6A5425998A0E55C2F0F363DDD588 /* TKTagCell.swift */,
-			);
-			name = CollectionViewCell;
-			path = TaggerKit/Classes/Source/CollectionViewCell;
-			sourceTree = "<group>";
-		};
-		3C3E7905B84E657C85AAC74FCA99666D /* CollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				CF01A2B3C1BE0B4E5ED4D62988CDB308 /* TKCollectionView.swift */,
-				BB5E6357BCE884D4275253D01B264D49 /* TKCollectionView+.swift */,
+				EAD670FBAC48CBA499FBA9B58C90553F /* TKCollectionView.swift */,
+				42C7851F30D836C2668322B11BB23D8E /* TKCollectionView+.swift */,
 			);
 			name = CollectionView;
 			path = TaggerKit/Classes/Source/CollectionView;
 			sourceTree = "<group>";
 		};
-		3FA5E673155A5E7802550BF249ACA4B9 /* Products */ = {
+		412A510B90E66F4C6628D88C84341EE5 /* TagLayout */ = {
 			isa = PBXGroup;
 			children = (
-				3704166954EECBBC2E4A85A99D1DF553 /* Pods_TaggerKit_Example.framework */,
-				767367E8A95547502AED5B22E7D586C8 /* Pods_TaggerKit_Tests.framework */,
-				E4332E5FBB7325CBA7640975ED150DA1 /* TaggerKit.bundle */,
-				727968B6C463EE33C00134246265B712 /* TaggerKit.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		5AB4BDB3BEB72D83EF734AA92147892F /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				17D765D1032F42069761CF451E290B77 /* Pods-TaggerKit_Example */,
-				3734E9C8E6F56003DCD46C5721D12999 /* Pods-TaggerKit_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		5DB1831533D9BD7D75ED1DE0626EB349 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				ADF2BE3003DC0BBD5CA0100D71E3F211 /* addIcon.png */,
-				9ABF29DAFCCBA68ADDB444BD0C66004E /* removeIcon.png */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		6943EB82A3F70DE9B3B287AB20A5D921 /* TagLayout */ = {
-			isa = PBXGroup;
-			children = (
-				6D76F1506CBA2BFB43B412DA0E7F8D60 /* LayoutAlignment.swift */,
-				61C13958909226C5C3E759DEF31FF975 /* LayoutInfo.swift */,
-				C2076B83A030B4DF6117B014255447E6 /* TagCellLayout.swift */,
-				8E32E0773010B46B708E628E1675DDD1 /* TagCellLayoutDelegate.swift */,
+				654F72AC7C936FABA2B49FB5450FEFC2 /* LayoutAlignment.swift */,
+				5F0C57E1D3A28D0ACAE9FA6CB17F6F52 /* LayoutInfo.swift */,
+				F508A2610083BE261EE53A58ABC77FD8 /* TagCellLayout.swift */,
+				DD44D08AE7CD642052F53FE7B63FE3A1 /* TagCellLayoutDelegate.swift */,
 			);
 			name = TagLayout;
 			path = TaggerKit/Classes/Source/TagLayout;
 			sourceTree = "<group>";
 		};
-		7D29A15C1A37AB3E922C5211E331D098 /* TextField */ = {
+		4ABAA1C4E666844182677745CDC67283 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
-				5E06DFA5759BF8C9D8D62764D473578C /* TKTextField.swift */,
+				912CA897156E2485F0D1124B8C3713E8 /* TKTextField.swift */,
 			);
 			name = TextField;
 			path = TaggerKit/Classes/Source/TextField;
 			sourceTree = "<group>";
 		};
-		8BA597700A3D8772F45560309BC4ADB3 /* Extensions */ = {
+		504B35A95E1494051B2E53B35FAC9388 /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				1F95D79DE337AF6DF801C822E405BC7C /* UIViewController+.swift */,
+				A780BC8E0D4AE16BCA476C8BEF7DABBE /* TKTagButton.swift */,
+				ED1FFE98623EC9FAD68A9626BF0C52FF /* TKTagCell.swift */,
 			);
-			name = Extensions;
-			path = TaggerKit/Classes/Source/Extensions;
+			name = CollectionViewCell;
+			path = TaggerKit/Classes/Source/CollectionViewCell;
 			sourceTree = "<group>";
 		};
-		99FA38B998BB74885CBE6A720053B299 /* TaggerKit */ = {
+		5AB4BDB3BEB72D83EF734AA92147892F /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3C3E7905B84E657C85AAC74FCA99666D /* CollectionView */,
-				3B449DE4C86C3C158974D258D9A8FE4A /* CollectionViewCell */,
-				8BA597700A3D8772F45560309BC4ADB3 /* Extensions */,
-				26F8BB0F07CF952DD3AF729C1AD1DB19 /* Pod */,
-				5DB1831533D9BD7D75ED1DE0626EB349 /* Resources */,
-				DB3FF57AE8C27C81DC537A67D77D2BEC /* Support Files */,
-				6943EB82A3F70DE9B3B287AB20A5D921 /* TagLayout */,
-				7D29A15C1A37AB3E922C5211E331D098 /* TextField */,
+				63FA74F95B6ADEBD1E16C91198B0957D /* Pods-TaggerKit_Example */,
+				5D2D8F41EA48CE50CD84917EA5719E08 /* Pods-TaggerKit_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5D2D8F41EA48CE50CD84917EA5719E08 /* Pods-TaggerKit_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				42114C308FB4C9223404B60D1D40C558 /* Pods-TaggerKit_Tests.modulemap */,
+				6F30F3A1ED5B057094C9810C99C699BE /* Pods-TaggerKit_Tests-acknowledgements.markdown */,
+				B5765A35624EAA3924677892358F5EB6 /* Pods-TaggerKit_Tests-acknowledgements.plist */,
+				F634FFE07861587FC11384E547CE78A3 /* Pods-TaggerKit_Tests-dummy.m */,
+				50CB4C7C69D2DEBF81D1C0395CC18A0F /* Pods-TaggerKit_Tests-Info.plist */,
+				36679015E6E7AE6A0F12F8FD884FEB20 /* Pods-TaggerKit_Tests-umbrella.h */,
+				D0688F60BF01D3FFE5F95AD3869E7D40 /* Pods-TaggerKit_Tests.debug.xcconfig */,
+				1E5275AA13FAEEC64C3FD7E4C61420B5 /* Pods-TaggerKit_Tests.release.xcconfig */,
+			);
+			name = "Pods-TaggerKit_Tests";
+			path = "Target Support Files/Pods-TaggerKit_Tests";
+			sourceTree = "<group>";
+		};
+		63FA74F95B6ADEBD1E16C91198B0957D /* Pods-TaggerKit_Example */ = {
+			isa = PBXGroup;
+			children = (
+				12839B034A898B54D2811D451A3375A0 /* Pods-TaggerKit_Example.modulemap */,
+				36B162732869D64F8A090FB35E1F8C40 /* Pods-TaggerKit_Example-acknowledgements.markdown */,
+				68A608EC78843A74E350DAACF9FF0583 /* Pods-TaggerKit_Example-acknowledgements.plist */,
+				25C7DD3DB540F74FF9ABAC62432AA96A /* Pods-TaggerKit_Example-dummy.m */,
+				A0D58AC66BED9E29DA2DADECD774EE66 /* Pods-TaggerKit_Example-frameworks.sh */,
+				CDFFFD8240A6E20C042A7703DAA26892 /* Pods-TaggerKit_Example-Info.plist */,
+				EA043D47D3353563BF0B661420B0369A /* Pods-TaggerKit_Example-umbrella.h */,
+				21EA6AE8FAFDE24C7B21701BCF96D0D6 /* Pods-TaggerKit_Example.debug.xcconfig */,
+				CAABCB5E473658E9E9FA82793AA31224 /* Pods-TaggerKit_Example.release.xcconfig */,
+			);
+			name = "Pods-TaggerKit_Example";
+			path = "Target Support Files/Pods-TaggerKit_Example";
+			sourceTree = "<group>";
+		};
+		8017AC1A8548B26334C427E50E92F97F /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				E9D206B4D36A0B9FA4AA1B246E1F2C40 /* LICENSE */,
+				6EE4B73BD035972A0B28D76F6E936C07 /* README.md */,
+				16936F99A38BB8DBD8D1707D79D19B6C /* TaggerKit.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		82674FA6AE058EBFA03C0F0F062A92C1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D2E84402677D5EC963D3D58C29265490 /* addIcon.png */,
+				2D1618F59B12D174B97A6A75AF01B7D4 /* removeIcon.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8412E02B768BE81154729AF840943E4C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE193BAC42A792C8B26B023FC636B19D /* ResourceBundle-TaggerKit-TaggerKit-Info.plist */,
+				763793F0C5CC8B62D1D51B2EB75F72C9 /* TaggerKit.modulemap */,
+				3BE061DE629F390F564E0FED3FD52854 /* TaggerKit.xcconfig */,
+				B4C58F5718A041C99DADB447B2619757 /* TaggerKit-dummy.m */,
+				17DF255689C4F13924094CCDE94F0FF5 /* TaggerKit-Info.plist */,
+				8B4F1C757737AC715B44159932FD73CB /* TaggerKit-prefix.pch */,
+				6691538120233F5C64B275C22EFA7DA6 /* TaggerKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/TaggerKit";
+			sourceTree = "<group>";
+		};
+		B3E2093425C75904D77B8143ACF11A59 /* TaggerKit */ = {
+			isa = PBXGroup;
+			children = (
+				39A3B49B5D2C632ADE3FE6E4DEEE6830 /* CollectionView */,
+				504B35A95E1494051B2E53B35FAC9388 /* CollectionViewCell */,
+				D1F84EE451586A4C62F3C2052960ED21 /* Extensions */,
+				8017AC1A8548B26334C427E50E92F97F /* Pod */,
+				82674FA6AE058EBFA03C0F0F062A92C1 /* Resources */,
+				8412E02B768BE81154729AF840943E4C /* Support Files */,
+				412A510B90E66F4C6628D88C84341EE5 /* TagLayout */,
+				4ABAA1C4E666844182677745CDC67283 /* TextField */,
 			);
 			name = TaggerKit;
 			path = ../..;
@@ -295,30 +301,24 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				DF563A96C9946D8883D0621BF50CB725 /* Development Pods */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				3FA5E673155A5E7802550BF249ACA4B9 /* Products */,
+				243F480E0167891CF23FAB3F82961CA5 /* Products */,
 				5AB4BDB3BEB72D83EF734AA92147892F /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		DB3FF57AE8C27C81DC537A67D77D2BEC /* Support Files */ = {
+		D1F84EE451586A4C62F3C2052960ED21 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				447B097B37FE42F487F56D1EF27D2BE3 /* ResourceBundle-TaggerKit-TaggerKit-Info.plist */,
-				3997DFE502DC5B69A8A1459538DC7BFE /* TaggerKit.modulemap */,
-				1970AB67AEBBADDCD68D2313EDD0DF5E /* TaggerKit.xcconfig */,
-				E5073B5561AE34CB583408C101A240B4 /* TaggerKit-dummy.m */,
-				EA7E0E20232E85A6E860806CFDEC084A /* TaggerKit-Info.plist */,
-				74930D46D83E841B29FB1CF9048C6D28 /* TaggerKit-prefix.pch */,
-				8F9C38A5FED254EF07D7303A216E5B40 /* TaggerKit-umbrella.h */,
+				83DA5932DDD9E373B9A8FBBA013636C6 /* UIViewController+.swift */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/TaggerKit";
+			name = Extensions;
+			path = TaggerKit/Classes/Source/Extensions;
 			sourceTree = "<group>";
 		};
 		DF563A96C9946D8883D0621BF50CB725 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				99FA38B998BB74885CBE6A720053B299 /* TaggerKit */,
+				B3E2093425C75904D77B8143ACF11A59 /* TaggerKit */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -335,19 +335,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0A58631AA579864D283CA8DFE22E9042 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1FA92E63147A85469150A35ECCFC15E1 /* TaggerKit-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4675997A91605D951FF494BF8DCF9D61 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2BF1C9AA2ABBD191CBF7658CF21B8A1F /* Pods-TaggerKit_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFF2DE98148DD1F43C8BC7E42D0B265C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7633EDBDC33A888EB3A5505B69E7DE2E /* TaggerKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,43 +362,7 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		774B96E5952B814856E65145BC9CDDDF /* TaggerKit-TaggerKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B6BC390837C9C3BC65684B8BD803A54E /* Build configuration list for PBXNativeTarget "TaggerKit-TaggerKit" */;
-			buildPhases = (
-				BBC08E7E4DFEC30727DB37785FFA064B /* Sources */,
-				5A30E1961527E552C857F6839574CBAD /* Frameworks */,
-				99AA52505AC470816B9140DD6AD6141D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "TaggerKit-TaggerKit";
-			productName = "TaggerKit-TaggerKit";
-			productReference = E4332E5FBB7325CBA7640975ED150DA1 /* TaggerKit.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
-		8F70D862A29CF09B452CDD7DFA5B19AA /* TaggerKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 69C535764EDD36B5C916BD331A6D2E90 /* Build configuration list for PBXNativeTarget "TaggerKit" */;
-			buildPhases = (
-				0A58631AA579864D283CA8DFE22E9042 /* Headers */,
-				3E8D1D986AE7F67C07F4688DB3ED5553 /* Sources */,
-				8E1C26815B278A48303811440094B30C /* Frameworks */,
-				E134BB2C1A05E2DFAECE35F12DA665A4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AF5DA02810C9F237C9222A91D053E02E /* PBXTargetDependency */,
-			);
-			name = TaggerKit;
-			productName = TaggerKit;
-			productReference = 727968B6C463EE33C00134246265B712 /* TaggerKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		91BA536989B122C45505EAE82DF92FE1 /* Pods-TaggerKit_Tests */ = {
+		01DFEA7E683A672117BF6B8492216DB9 /* Pods-TaggerKit_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3074F7EE93C853EC5A556E793E2DB387 /* Build configuration list for PBXNativeTarget "Pods-TaggerKit_Tests" */;
 			buildPhases = (
@@ -414,10 +378,10 @@
 			);
 			name = "Pods-TaggerKit_Tests";
 			productName = "Pods-TaggerKit_Tests";
-			productReference = 767367E8A95547502AED5B22E7D586C8 /* Pods_TaggerKit_Tests.framework */;
+			productReference = D9F7982D1167CB19124ED8C9048FD1A5 /* Pods_TaggerKit_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D0F0C800AB106454D487652D16A53ACA /* Pods-TaggerKit_Example */ = {
+		295E3624F2608B1E8DA588306741753F /* Pods-TaggerKit_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C26E24C10A26530AB75FAC32A7BEF66 /* Build configuration list for PBXNativeTarget "Pods-TaggerKit_Example" */;
 			buildPhases = (
@@ -433,8 +397,44 @@
 			);
 			name = "Pods-TaggerKit_Example";
 			productName = "Pods-TaggerKit_Example";
-			productReference = 3704166954EECBBC2E4A85A99D1DF553 /* Pods_TaggerKit_Example.framework */;
+			productReference = A2149F123F89D77C5A7B911E216084F7 /* Pods_TaggerKit_Example.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		4AA90466907443E8370758A4640976D1 /* TaggerKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 333A1E7DB45541CA54960DEC1CC59B0F /* Build configuration list for PBXNativeTarget "TaggerKit" */;
+			buildPhases = (
+				CFF2DE98148DD1F43C8BC7E42D0B265C /* Headers */,
+				A11904E3C8778C79EB4F475A39FD6FB5 /* Sources */,
+				BFD303F7F853AE5B68B9C5686E55E167 /* Frameworks */,
+				747CE8C2A93B8D69081AFDD2BF6FA655 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C06EF6974554F48ABDB6048C4E04EA7 /* PBXTargetDependency */,
+			);
+			name = TaggerKit;
+			productName = TaggerKit;
+			productReference = C0248D7B850B777EC021CD8CACD3CA52 /* TaggerKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		841537762199BA2C6653A72C1E5480E1 /* TaggerKit-TaggerKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1B5AD014EF8F1F5970A0D5DC537F49D /* Build configuration list for PBXNativeTarget "TaggerKit-TaggerKit" */;
+			buildPhases = (
+				3E74C8632F50677164300FBF2E591229 /* Sources */,
+				CB8FC231701D9826822916DAAF9FAD51 /* Frameworks */,
+				D9EB851813AD4C3D750693FDC1EA990C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TaggerKit-TaggerKit";
+			productName = "TaggerKit-TaggerKit";
+			productReference = 9FCC756660230852215A5ED59902C1D8 /* TaggerKit.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -453,14 +453,14 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 3FA5E673155A5E7802550BF249ACA4B9 /* Products */;
+			productRefGroup = 243F480E0167891CF23FAB3F82961CA5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D0F0C800AB106454D487652D16A53ACA /* Pods-TaggerKit_Example */,
-				91BA536989B122C45505EAE82DF92FE1 /* Pods-TaggerKit_Tests */,
-				8F70D862A29CF09B452CDD7DFA5B19AA /* TaggerKit */,
-				774B96E5952B814856E65145BC9CDDDF /* TaggerKit-TaggerKit */,
+				295E3624F2608B1E8DA588306741753F /* Pods-TaggerKit_Example */,
+				01DFEA7E683A672117BF6B8492216DB9 /* Pods-TaggerKit_Tests */,
+				4AA90466907443E8370758A4640976D1 /* TaggerKit */,
+				841537762199BA2C6653A72C1E5480E1 /* TaggerKit-TaggerKit */,
 			);
 		};
 /* End PBXProject section */
@@ -473,12 +473,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		99AA52505AC470816B9140DD6AD6141D /* Resources */ = {
+		747CE8C2A93B8D69081AFDD2BF6FA655 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C678F1738C8B9F48D2AD7300C77DC0B5 /* addIcon.png in Resources */,
-				5B5B1BC467CCFC7D24696ACFAD2D2678 /* removeIcon.png in Resources */,
+				94A2C72880366C95F390DFF586736F20 /* addIcon.png in Resources */,
+				4420166E77689745266A8E279853906B /* removeIcon.png in Resources */,
+				68789ABBEAA8BBD10D99B25D3A161A55 /* TaggerKit.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,34 +490,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E134BB2C1A05E2DFAECE35F12DA665A4 /* Resources */ = {
+		D9EB851813AD4C3D750693FDC1EA990C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF8AFF4D08A7F83CE7EDF81F6910627D /* addIcon.png in Resources */,
-				29EA7ACF855308D48A6D07BDA8E926B1 /* removeIcon.png in Resources */,
-				55A5CAA395268E6918E11F5BF1A40632 /* TaggerKit.bundle in Resources */,
+				DEAE6744341253449DC7E10183B69D70 /* addIcon.png in Resources */,
+				63C863205A034D1F5D90EBAC3E4EFC3F /* removeIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3E8D1D986AE7F67C07F4688DB3ED5553 /* Sources */ = {
+		3E74C8632F50677164300FBF2E591229 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91322F6A130FC7D9D9B975811895FD4D /* LayoutAlignment.swift in Sources */,
-				C61C1007BC948228396EE325A2C17A8C /* LayoutInfo.swift in Sources */,
-				D21F03995405EF30032C7C7EC7409ADC /* TagCellLayout.swift in Sources */,
-				7AA7657F783F5867577EFB5A0F78AAC5 /* TagCellLayoutDelegate.swift in Sources */,
-				89C2281FBB579237EBA74FE9F659A684 /* TaggerKit-dummy.m in Sources */,
-				A2B8E81E4A2097B54FBFE94446AC0846 /* TKCollectionView+.swift in Sources */,
-				1C5C998F22CA9D3D18EBCDDFC4DEA906 /* TKCollectionView.swift in Sources */,
-				0E862D12BBBECA575A8E8A5AC3EE44D8 /* TKTagButton.swift in Sources */,
-				E2E4DE1140B0A161DF6248D1D87EBF6E /* TKTagCell.swift in Sources */,
-				675A7EEA5611DD9DA48757852C9F9B09 /* TKTextField.swift in Sources */,
-				0D13A4C861F33D1C9BF0C2AB54477171 /* UIViewController+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,10 +517,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BBC08E7E4DFEC30727DB37785FFA064B /* Sources */ = {
+		A11904E3C8778C79EB4F475A39FD6FB5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABBC83E1E6E8B76A905BF1B1DE080C36 /* LayoutAlignment.swift in Sources */,
+				536BF5729CBAE7451B0D6DF402C702EA /* LayoutInfo.swift in Sources */,
+				9B85A8C2BA5D44A4CB4BCA2943646DB0 /* TagCellLayout.swift in Sources */,
+				4A8659CE59AB5143564EE05749BAD12C /* TagCellLayoutDelegate.swift in Sources */,
+				627C3BD1B61168FFA2243883ABBCEA1E /* TaggerKit-dummy.m in Sources */,
+				5AA51D05DE01748ECCB1CBF70099BBC1 /* TKCollectionView+.swift in Sources */,
+				8AC5D9728F5FDD5D196D3F4DE2D6681A /* TKCollectionView.swift in Sources */,
+				DD2122E50984BD0BDA2ACDD4580C2D4D /* TKTagButton.swift in Sources */,
+				E576C85265473111F7C5F1E0213D9801 /* TKTagCell.swift in Sources */,
+				787EA5E3752F9AD866194A47748C8A34 /* TKTextField.swift in Sources */,
+				7640A494A3FF25A244AC92E52DAE56A1 /* UIViewController+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,61 +549,27 @@
 		3CE25DFD9D2C7B10A833C807C86E7753 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-TaggerKit_Example";
-			target = D0F0C800AB106454D487652D16A53ACA /* Pods-TaggerKit_Example */;
+			target = 295E3624F2608B1E8DA588306741753F /* Pods-TaggerKit_Example */;
 			targetProxy = D4BE25B86481D52081DB85B6CBF1D6F1 /* PBXContainerItemProxy */;
+		};
+		9C06EF6974554F48ABDB6048C4E04EA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "TaggerKit-TaggerKit";
+			target = 841537762199BA2C6653A72C1E5480E1 /* TaggerKit-TaggerKit */;
+			targetProxy = 54F2FE8509DEC8569C3B0875E000E2B7 /* PBXContainerItemProxy */;
 		};
 		9F1FFAAA723C1BA2E9B08D3985700453 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TaggerKit;
-			target = 8F70D862A29CF09B452CDD7DFA5B19AA /* TaggerKit */;
+			target = 4AA90466907443E8370758A4640976D1 /* TaggerKit */;
 			targetProxy = 03FABFB5DD5DB3EAA3E9C764B8590F53 /* PBXContainerItemProxy */;
-		};
-		AF5DA02810C9F237C9222A91D053E02E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "TaggerKit-TaggerKit";
-			target = 774B96E5952B814856E65145BC9CDDDF /* TaggerKit-TaggerKit */;
-			targetProxy = 64EF403C3AC79EE34621C562C0B70282 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0775BD37416DCD12DEEA6AB4C1FE4932 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1970AB67AEBBADDCD68D2313EDD0DF5E /* TaggerKit.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TaggerKit/TaggerKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TaggerKit/TaggerKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TaggerKit/TaggerKit.modulemap";
-				PRODUCT_MODULE_NAME = TaggerKit;
-				PRODUCT_NAME = TaggerKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		10DEE2144937A38C7409AC1FA745C284 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7924B10909A827F63F180A713787D4AB /* Pods-TaggerKit_Tests.debug.xcconfig */;
+			baseConfigurationReference = D0688F60BF01D3FFE5F95AD3869E7D40 /* Pods-TaggerKit_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -635,6 +601,55 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		1DC756D48D92B0AD3319E2BF943C8896 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BE061DE629F390F564E0FED3FD52854 /* TaggerKit.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TaggerKit/TaggerKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TaggerKit/TaggerKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TaggerKit/TaggerKit.modulemap";
+				PRODUCT_MODULE_NAME = TaggerKit;
+				PRODUCT_NAME = TaggerKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		400EEC511D798AAA4221E00B5AE03864 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BE061DE629F390F564E0FED3FD52854 /* TaggerKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TaggerKit";
+				INFOPLIST_FILE = "Target Support Files/TaggerKit/ResourceBundle-TaggerKit-TaggerKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = TaggerKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
 		};
 		4CE281642D6EE9FAB113046B4B6328A0 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -698,7 +713,7 @@
 		};
 		4DF575CC003CE97926E9B108EB7678A0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 393072722D6E33FD99E7EBA75377BAD4 /* Pods-TaggerKit_Example.release.xcconfig */;
+			baseConfigurationReference = CAABCB5E473658E9E9FA82793AA31224 /* Pods-TaggerKit_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -731,22 +746,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		69F58B38D8729D83D582BAEB3C8E2B42 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1970AB67AEBBADDCD68D2313EDD0DF5E /* TaggerKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TaggerKit";
-				INFOPLIST_FILE = "Target Support Files/TaggerKit/ResourceBundle-TaggerKit-TaggerKit-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_NAME = TaggerKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
 		};
 		6DFA1578582149B7E24AD55CBA30F07A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -814,7 +813,7 @@
 		};
 		73D36BF47D04574B3CE06C3BDF4E5EC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D460511E9FFFE1A224673F8000E06969 /* Pods-TaggerKit_Example.debug.xcconfig */;
+			baseConfigurationReference = 21EA6AE8FAFDE24C7B21701BCF96D0D6 /* Pods-TaggerKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -847,9 +846,9 @@
 			};
 			name = Debug;
 		};
-		7A4CF0FE6D2B096A3F664DFB90E0AC63 /* Debug */ = {
+		89CF47909DEC2C0931530356D631B358 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1970AB67AEBBADDCD68D2313EDD0DF5E /* TaggerKit.xcconfig */;
+			baseConfigurationReference = 3BE061DE629F390F564E0FED3FD52854 /* TaggerKit.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -875,14 +874,15 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		91324C6FB8A4E5D8FF54F0F3EB507619 /* Release */ = {
+		B97440A619E9780C479FF36791B3F385 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1970AB67AEBBADDCD68D2313EDD0DF5E /* TaggerKit.xcconfig */;
+			baseConfigurationReference = 3BE061DE629F390F564E0FED3FD52854 /* TaggerKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TaggerKit";
@@ -894,11 +894,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
 			};
-			name = Release;
+			name = Debug;
 		};
 		D47ECBFD6BDD094194BD8B53ADF450AC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E3636D8356DC426AF0188F74CD6D38A9 /* Pods-TaggerKit_Tests.release.xcconfig */;
+			baseConfigurationReference = 1E5275AA13FAEEC64C3FD7E4C61420B5 /* Pods-TaggerKit_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -944,6 +944,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		333A1E7DB45541CA54960DEC1CC59B0F /* Build configuration list for PBXNativeTarget "TaggerKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC756D48D92B0AD3319E2BF943C8896 /* Debug */,
+				89CF47909DEC2C0931530356D631B358 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -962,20 +971,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69C535764EDD36B5C916BD331A6D2E90 /* Build configuration list for PBXNativeTarget "TaggerKit" */ = {
+		B1B5AD014EF8F1F5970A0D5DC537F49D /* Build configuration list for PBXNativeTarget "TaggerKit-TaggerKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7A4CF0FE6D2B096A3F664DFB90E0AC63 /* Debug */,
-				0775BD37416DCD12DEEA6AB4C1FE4932 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B6BC390837C9C3BC65684B8BD803A54E /* Build configuration list for PBXNativeTarget "TaggerKit-TaggerKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				69F58B38D8729D83D582BAEB3C8E2B42 /* Debug */,
-				91324C6FB8A4E5D8FF54F0F3EB507619 /* Release */,
+				B97440A619E9780C479FF36791B3F385 /* Debug */,
+				400EEC511D798AAA4221E00B5AE03864 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

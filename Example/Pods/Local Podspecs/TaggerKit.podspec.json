@@ -1,6 +1,6 @@
 {
   "name": "TaggerKit",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "summary": "TaggerKit is a straightforward library that helps you implement tags in your iOS project.",
   "description": "This library helps you to quickly implement tags in your iOS apps, so you can go on and test your idea without having to worry about logic and custom collection layouts.",
   "homepage": "https://github.com/nekonora/TaggerKit",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/nekonora/TaggerKit.git",
-    "tag": "0.4.0"
+    "tag": "0.4.1"
   },
   "social_media_url": "https://twitter.com/_nknr",
   "platforms": {

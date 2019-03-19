@@ -37,13 +37,6 @@ public class TKTextField: UITextField {
 		
 		addTarget(self, action: #selector(addingTags), for: .editingChanged)
 		addTarget(self, action: #selector(pressedReturn), for: .editingDidEndOnExit)
-		
-		// Toolbar button
-		let toolbarDone = UIToolbar.init()
-		toolbarDone.sizeToFit()
-		let barBtnDone = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(doneButtonAction))
-		toolbarDone.items = [barBtnDone] // You can even add cancel button too
-		self.inputAccessoryView = toolbarDone
 	}
 	
 	
@@ -78,12 +71,6 @@ public class TKTextField: UITextField {
 	@objc func pressedReturn() {
 		guard sender != nil && receiver != nil else { return }
 		sender?.addNewTag(named: text)
-	}
-	
-	
-	// Done button to hide keyboard
-	@objc func doneButtonAction() {
-		self.resignFirstResponder()
 	}
 	
 	
