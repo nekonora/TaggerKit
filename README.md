@@ -15,16 +15,22 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-TaggerKit runs on Swift 4.2 and iOS 11.
+TaggerKit is writtern is compatible with Swift 4.2/5 and runs on iOS 11+.
 
 
 ## Installation
 
-TaggerKit is available through [CocoaPods](https://cocoapods.org). To install
-it, just add the following line to your Podfile:
+TaggerKit is available through [CocoaPods](https://cocoapods.org). To install the latest version (updated for Swift 5)
+, just add the following line to your Podfile:
 
 ```ruby
 pod 'TaggerKit'
+```
+
+If you are experiencing any problem with that version in your project, either set in Xcode: `File > Workspace Settings > Build System` to `Legacy`, or install this version:
+
+```ruby
+pod 'TaggerKit', '~> 0.4.1'
 ```
 
 
