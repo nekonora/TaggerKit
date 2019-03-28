@@ -15,7 +15,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-TaggerKit runs on Swift 4.2 and iOS 12.
+TaggerKit is writtern in Swift 5 and runs on iOS 11+.
 
 
 ## Installation
