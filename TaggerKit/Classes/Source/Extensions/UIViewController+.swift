@@ -12,7 +12,7 @@ import UIKit
 public extension UIViewController {
 	
 	
-	public func add(_ child: UIViewController, toView view: UIView) {
+	func add(_ child: UIViewController, toView view: UIView) {
 		
 		addChild(child)
 		child.view.frame = view.bounds
@@ -22,7 +22,7 @@ public extension UIViewController {
 	}
 	
 	
-	public func remove() {
+	func remove() {
 		guard parent != nil else { return }
 		
 		willMove(toParent: nil)
