@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TaggerKit'
-  s.version          = '0.4.2'
+  s.version          = '0.5.0'
   s.summary          = 'TaggerKit is a straightforward library that helps you implement tags in your iOS project.'
 
 # This description is used to generate tags and improve search results.
