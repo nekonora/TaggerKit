@@ -8,10 +8,12 @@
 
 
 import UIKit
+import MobileCoreServices
 
 
-// MARK: - UICollectionViewDataSource
+// MARK: - Extension to UICollectionViewDataSource
 extension TKCollectionView: UICollectionViewDataSource {
+	
 	
 	public func numberOfSections(in collectionView: UICollectionView) -> Int {
 		return 1
@@ -70,7 +72,7 @@ extension TKCollectionView: UICollectionViewDataSource {
 }
 
 
-// MARK: - UICollectionViewDelegate
+// MARK: - Extension to UICollectionViewDelegate
 extension TKCollectionView: UICollectionViewDelegate {
 	
 	public  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -80,7 +82,7 @@ extension TKCollectionView: UICollectionViewDelegate {
 }
 
 
-// MARK: - TagCellLayoutDelegate
+// MARK: - Extension to TagCellLayoutDelegate
 extension TKCollectionView: TagCellLayoutDelegate {
 	
 	public func tagCellLayoutInteritemHorizontalSpacing(layout: TagCellLayout) -> CGFloat {
@@ -120,10 +122,11 @@ extension TKCollectionView: TagCellLayoutDelegate {
 		
 		return s
 	}
+	
 }
 
 
-// MARK: - TagCellDelegate (action delegate)
+// MARK: - Extension to TagCellDelegate (action delegate)
 extension TKCollectionView: TagCellDelegate {
 	
 	public func didTapButton(name: String?, action: actionType) {
@@ -143,3 +146,61 @@ extension TKCollectionView: TagCellDelegate {
 	
 }
 
+
+// MARK: - Extension to Drag&Drop
+extension TKCollectionView: UICollectionViewDragDelegate, UICollectionViewDropDelegate {
+	
+	public func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+		let tagString = tags[indexPath.item]
+		guard let data = tagString.data(using: .utf8) else { return [] }
+		let itemProvider = NSItemProvider(item: data as NSData, typeIdentifier: kUTTypePlainText as String)
+		return [UIDragItem(itemProvider: itemProvider)]
+	}
+	
+	public func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
+		let destinationIndexPath: IndexPath
+		
+		// If a destinationIndexPath (the point between other data) is present, put the drop there
+		if let indexPath = coordinator.destinationIndexPath {
+			destinationIndexPath = indexPath
+		} else {
+			let section = tagsCollectionView.numberOfSections - 1
+			let row = tagsCollectionView.numberOfItems(inSection: section)
+			destinationIndexPath = IndexPath(row: row, section: section)
+		}
+		
+		coordinator.session.loadObjects(ofClass: NSString.self) { items in
+			guard let strings = items as? [String] else { return }
+			
+			var indexPaths = [IndexPath]()
+			
+			for (index, string) in strings.enumerated() {
+				let indexPath = IndexPath(row: destinationIndexPath.row + index, section: destinationIndexPath.section)
+				self.tags.insert(string, at: indexPath.row)
+				
+				indexPaths.append(indexPath)
+			}
+			self.tagsCollectionView.insertItems(at: indexPaths)
+		}
+	}
+	
+	public func collectionView(_ collectionView: UICollectionView, dragPreviewParametersForItemAt indexPath: IndexPath) -> UIDragPreviewParameters? {
+		var dragPreview: UIDragPreviewParameters {
+			let preview = UIDragPreviewParameters()
+			preview.backgroundColor = .clear
+			return preview
+		}
+		
+		return dragPreview
+	}
+	
+	public func collectionView(_ collectionView: UICollectionView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UICollectionViewDropProposal {
+		return UICollectionViewDropProposal(operation: .move)
+	}
+	
+	func setupDragAndDrop() {
+		tagsCollectionView.dragInteractionEnabled = true
+		tagsCollectionView.dragDelegate = self
+		tagsCollectionView.dropDelegate = self
+	}
+}

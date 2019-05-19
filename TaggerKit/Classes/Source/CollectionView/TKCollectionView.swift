@@ -47,10 +47,12 @@ public class TKCollectionView: UIViewController {
 	var longTagIndex	: Int { return 1 }
 	public var tags 	= [String]()
 	
-	// MARK: - Lifecycle methods
+	
+	// MARK: - Lifecycle Methods
     public override func viewDidLoad() {
         super.viewDidLoad()
 		setupView()
+		setupDragAndDrop()
     }
 	
 	
@@ -60,16 +62,16 @@ public class TKCollectionView: UIViewController {
 	}
 	
 	
-	// MARK: - View setup
+	// MARK: - Class Methods
 	private func setupView() {
 		tagCellLayout 			= TagCellLayout(alignment: .left, delegate: self)
 		tagCellLayout.delegate 	= self
 		
-		tagsCollectionView 						= UICollectionView(frame: view.bounds, collectionViewLayout: tagCellLayout)
-		tagsCollectionView.dataSource 			= self
+		tagsCollectionView 							= UICollectionView(frame: view.bounds, collectionViewLayout: tagCellLayout)
+		tagsCollectionView.dataSource 				= self
 		tagsCollectionView.delegate 				= self
 		tagsCollectionView.alwaysBounceVertical 	= true
-		tagsCollectionView.backgroundColor		= UIColor.clear
+		tagsCollectionView.backgroundColor			= UIColor.clear
 		tagsCollectionView.register(TKTagCell.self, forCellWithReuseIdentifier: "TKCell")
 		
 		view.addSubview(tagsCollectionView)
