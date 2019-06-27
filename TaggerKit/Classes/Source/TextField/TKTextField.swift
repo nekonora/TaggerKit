@@ -6,14 +6,12 @@
 //  Copyright © 2019 Filippo Zaffoni. All rights reserved.
 //
 
-
 import UIKit
-
 
 public class TKTextField: UITextField {
 	
-	
 	// MARK: - Properties
+	
 	// Objects to operate - obviously should not be the same
 	public var sender 	: TKCollectionView? { didSet { allTags = sender?.tags } }
 	public var receiver	: TKCollectionView?
@@ -26,6 +24,7 @@ public class TKTextField: UITextField {
 	
 	
 	// MARK: - Lifecycle Methods
+	
 	public override func awakeFromNib() {
 		clipsToBounds = true
 		layer.cornerRadius = defaultCornerRadius
@@ -41,6 +40,7 @@ public class TKTextField: UITextField {
 	
 	
 	// MARK: - TextField methods
+	
 	@objc func addingTags() {
 		guard sender != nil && receiver != nil else { return }
 		
@@ -67,11 +67,9 @@ public class TKTextField: UITextField {
 		
 	}
 	
-	
 	@objc func pressedReturn() {
 		guard sender != nil && receiver != nil else { return }
 		sender?.addNewTag(named: text)
 	}
-	
 	
 }

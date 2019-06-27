@@ -6,49 +6,45 @@
 //  Copyright © 2019 Filippo Zaffoni. All rights reserved.
 //
 
-
 import UIKit
-
 
 protocol TagCellDelegate {
 	func didTapButton(name: String?, action: actionType)
 }
 
-
 class TKTagCell: UICollectionViewCell {
 	
-	
 	// MARK: - Properties
-	var tagName			: String? { didSet { nameLabel.text = tagName } }
-	var font			: UIFont? { didSet { nameLabel.font = font } }
-	var color 			: UIColor? { didSet { backgroundColor = color } }
-	var cornerRadius	: CGFloat? { didSet { layer.cornerRadius = cornerRadius! } }
-	var tagAction 		: actionType! { didSet { setupButton(action: tagAction) } }
+	
+	var tagName: String? { didSet { nameLabel.text = tagName } }
+	var font: UIFont? { didSet { nameLabel.font = font } }
+	var color: UIColor? { didSet { backgroundColor = color } }
+	var cornerRadius: CGFloat? { didSet { layer.cornerRadius = cornerRadius! } }
+	var tagAction: actionType! { didSet { setupButton(action: tagAction) } }
 	
 	lazy var nameLabel: UILabel = {
-		let label 										= UILabel()
-		label.textColor 								= UIColor.darkGray
-		label.textAlignment 							= .center
+		let label 			= UILabel()
+		label.textColor 	= UIColor.darkGray
+		label.textAlignment = .center
 		return label
 	}()
 	
-	let button 		= TKTagButton()
-	var delegate 	: TKCollectionView?
-	
+	let button = TKTagButton()
+	var delegate: TKCollectionView?
 	
 	// MARK: - Lifecycle methods
+	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		setupCell()
 	}
 	
-	
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
-	
 	// MARK: - Setup methods
+	
 	private func setupCell() {
 		clipsToBounds = true
 		
@@ -56,12 +52,10 @@ class TKTagCell: UICollectionViewCell {
 		addSubview(button)
 	
 		nameLabel.translatesAutoresizingMaskIntoConstraints = false
-		button.translatesAutoresizingMaskIntoConstraints = false
+		button.translatesAutoresizingMaskIntoConstraints 	= false
 	}
 	
-	
 	private func setupButton(action: actionType) {
-		
 		// Button layout
 		var computedPadding: CGFloat = 0
 		button.alpha = 0.3
@@ -71,7 +65,6 @@ class TKTagCell: UICollectionViewCell {
 		} else if tagAction == .noAction {
 			computedPadding = 0
 		}
-		
 		
 		switch action {
 		case .addTag:
@@ -97,21 +90,19 @@ class TKTagCell: UICollectionViewCell {
 			NSLayoutConstraint(item: button, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: 0)
 			])
 		
-		
 		// Button action
 		button.isEnabled = true
 		button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
 	}
 	
-	
 	// MARK: - Buttons action methods
+	
 	@objc private func buttonTapped() {
 		if let cellDelegate = delegate {
 			cellDelegate.didTapButton(name: tagName, action: tagAction)
 		}
 	}
 
-	
 	func loadImage(name: String) -> UIImage? {
 		let podBundle = Bundle(identifier: "org.cocoapods.TaggerKit")!
 		if let url = podBundle.url(forResource: "TaggerKit", withExtension: "bundle") {
@@ -120,6 +111,5 @@ class TKTagCell: UICollectionViewCell {
 		}
 		return nil
 	}
-	
-	
+		
 }

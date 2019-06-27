@@ -2,40 +2,33 @@
 //  ViewController.swift
 //  TaggerKit
 //
-//  Created by registration.fi.za@outlook.com on 03/13/2019.
+//  Created by Filippo Zaffoni on 03/13/2019.
 //  Copyright (c) 2019 registration.fi.za@outlook.com. All rights reserved.
 //
-
 
 import UIKit
 import TaggerKit		// Import taggerKit
 
-
 class ViewController: UIViewController {
 
-	
 	// MARK: - Outlets
 	@IBOutlet var addTagsTextField	: TKTextField!
 	@IBOutlet var searchContainer	: UIView!
 	@IBOutlet var testContainer		: UIView!
 	
-	
 	// We want the whole experience, let's create two TKCollectionViews
 	let productTags = TKCollectionView()
 	let allTags 	= TKCollectionView()
 	
-	
 	// MARK: - Lifecycle Methods
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
 		
 		// Customisation example
 		//		testCollection.customFont = UIFont.boldSystemFont(ofSize: 14)		// Custom font
 		//		testCollection.customCornerRadius = 14.0							// Corner radius of tags
 		//		testCollection.customSpacing = 20.0									// Spacing between cells
 		//		testCollection.customBackgroundColor = UIColor.red					// Background of cells
-		
 		
 		// These are the tags already added by the user, give an aray of strings to the collection
 		productTags.tags = ["Tech", "Design", "Writing", "Social Media"]
@@ -49,7 +42,6 @@ class ViewController: UIViewController {
 		*/
 		productTags.action = .removeTag
 		
-		
 		// Set the current controller as the delegate of both collections
 		productTags.delegate = self
 		allTags.delegate = self
@@ -60,7 +52,6 @@ class ViewController: UIViewController {
 		// The tags in "searchCollection" are going to be added, so we set the action to addTag
 		allTags.action = .addTag
 		
-		
 		// Set the sender and receiver of the TextField
 		addTagsTextField.sender 	= allTags
 		addTagsTextField.receiver 	= productTags
@@ -68,7 +59,6 @@ class ViewController: UIViewController {
 		add(productTags, toView: testContainer)
 		add(allTags, toView: searchContainer)
 	}
-	
 	
 	/*
 	These methods come from UIViewController now conforming to TKCollectionViewDelegate,

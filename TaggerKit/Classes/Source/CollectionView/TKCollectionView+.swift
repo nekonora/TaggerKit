@@ -6,22 +6,19 @@
 //  Copyright © 2019 Filippo Zaffoni. All rights reserved.
 //
 
-
 import UIKit
 
-
 // MARK: - UICollectionViewDataSource
+
 extension TKCollectionView: UICollectionViewDataSource {
 	
 	public func numberOfSections(in collectionView: UICollectionView) -> Int {
 		return 1
 	}
 	
-	
 	public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return tags.count
 	}
-	
 	
 	public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TKCell", for: indexPath) as! TKTagCell
@@ -35,7 +32,6 @@ extension TKCollectionView: UICollectionViewDataSource {
 		
 		return cell
 	}
-	
 	
 	public func addNewTag(named: String?) {
 		guard receiver != nil else { return }
@@ -53,7 +49,6 @@ extension TKCollectionView: UICollectionViewDataSource {
 		}
 	}
 	
-	
 	public func removeOldTag(named: String?) {
 		if let tagToRemove = named {
 			if tags.contains(tagToRemove) {
@@ -69,8 +64,8 @@ extension TKCollectionView: UICollectionViewDataSource {
 	
 }
 
-
 // MARK: - UICollectionViewDelegate
+
 extension TKCollectionView: UICollectionViewDelegate {
 	
 	public  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -79,19 +74,17 @@ extension TKCollectionView: UICollectionViewDelegate {
 	
 }
 
-
 // MARK: - TagCellLayoutDelegate
+
 extension TKCollectionView: TagCellLayoutDelegate {
 	
 	public func tagCellLayoutInteritemHorizontalSpacing(layout: TagCellLayout) -> CGFloat {
 		return customSpacing ?? defaultSpacing
 	}
 	
-	
 	public func tagCellLayoutInteritemVerticalSpacing(layout: TagCellLayout) -> CGFloat {
 		return customSpacing ?? defaultSpacing
 	}
-	
 	
 	public func tagCellLayoutTagSize(layout: TagCellLayout, atIndex index: Int) -> CGSize {
 		let tagName 	= tags[index]
@@ -100,7 +93,6 @@ extension TKCollectionView: TagCellLayoutDelegate {
 		
 		return cellSize
 	}
-	
 	
 	public func textSize(text: String, font: UIFont, collectionView: UICollectionView) -> CGSize {
 		var viewBounds 			= collectionView.bounds
@@ -120,14 +112,14 @@ extension TKCollectionView: TagCellLayoutDelegate {
 		
 		return s
 	}
+	
 }
 
-
 // MARK: - TagCellDelegate (action delegate)
+
 extension TKCollectionView: TagCellDelegate {
 	
 	public func didTapButton(name: String?, action: actionType) {
-		
 		switch action {
 		case .addTag:
 			addNewTag(named: name)
@@ -138,7 +130,6 @@ extension TKCollectionView: TagCellDelegate {
 		case .noAction:
 			break
 		}
-		
 	}
 	
 }

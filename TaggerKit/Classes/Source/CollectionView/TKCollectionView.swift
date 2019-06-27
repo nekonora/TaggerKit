@@ -6,28 +6,25 @@
 //  Copyright © 2019 Filippo Zaffoni. All rights reserved.
 //
 
-
 import UIKit
-
 
 protocol TKCollectionViewDelegate {
 	func tagIsBeingAdded(name: String?)
 	func tagIsBeingRemoved(name: String?)
 }
 
-
 public class TKCollectionView: UIViewController {
-
 	
 	// MARK: - Customasible properties
+
 	public var customFont				: UIFont?
 	public var customSpacing 			: CGFloat?
 	public var customCornerRadius 	  	: CGFloat?
 	public var customBackgroundColor 	: UIColor?
 	public var action 					: actionType?
 	
-	
 	// MARK: - Class properties
+	
 	public var tagsCollectionView	: UICollectionView!
 	public var tagCellLayout		: TagCellLayout!
 	public var receiver 			: TKCollectionView?
@@ -48,19 +45,19 @@ public class TKCollectionView: UIViewController {
 	public var tags 	= [String]()
 	
 	// MARK: - Lifecycle methods
-    public override func viewDidLoad() {
+	
+	public override func viewDidLoad() {
         super.viewDidLoad()
 		setupView()
     }
-	
 	
 	public override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
 		tagsCollectionView.frame = view.bounds
 	}
 	
-	
 	// MARK: - View setup
+	
 	private func setupView() {
 		tagCellLayout 			= TagCellLayout(alignment: .left, delegate: self)
 		tagCellLayout.delegate 	= self
@@ -74,7 +71,6 @@ public class TKCollectionView: UIViewController {
 		
 		view.addSubview(tagsCollectionView)
 	}
-	
 	
 }
 
