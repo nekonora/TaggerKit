@@ -8,9 +8,7 @@
 
 import UIKit
 
-
 public extension UIViewController {
-	
 	
 	func add(_ child: UIViewController, toView view: UIView) {
 		
@@ -21,7 +19,6 @@ public extension UIViewController {
 		child.didMove(toParent: self)
 	}
 	
-	
 	func remove() {
 		guard parent != nil else { return }
 		
@@ -30,9 +27,7 @@ public extension UIViewController {
 		removeFromParent()
 	}
 	
-	
 }
-
 
 extension UIViewController: TKCollectionViewDelegate {
 	

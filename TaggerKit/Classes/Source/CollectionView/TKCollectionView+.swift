@@ -6,7 +6,6 @@
 //  Copyright © 2019 Filippo Zaffoni. All rights reserved.
 //
 
-
 import UIKit
 import MobileCoreServices
 
@@ -19,11 +18,9 @@ extension TKCollectionView: UICollectionViewDataSource {
 		return 1
 	}
 	
-	
 	public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return tags.count
 	}
-	
 	
 	public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TKCell", for: indexPath) as! TKTagCell
@@ -37,7 +34,6 @@ extension TKCollectionView: UICollectionViewDataSource {
 		
 		return cell
 	}
-	
 	
 	public func addNewTag(named: String?) {
 		guard receiver != nil else { return }
@@ -54,7 +50,6 @@ extension TKCollectionView: UICollectionViewDataSource {
 			}
 		}
 	}
-	
 	
 	public func removeOldTag(named: String?) {
 		if let tagToRemove = named {
@@ -89,11 +84,9 @@ extension TKCollectionView: TagCellLayoutDelegate {
 		return customSpacing ?? defaultSpacing
 	}
 	
-	
 	public func tagCellLayoutInteritemVerticalSpacing(layout: TagCellLayout) -> CGFloat {
 		return customSpacing ?? defaultSpacing
 	}
-	
 	
 	public func tagCellLayoutTagSize(layout: TagCellLayout, atIndex index: Int) -> CGSize {
 		let tagName 	= tags[index]
@@ -102,7 +95,6 @@ extension TKCollectionView: TagCellLayoutDelegate {
 		
 		return cellSize
 	}
-	
 	
 	public func textSize(text: String, font: UIFont, collectionView: UICollectionView) -> CGSize {
 		var viewBounds 			= collectionView.bounds
@@ -130,7 +122,6 @@ extension TKCollectionView: TagCellLayoutDelegate {
 extension TKCollectionView: TagCellDelegate {
 	
 	public func didTapButton(name: String?, action: actionType) {
-		
 		switch action {
 		case .addTag:
 			addNewTag(named: name)
@@ -141,7 +132,6 @@ extension TKCollectionView: TagCellDelegate {
 		case .noAction:
 			break
 		}
-		
 	}
 	
 }

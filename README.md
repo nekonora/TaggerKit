@@ -58,7 +58,7 @@ Tags can be implemented in a couple of ways.  Let's start simple: you have a bun
 3. Instantiate and a `TKCollectionView()` and give it to the container with:
 
 	```swift
-	var tagCollection: TKCollectionView()
+	var tagCollection = TKCollectionView()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()

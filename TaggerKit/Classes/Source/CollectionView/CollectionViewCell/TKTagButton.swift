@@ -6,9 +6,7 @@
 //  Copyright © 2019 Filippo Zaffoni. All rights reserved.
 //
 
-
 import UIKit
-
 
 public enum actionType {
 	case addTag
@@ -16,20 +14,15 @@ public enum actionType {
 	case noAction
 }
 
-
 class TKTagButton: UIButton {
-
 	
 	// MARK: - Properties
 
-	
 	// MARK: - Lifecycle methods
-	
 	
 	// MARK: - Setup methods
 	private func setup() {
 		alpha = 0.5
 	}
 	
-
 }
