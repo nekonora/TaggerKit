@@ -8,7 +8,8 @@
 
 import UIKit
 
-public enum actionType {
+/// The type of action that can be done on a tag
+public enum ActionType {
 	case addTag
 	case removeTag
 	case noAction
@@ -21,6 +22,7 @@ class TKTagButton: UIButton {
 	// MARK: - Lifecycle methods
 	
 	// MARK: - Setup methods
+	
 	private func setup() {
 		alpha = 0.5
 	}

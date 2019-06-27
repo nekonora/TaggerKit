@@ -17,6 +17,10 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 TaggerKit is writtern is compatible with Swift 4.2/5 and runs on iOS 11+.
 
+## Changelog
+
+### 0.6
+• `tagIsBeingAdded` and `tagIsBeingRemoved` methods are not accessible by override from UIViewControllers. This is because UIViewController is not a delegate of TKViewController anymore. If you want to use these methods you can still make your controller conform to the TKCollectionViewDelegate protocol;
 
 ## Installation
 

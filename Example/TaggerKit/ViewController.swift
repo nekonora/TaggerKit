@@ -59,18 +59,26 @@ class ViewController: UIViewController {
 		add(productTags, toView: testContainer)
 		add(allTags, toView: searchContainer)
 	}
+
+}
+
+// MARK: - Extension to TKCollectionViewDelegate
+
+extension ViewController: TKCollectionViewDelegate {
 	
 	/*
 	These methods come from UIViewController now conforming to TKCollectionViewDelegate,
 	You use these to do whatever you want when a tag is added or removed (e.g. save to file, etc)
 	*/
-	override func tagIsBeingAdded(name: String?) {
+	
+	func tagIsBeingAdded(name: String?) {
 		// Example: save testCollection.tags to UserDefault
 		print("added \(name!)")
 	}
 	
-	override func tagIsBeingRemoved(name: String?) {
+	func tagIsBeingRemoved(name: String?) {
 		print("removed \(name!)")
 	}
 	
 }
+

@@ -8,10 +8,11 @@
 
 import UIKit
 
+// MARK: - Extension to implement easy child controllers functionality
+
 public extension UIViewController {
 	
 	func add(_ child: UIViewController, toView view: UIView) {
-		
 		addChild(child)
 		child.view.frame = view.bounds
 		view.addSubview(child.view)
@@ -29,10 +30,12 @@ public extension UIViewController {
 	
 }
 
-extension UIViewController: TKCollectionViewDelegate {
-	
-	@objc open func tagIsBeingAdded(name: String?) { }
-	
-	@objc open func tagIsBeingRemoved(name: String?) { }
-	
-}
+// MARK: - Extension to TKCollectionViewDelegate
+
+//extension UIViewController: TKCollectionViewDelegate {
+//
+//	@objc open func tagIsBeingAdded(name: String?) { }
+//
+//	@objc open func tagIsBeingRemoved(name: String?) { }
+//
+//}
