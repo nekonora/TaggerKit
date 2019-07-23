@@ -62,7 +62,6 @@ public class TKCollectionView: UIViewController {
         super.viewDidLoad()
 		
 		setupView()
-		setupDragAndDrop()
     }
 	
 	public override func viewDidLayoutSubviews() {
