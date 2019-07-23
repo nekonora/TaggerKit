@@ -11,86 +11,86 @@ import UIKit
 /// Conforming to this protocol enables a controller to be notified and act upon
 /// the life of a tag (added or removed from a collection)
 public protocol TKCollectionViewDelegate: UIViewController {
-	func tagIsBeingAdded(name: String?)
-	func tagIsBeingRemoved(name: String?)
+    func tagIsBeingAdded(name: String?)
+    func tagIsBeingRemoved(name: String?)
 }
 
 /// This collection view is a container that displays and manages tags
 public class TKCollectionView: UIViewController {
-	
-	// MARK: - Customasible properties
-	
-	/// The font of the label inside the tag (default: system bold of size 14)
-	public var customFont = UIFont.boldSystemFont(ofSize: 14)
-	
-	/// The inset between every tag (default: 10 points)
-	public var customSpacing = CGFloat(10.0)
-	
-	/// The corner radius of the tag view (default: 14 points)
-	public var customCornerRadius = CGFloat(14.0)
-	
-	/// The background color of the tag view
-	public var customBackgroundColor = UIColor(red: 1.00, green: 0.80, blue: 0.37, alpha: 1.0)
-
+    
+    // MARK: - Customasible properties
+    
+    /// The font of the label inside the tag (default: system bold of size 14)
+    public var customFont = UIFont.boldSystemFont(ofSize: 14)
+    
+    /// The inset between every tag (default: 10 points)
+    public var customSpacing = CGFloat(10.0)
+    
+    /// The corner radius of the tag view (default: 14 points)
+    public var customCornerRadius = CGFloat(14.0)
+    
+    /// The background color of the tag view
+    public var customBackgroundColor = UIColor(red: 1.00, green: 0.80, blue: 0.37, alpha: 1.0)
+    
     /// The color of the tag cell border, if present
     public var customTagBorderColor: UIColor?
     
     /// The border of the tag cell view
     public var customTagBorderSize: CGFloat?
     
-	/// The action embedded in the tag: add, remove or no action (default: no action). (this changes the embedded icon)
-	public var action = ActionType.noAction
-	
-	// MARK: - Class properties
-	
-	/// The actual collectionView inside the controller, where every cell is a tag
-	public var tagsCollectionView	: UICollectionView!
-	
-	/// The custom cell layout of the single cell
-	public var tagCellLayout		: TagCellLayout!
-	
-	/// If tags in the collection are given an action of type "add", a receiver can be automatically binded on this property
-	public var receiver 			: TKCollectionView?
-	
-	/// A controller that confromed to be a delegate for the tags collection view
-	public var delegate 			: TKCollectionViewDelegate?
-
-	lazy var oneLineHeight: CGFloat = { customFont.pointSize * 2 }()
-	
-	var longTagIndex = 1
-	
-	/// The array containing all the tags of the collection
-	public var tags = [String]()
-	
-	// MARK: - Lifecycle methods
-	
-	public override func viewDidLoad() {
+    /// The action embedded in the tag: add, remove or no action (default: no action). (this changes the embedded icon)
+    public var action = ActionType.noAction
+    
+    // MARK: - Class properties
+    
+    /// The actual collectionView inside the controller, where every cell is a tag
+    public var tagsCollectionView	: UICollectionView!
+    
+    /// The custom cell layout of the single cell
+    public var tagCellLayout		: TagCellLayout!
+    
+    /// If tags in the collection are given an action of type "add", a receiver can be automatically binded on this property
+    public var receiver 			: TKCollectionView?
+    
+    /// A controller that confromed to be a delegate for the tags collection view
+    public var delegate 			: TKCollectionViewDelegate?
+    
+    lazy var oneLineHeight: CGFloat = { customFont.pointSize * 2 }()
+    
+    var longTagIndex = 1
+    
+    /// The array containing all the tags of the collection
+    public var tags = [String]()
+    
+    // MARK: - Lifecycle methods
+    
+    public override func viewDidLoad() {
         super.viewDidLoad()
-		
-		setupView()
+        
+        setupView()
     }
-	
-	public override func viewDidLayoutSubviews() {
-		super.viewDidLayoutSubviews()
-		
-		tagsCollectionView.frame = view.bounds
-	}
-	
-	// MARK: - Class Methods
-	
-	private func setupView() {
-		tagCellLayout 			= TagCellLayout(alignment: .left, delegate: self)
-		tagCellLayout.delegate 	= self
-		
-		tagsCollectionView 							= UICollectionView(frame: view.bounds, collectionViewLayout: tagCellLayout)
-		tagsCollectionView.dataSource 				= self
-		tagsCollectionView.delegate 				= self
-		tagsCollectionView.alwaysBounceVertical 	= true
-		tagsCollectionView.backgroundColor			= UIColor.clear
-		tagsCollectionView.register(TKTagCell.self, forCellWithReuseIdentifier: "TKCell")
-		
-		view.addSubview(tagsCollectionView)
-	}
-	
+    
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        tagsCollectionView.frame = view.bounds
+    }
+    
+    // MARK: - Class Methods
+    
+    private func setupView() {
+        tagCellLayout 			= TagCellLayout(alignment: .left, delegate: self)
+        tagCellLayout.delegate 	= self
+        
+        tagsCollectionView 							= UICollectionView(frame: view.bounds, collectionViewLayout: tagCellLayout)
+        tagsCollectionView.dataSource 				= self
+        tagsCollectionView.delegate 				= self
+        tagsCollectionView.alwaysBounceVertical 	= true
+        tagsCollectionView.backgroundColor			= UIColor.clear
+        tagsCollectionView.register(TKTagCell.self, forCellWithReuseIdentifier: "TKCell")
+        
+        view.addSubview(tagsCollectionView)
+    }
+    
 }
 
