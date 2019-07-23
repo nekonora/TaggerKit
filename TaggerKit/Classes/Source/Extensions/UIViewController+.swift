@@ -11,23 +11,23 @@ import UIKit
 // MARK: - Extension to implement easy child controllers functionality
 
 public extension UIViewController {
-	
-	func add(_ child: UIViewController, toView view: UIView) {
-		addChild(child)
-		child.view.frame = view.bounds
-		view.addSubview(child.view)
-		
-		child.didMove(toParent: self)
-	}
-	
-	func remove() {
-		guard parent != nil else { return }
-		
-		willMove(toParent: nil)
-		view.removeFromSuperview()
-		removeFromParent()
-	}
-	
+    
+    func add(_ child: UIViewController, toView view: UIView) {
+        addChild(child)
+        child.view.frame = view.bounds
+        view.addSubview(child.view)
+        
+        child.didMove(toParent: self)
+    }
+    
+    func remove() {
+        guard parent != nil else { return }
+        
+        willMove(toParent: nil)
+        view.removeFromSuperview()
+        removeFromParent()
+    }
+    
 }
 
 // MARK: - Extension to TKCollectionViewDelegate
