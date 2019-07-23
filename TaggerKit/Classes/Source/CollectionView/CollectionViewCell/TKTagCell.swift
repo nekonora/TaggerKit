@@ -21,6 +21,18 @@ class TKTagCell: UICollectionViewCell {
 	var color: UIColor? { didSet { backgroundColor = color } }
 	var cornerRadius: CGFloat? { didSet { layer.cornerRadius = cornerRadius! } }
 	var tagAction: ActionType! { didSet { setupButton(action: tagAction) } }
+    var borderSize: CGFloat? {
+        didSet {
+            guard let size = borderSize else { return }
+            self.layer.borderWidth = size
+        }
+    }
+    var borderColor: UIColor? {
+        didSet {
+            guard let color = borderColor else { return }
+            self.layer.borderColor = color.cgColor
+        }
+    }
 	
 	lazy var nameLabel: UILabel = {
 		let label 			= UILabel()

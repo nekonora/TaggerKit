@@ -63,6 +63,8 @@ extension TKCollectionView: UICollectionViewDelegate {
 		cell.cornerRadius 	= customCornerRadius
 		cell.font			= customFont
 		cell.color			= customBackgroundColor
+        cell.borderSize     = customTagBorderSize
+        cell.borderColor    = customTagBorderColor
 		cell.delegate		= self
 	}
 	
