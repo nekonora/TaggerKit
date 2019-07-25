@@ -138,4 +138,7 @@ Do this if you want what you saw in the preview GIF.
 	tagCollection.customSpacing = 20.0	
 // Background of cells						
 	tagCollection.customBackgroundColor = UIColor.red	
+// Border for cells
+    tagCollection.customTagBorderColor = UIColor.red
+    tagCollection.customTagBorderSize = 2
 ```

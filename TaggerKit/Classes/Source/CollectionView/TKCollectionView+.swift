@@ -48,7 +48,6 @@ extension TKCollectionView: UICollectionViewDataSource {
 			}, completion: nil)
 		}
 	}
-	
 }
 
 // MARK: - Extension to UICollectionViewDelegate
@@ -67,7 +66,6 @@ extension TKCollectionView: UICollectionViewDelegate {
         cell.borderColor    = customTagBorderColor
 		cell.delegate		= self
 	}
-	
 }
 
 // MARK: - Extension to TagCellLayoutDelegate
@@ -114,7 +112,6 @@ extension TKCollectionView: TagCellLayoutDelegate {
 		
 		return sizeThatFits
 	}
-	
 }
 
 // MARK: - Extension to TagCellDelegate (action delegate)
@@ -133,5 +130,4 @@ extension TKCollectionView: TagCellDelegate {
 			break
 		}
 	}
-	
 }

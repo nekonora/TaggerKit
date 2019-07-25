@@ -6,6 +6,5 @@ target 'TaggerKit_Example' do
   target 'TaggerKit_Tests' do
     inherit! :search_paths
 
-    
   end
 end

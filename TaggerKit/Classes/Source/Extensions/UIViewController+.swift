@@ -39,3 +39,21 @@ public extension UIViewController {
 //	@objc open func tagIsBeingRemoved(name: String?) { }
 //
 //}
+
+extension UIBezierPath {
+    
+    func shapeImage(view: UIView) -> UIImage? {
+        
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, UIScreen.main.scale)
+        
+        UIColor.black.setFill()
+        fill()
+        
+        if let image: UIImage = UIGraphicsGetImageFromCurrentImageContext() {
+            UIGraphicsEndImageContext()
+            return image
+        }
+        
+        return nil
+    }
+}
