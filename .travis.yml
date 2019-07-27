@@ -4,11 +4,14 @@ xcode_workspace: Example/TaggerKit.xcworkspace
 xcode_scheme: TaggerKit
 xcode_destination: platform=iOS Simulator,OS=13,name=iPhone X
 
+branches:
+  only:
+    - develop
+    - master
+
 jobs:
   include:
     - stage: clean
-      script: set -o pipefail && xcodebuild clean
-    - stage: test&build
-      script: set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/TaggerKit.xcworkspace -scheme TaggerKit-Example ONLY_ACTIVE_ARCH=NO | xcpretty
+      before_script: set -o pipefail && xcodebuild clean
     - stage: podLint
-      script: pod lib lint
+      after_success: pod lib lint
