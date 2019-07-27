@@ -4,11 +4,6 @@ xcode_workspace: Example/TaggerKit.xcworkspace
 xcode_scheme: TaggerKit
 xcode_destination: platform=iOS Simulator,OS=13,name=iPhone X
 
-branches:
-  only:
-    - develop
-    - master
-
 jobs:
   include:
     - stage: clean
