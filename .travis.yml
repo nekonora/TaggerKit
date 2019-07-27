@@ -18,7 +18,7 @@ jobs:
     - &pod
       stage: lint
       install: gem install cocoapods -v '~> 1.7.0'
-      script: pod lib lint --fail-fast
+      script: pod lib lint --allow-warnings --fail-fast --verbose
       osx_image: xcode10.1
     - <<: *pod
       osx_image: xcode10.2
