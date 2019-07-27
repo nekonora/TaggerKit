@@ -33,11 +33,5 @@ This library helps you to quickly implement tags in your iOS apps, so you can go
 
   s.source_files = 'TaggerKit/Classes/**/*'
   
-  s.resource_bundles = {
-     'TaggerKit' => ['TaggerKit/Assets/*.png']
-  }
-
-  s.resources = 'TaggerKit/Assets/**/*.{png,storyboard}'
-  
   s.frameworks = 'UIKit'
 end
