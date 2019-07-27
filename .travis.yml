@@ -2,7 +2,7 @@ osx_image: xcode11
 language: swift
 xcode_workspace: Example/TaggerKit.xcworkspace
 xcode_scheme: TaggerKit-Example
-xcode_destination: platform=iOS Simulator,OS=13,name=iPhone X
+xcode_destination: platform=iOS Simulator,OS=13.0,name=iPhone Xs
 
 before_script: set -o pipefail && xcodebuild clean
 after_success: pod lib lint
