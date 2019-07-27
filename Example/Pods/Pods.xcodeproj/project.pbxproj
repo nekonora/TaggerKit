@@ -98,6 +98,7 @@
 		ECA504AD23103B48D89761712DB84E76 /* TaggerKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaggerKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		F634FFE07861587FC11384E547CE78A3 /* Pods-TaggerKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaggerKit_Tests-dummy.m"; sourceTree = "<group>"; };
 		F9CC336EE12985730894A5F3EC3660BC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		FABBDE3022ECAC9B00454A68 /* TaggerKit.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TaggerKit.xctestplan; sourceTree = "<group>"; };
 		FF05A3C76462433CFE1C2E74F43F3AF8 /* TaggerKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TaggerKit-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +200,7 @@
 		5AB4BDB3BEB72D83EF734AA92147892F /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				FABBDE3022ECAC9B00454A68 /* TaggerKit.xctestplan */,
 				63FA74F95B6ADEBD1E16C91198B0957D /* Pods-TaggerKit_Example */,
 				5D2D8F41EA48CE50CD84917EA5719E08 /* Pods-TaggerKit_Tests */,
 			);
