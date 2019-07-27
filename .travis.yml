@@ -1,16 +1,16 @@
 language: swift
 
 stages:
-  - CocoapodsLint # name:
-    # if: NOT branch =~ ^\d+\.\d+\.\d+$
-  - CarthageBuild
-    # if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
-  # - SwiftPMBuild
-    # if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
-  - Test
-    # if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
-  - name: Deploy
-    if: branch = master
+  - name: CocoapodsLint
+    if: NOT branch =~ ^\d+\.\d+\.\d+$
+  - name: CarthageBuild
+    if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
+  # - name: SwiftPMBuild
+  #   if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
+  - name: Test
+    if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
+  # - name: Deploy
+  #   if: branch = master
 
 jobs:
   include:
@@ -53,13 +53,13 @@ jobs:
       osx_image: xcode11
       xcode_destination: platform=iOS Simulator,OS=13.0,name=iPhone Xs
 
-    - name: '`pod trunk push`'
-      stage: Deploy
-      install: gem install cocoapods -v '~> 1.7.0'
-      before_script: |
-        mv .github/TaggerKit.podspec .
-        sed -i '' "s/s.version = '0.0.1'/s.version = '$TRAVIS_TAG'/g" TaggerKit.podspec
-      script: |
-        set -exo pipefail
-        pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
-      after_failure: cat pod.log | grep error
+    # - name: '`pod trunk push`'
+    #   stage: Deploy
+    #   install: gem install cocoapods -v '~> 1.7.0'
+    #   before_script: |
+    #     mv .github/TaggerKit.podspec .
+    #     sed -i '' "s/s.version = '0.0.1'/s.version = '$TRAVIS_TAG'/g" TaggerKit.podspec
+    #   script: |
+    #     set -exo pipefail
+    #     pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
+    #   after_failure: cat pod.log | grep error
