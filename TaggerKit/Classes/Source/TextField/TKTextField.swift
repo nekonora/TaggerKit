@@ -24,8 +24,8 @@ public class TKTextField: UITextField {
     var allTags: [String]!
     
     // Style
-    private let defaultBackgroundColor 	= UIColor(red: 1.00, green: 0.80, blue: 0.37, alpha: 1.0)
-    private let defaultCornerRadius 	= CGFloat(14.0)
+    fileprivate let defaultBackgroundColor 	= UIColor(red: 1.00, green: 0.80, blue: 0.37, alpha: 1.0)
+    fileprivate let defaultCornerRadius 	= CGFloat(14.0)
     
     // MARK: - Lifecycle Methods
     
@@ -39,7 +39,7 @@ public class TKTextField: UITextField {
     }
     
     // MARK: - Class Methods
-    private func setupView() {
+    fileprivate func setupView() {
         clipsToBounds 		= true
         layer.cornerRadius 	= defaultCornerRadius
         backgroundColor 	= defaultBackgroundColor
@@ -51,7 +51,7 @@ public class TKTextField: UITextField {
     
     // MARK: - TextField methods
     
-    @objc func addingTags() {
+    @objc fileprivate func addingTags() {
         guard let sender = sender, let text = text else { return }
         
         let filteredStrings = allTags.filter({(item: String) -> Bool in
@@ -75,9 +75,8 @@ public class TKTextField: UITextField {
         
     }
     
-    @objc func pressedReturn() {
+    @objc fileprivate func pressedReturn() {
         guard let sender = sender, let text = text else { return }
         sender.addNewTag(named: text)
     }
-    
 }
