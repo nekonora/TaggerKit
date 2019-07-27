@@ -36,7 +36,7 @@ public class TKCollectionView: UIViewController {
     public var customTagBorderColor: UIColor?
     
     /// The border of the tag cell view
-    public var customTagBorderSize: CGFloat?
+    public var customTagBorderWidth: CGFloat?
     
     /// The action embedded in the tag: add, remove or no action (default: no action). (this changes the embedded icon)
     public var action = ActionType.noAction
