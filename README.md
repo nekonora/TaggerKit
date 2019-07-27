@@ -12,7 +12,6 @@ TaggerKit helps you quickly integrate tags into your iOS projects. It provides a
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-
 ## Requirements
 
 TaggerKit is writtern is compatible with Swift 4.2/5 and runs on iOS 11+.
@@ -22,9 +21,9 @@ TaggerKit is writtern is compatible with Swift 4.2/5 and runs on iOS 11+.
 ### 0.6
 • `tagIsBeingAdded` and `tagIsBeingRemoved` methods are not accessible by override from UIViewControllers. This is because UIViewController is not a delegate of TKViewController anymore. If you want to use these methods you can still make your controller conform to the TKCollectionViewDelegate protocol;
 • Custom properties `customTagBorderWidth` and `customTagBorderColor` can now be set;
-• iOS 13, Swift 5.1 support;
+• Added Carthage support;
+• iOS 13, Xcode 11, Swift 5.1 support;
 • Some code refactored;
-
 
 ## Installation
 
@@ -35,12 +34,11 @@ TaggerKit is available through [CocoaPods](https://cocoapods.org). To install th
 pod 'TaggerKit'
 ```
 
-If you are experiencing any problem with that version in your project, either set in Xcode: `File > Workspace Settings > Build System` to `Legacy`, or install this version:
+Or in your Cartfile:
 
 ```ruby
-pod 'TaggerKit', '~> 0.4.1'
+github "nekonora/TaggerKit" ~> 0.6.0
 ```
-
 
 ## Setup
 
@@ -81,7 +79,6 @@ Tags can be implemented in a couple of ways.  Let's start simple: you have a bun
 	```
 
 5. Done!
-
 
 ### Dynamic tags
 
@@ -127,7 +124,6 @@ Do this if you want what you saw in the preview GIF.
 		print("removed \(name!)")
 	}
 	```
-
 
 ## Customisation
 
