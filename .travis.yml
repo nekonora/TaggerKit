@@ -1,14 +1,14 @@
 language: swift
 
 stages:
-  - name: lint
-    if: NOT branch =~ ^\d+\.\d+\.\d+$
-  - name: carthage
-    if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
-  - name: swiftpm
-    if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
-  - name: test
-    if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
+  - lint # name:
+    # if: NOT branch =~ ^\d+\.\d+\.\d+$
+  - carthage
+    # if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
+  - swiftpm
+    # if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
+  - test
+    # if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
   - name: deploy
     if: branch = master
 
