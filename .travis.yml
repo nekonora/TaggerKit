@@ -1,22 +1,22 @@
 language: swift
 
 stages:
-  - lint # name:
+  - CocoapodsLint # name:
     # if: NOT branch =~ ^\d+\.\d+\.\d+$
-  - carthage
+  - CarthageBuild
     # if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
-  - swiftpm
+  # - SwiftPMBuild
     # if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
-  - test
+  - Test
     # if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
-  - name: deploy
+  - name: Deploy
     if: branch = master
 
 jobs:
   include:
 
     - &pod
-      stage: lint
+      stage: CocoapodsLint
       install: gem install cocoapods -v '~> 1.7.0'
       script: pod lib lint --allow-warnings --fail-fast
       osx_image: xcode10.2
@@ -24,7 +24,7 @@ jobs:
       osx_image: xcode11
 
     - &carthage
-      stage: carthage
+      stage: CarthageBuild
       script: carthage build --no-skip-current
       osx_image: xcode10.2
       name: Xcode 10.2
@@ -32,17 +32,17 @@ jobs:
       osx_image: xcode11
       name: Xcode 11
 
-    - &swiftpm
-      stage: swiftpm
-      osx_image: xcode10.2
-      name: 'swift-tools-version: 5.0 / Swift 5.0.0'
-      script: swift build
-    - <<: *swiftpm
-      osx_image: xcode11
-      name: 'swift-tools-version: 5.0 / Swift 5.1.0'
+    # - &swiftpm
+    #   stage: SwiftPMBuild
+    #   osx_image: xcode10.2
+    #   name: 'swift-tools-version: 5.0 / Swift 5.0.0'
+    #   script: swift build
+    # - <<: *swiftpm
+    #   osx_image: xcode11
+    #   name: 'swift-tools-version: 5.0 / Swift 5.1.0'
 
     - &test
-      stage: test
+      stage: Test
       name: iOS 12.2 / Xcode 10.2
       xcode_workspace: Example/TaggerKit.xcworkspace
       xcode_scheme: TaggerKit-Example
@@ -54,16 +54,12 @@ jobs:
       xcode_destination: platform=iOS Simulator,OS=13.0,name=iPhone Xs
 
     - name: '`pod trunk push`'
-      stage: deploy
+      stage: Deploy
       install: gem install cocoapods -v '~> 1.7.0'
       before_script: |
-        mv .github/PromiseKit.podspec .
-        sed -i '' "s/s.version = '0.0.1'/s.version = '$TRAVIS_TAG'/g" PromiseKit.podspec
+        mv .github/TaggerKit.podspec .
+        sed -i '' "s/s.version = '0.0.1'/s.version = '$TRAVIS_TAG'/g" TaggerKit.podspec
       script: |
         set -exo pipefail
         pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
-      # ^^ pipe because Travis times us out if there is no output
-      # AND `pod` defaults to hardly any output
-      # BUT `--verbose` generates so much output that Travis kills our script due to *too much* output!
-      # --allow-warnings because Bolts generates warnings and CocoaPods fails you even if your deps emit warnings
       after_failure: cat pod.log | grep error

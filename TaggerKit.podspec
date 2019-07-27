@@ -29,7 +29,7 @@ This library helps you to quickly implement tags in your iOS apps, so you can go
   s.social_media_url = 'https://twitter.com/_nknr'
 
   s.ios.deployment_target = '11.0'
-  s.swift_version = '5'
+  s.swift_versions = ['4.2', '4.3', '4.4', '5.0', '5.1']
 
   s.source_files = 'TaggerKit/Classes/**/*'
   
