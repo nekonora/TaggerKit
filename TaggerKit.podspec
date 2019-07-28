@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TaggerKit'
-  s.version          = '0.5.0'
+  s.version          = '0.6.0'
   s.summary          = 'TaggerKit is a straightforward library that helps you implement tags in your iOS project.'
 
 # This description is used to generate tags and improve search results.
@@ -29,17 +29,9 @@ This library helps you to quickly implement tags in your iOS apps, so you can go
   s.social_media_url = 'https://twitter.com/_nknr'
 
   s.ios.deployment_target = '11.0'
-  s.swift_version = '5'
+  s.swift_versions = ['4.2', '4.3', '4.4', '5.0', '5.1']
 
   s.source_files = 'TaggerKit/Classes/**/*'
   
-  s.resource_bundles = {
-     'TaggerKit' => ['TaggerKit/Assets/*.png']
-  }
-
-  s.resources = 'TaggerKit/Assets/**/*.{png,storyboard}'
-  
-  # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

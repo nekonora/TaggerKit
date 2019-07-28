@@ -8,21 +8,22 @@
 
 import UIKit
 
-public enum actionType {
-	case addTag
-	case removeTag
-	case noAction
+/// The type of action that can be done on a tag
+public enum ActionType {
+    case addTag
+    case removeTag
+    case noAction
 }
 
 class TKTagButton: UIButton {
-	
-	// MARK: - Properties
-
-	// MARK: - Lifecycle methods
-	
-	// MARK: - Setup methods
-	private func setup() {
-		alpha = 0.5
-	}
-	
+    
+    // MARK: - Properties
+    
+    // MARK: - Lifecycle methods
+    
+    // MARK: - Setup methods
+    
+    private func setup() {
+        alpha = 0.5
+    }
 }

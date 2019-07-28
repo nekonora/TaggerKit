@@ -1,0 +1,23 @@
+{
+  "configurations" : [
+    {
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:..\/TaggerKit.xcodeproj",
+        "identifier" : "607FACE41AFB9204008FA782",
+        "name" : "TaggerKit_Tests"
+      }
+    }
+  ],
+  "version" : 1
+}
