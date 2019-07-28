@@ -26,5 +26,4 @@ class TKTagButton: UIButton {
     private func setup() {
         alpha = 0.5
     }
-    
 }

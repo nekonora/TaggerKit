@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		00BC1B1D68E7AB908E7E9C79F2E45428 /* TKCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A04D563E0B377F83BB19C43872700C /* TKCollectionView.swift */; };
-		0D3341BBE4010249DFF2EA2C87C8E032 /* addIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 879FAF3BED8D74221EF57423E407A745 /* addIcon.png */; };
 		13AD6DEEFF674ACA11631F035BBA695A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		1B45B08B45535721EA015210FAD35C18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		222EA7433D311D42BEED9886D5674FA2 /* TKCollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212FD55FFA038ABB2737D4A54424725 /* TKCollectionView+.swift */; };
@@ -16,7 +15,6 @@
 		2964385411CB7ED0872F5AAE87EE3E5A /* TaggerKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83353488D773A270F950D11C436E832C /* TaggerKit-dummy.m */; };
 		35A54495AAC6F2DFC63C709068BC237A /* Pods-TaggerKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F634FFE07861587FC11384E547CE78A3 /* Pods-TaggerKit_Tests-dummy.m */; };
 		3FC4F28C4AB5868EB32BBE1931686B9F /* TKTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D29428D085EF6D993BB8366D7134C4E /* TKTagCell.swift */; };
-		43CE93CF5276FB5AE6D156A3480E5396 /* addIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 879FAF3BED8D74221EF57423E407A745 /* addIcon.png */; };
 		4A9A9B4EE9C9B73D6F7B8BC78AFC895B /* LayoutInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7957A9DD3C854511BD4C79B4729C88 /* LayoutInfo.swift */; };
 		4BD1392C870FA3CA5520B4DE48CD7265 /* Pods-TaggerKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 36679015E6E7AE6A0F12F8FD884FEB20 /* Pods-TaggerKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5384DAC9BEB71053A7A6793FE1AA6132 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
@@ -24,9 +22,7 @@
 		673FE32E8E075CAF71C72CFBD536FEDA /* LayoutAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE3473EC928E4A3A8BC0200AB3CDCD5 /* LayoutAlignment.swift */; };
 		7827E14C90CBAB5C9ED1744253B48850 /* TaggerKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ECA504AD23103B48D89761712DB84E76 /* TaggerKit.bundle */; };
 		7F03EC4891EA184C7013B1B605D0B1E1 /* TaggerKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 248A3EF73FC21247657E5F7844C85CEE /* TaggerKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8AF401F75C6FE7B4C01F8C1BE1189724 /* removeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 94885D6F19E5854DE8C1CD2DCF66E406 /* removeIcon.png */; };
 		B27C5152C20E2ACCFF97EC73D15C547C /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A727E241756CB0FAE64773041F9D148D /* UIViewController+.swift */; };
-		CA16BC7D6E02C80307D37CF73D50C9B3 /* removeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 94885D6F19E5854DE8C1CD2DCF66E406 /* removeIcon.png */; };
 		CEE25A6F5A5C7A098DF57076745C7469 /* TKTagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101B661CA58FC2E59A2F643D5C767639 /* TKTagButton.swift */; };
 		CEF766B54745E767E36C644B1B34BAED /* TagCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52767554A98CE927838BD9127EB5C0B6 /* TagCellLayout.swift */; };
 		E9941AE5389DC59BCC0042D20DAC752B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
@@ -65,7 +61,7 @@
 		0D7957A9DD3C854511BD4C79B4729C88 /* LayoutInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LayoutInfo.swift; sourceTree = "<group>"; };
 		101B661CA58FC2E59A2F643D5C767639 /* TKTagButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKTagButton.swift; sourceTree = "<group>"; };
 		12839B034A898B54D2811D451A3375A0 /* Pods-TaggerKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TaggerKit_Example.modulemap"; sourceTree = "<group>"; };
-		129EA401DE554F4787AA4C7FB5CED1B6 /* TaggerKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TaggerKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		129EA401DE554F4787AA4C7FB5CED1B6 /* TaggerKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TaggerKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1919CE3EFC0D2CD291071C6AD06C3843 /* TKTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKTextField.swift; sourceTree = "<group>"; };
 		1E5275AA13FAEEC64C3FD7E4C61420B5 /* Pods-TaggerKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaggerKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		21EA6AE8FAFDE24C7B21701BCF96D0D6 /* Pods-TaggerKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaggerKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,21 +71,19 @@
 		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		36679015E6E7AE6A0F12F8FD884FEB20 /* Pods-TaggerKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaggerKit_Tests-umbrella.h"; sourceTree = "<group>"; };
 		36B162732869D64F8A090FB35E1F8C40 /* Pods-TaggerKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaggerKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		408CE9F2F8BDA9DC1460C05C3BAF33FE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		408CE9F2F8BDA9DC1460C05C3BAF33FE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		42114C308FB4C9223404B60D1D40C558 /* Pods-TaggerKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TaggerKit_Tests.modulemap"; sourceTree = "<group>"; };
 		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		50CB4C7C69D2DEBF81D1C0395CC18A0F /* Pods-TaggerKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaggerKit_Tests-Info.plist"; sourceTree = "<group>"; };
-		522726FC10EF565D8E38AB4BF5D6839E /* Pods_TaggerKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TaggerKit_Example.framework; path = "Pods-TaggerKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		522726FC10EF565D8E38AB4BF5D6839E /* Pods_TaggerKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaggerKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52767554A98CE927838BD9127EB5C0B6 /* TagCellLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TagCellLayout.swift; sourceTree = "<group>"; };
 		68A608EC78843A74E350DAACF9FF0583 /* Pods-TaggerKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaggerKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		6ED0E96B50F1E88A3DBBB6894939DEBD /* TaggerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TaggerKit.framework; path = TaggerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ED0E96B50F1E88A3DBBB6894939DEBD /* TaggerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TaggerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F30F3A1ED5B057094C9810C99C699BE /* Pods-TaggerKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaggerKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		83353488D773A270F950D11C436E832C /* TaggerKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TaggerKit-dummy.m"; sourceTree = "<group>"; };
-		879FAF3BED8D74221EF57423E407A745 /* addIcon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = addIcon.png; path = TaggerKit/Assets/addIcon.png; sourceTree = "<group>"; };
 		8BE3473EC928E4A3A8BC0200AB3CDCD5 /* LayoutAlignment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LayoutAlignment.swift; sourceTree = "<group>"; };
-		94885D6F19E5854DE8C1CD2DCF66E406 /* removeIcon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = removeIcon.png; path = TaggerKit/Assets/removeIcon.png; sourceTree = "<group>"; };
 		972F98B25310587C7D8A983E4E999792 /* ResourceBundle-TaggerKit-TaggerKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-TaggerKit-TaggerKit-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A0D58AC66BED9E29DA2DADECD774EE66 /* Pods-TaggerKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TaggerKit_Example-frameworks.sh"; sourceTree = "<group>"; };
 		A727E241756CB0FAE64773041F9D148D /* UIViewController+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		B5765A35624EAA3924677892358F5EB6 /* Pods-TaggerKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaggerKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -99,11 +93,12 @@
 		CAABCB5E473658E9E9FA82793AA31224 /* Pods-TaggerKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaggerKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CDFFFD8240A6E20C042A7703DAA26892 /* Pods-TaggerKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaggerKit_Example-Info.plist"; sourceTree = "<group>"; };
 		D0688F60BF01D3FFE5F95AD3869E7D40 /* Pods-TaggerKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaggerKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D28F939FFFD5D27609F2DF1D30B309CC /* Pods_TaggerKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TaggerKit_Tests.framework; path = "Pods-TaggerKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D28F939FFFD5D27609F2DF1D30B309CC /* Pods_TaggerKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaggerKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA043D47D3353563BF0B661420B0369A /* Pods-TaggerKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaggerKit_Example-umbrella.h"; sourceTree = "<group>"; };
-		ECA504AD23103B48D89761712DB84E76 /* TaggerKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TaggerKit.bundle; path = "TaggerKit-TaggerKit.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECA504AD23103B48D89761712DB84E76 /* TaggerKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaggerKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		F634FFE07861587FC11384E547CE78A3 /* Pods-TaggerKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaggerKit_Tests-dummy.m"; sourceTree = "<group>"; };
-		F9CC336EE12985730894A5F3EC3660BC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		F9CC336EE12985730894A5F3EC3660BC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		FABBDE3022ECAC9B00454A68 /* TaggerKit.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TaggerKit.xctestplan; sourceTree = "<group>"; };
 		FF05A3C76462433CFE1C2E74F43F3AF8 /* TaggerKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TaggerKit-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,7 +186,6 @@
 				101B661CA58FC2E59A2F643D5C767639 /* TKTagButton.swift */,
 				0D29428D085EF6D993BB8366D7134C4E /* TKTagCell.swift */,
 			);
-			name = CollectionViewCell;
 			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
@@ -206,6 +200,7 @@
 		5AB4BDB3BEB72D83EF734AA92147892F /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				FABBDE3022ECAC9B00454A68 /* TaggerKit.xctestplan */,
 				63FA74F95B6ADEBD1E16C91198B0957D /* Pods-TaggerKit_Example */,
 				5D2D8F41EA48CE50CD84917EA5719E08 /* Pods-TaggerKit_Tests */,
 			);
@@ -251,22 +246,12 @@
 				16FBCED6329989C329E3575ADC4912B6 /* CollectionView */,
 				83786974523C911BA6CC70A79A4641AE /* Extensions */,
 				D6195AF1FF6204CAD619600C9C7A0433 /* Pod */,
-				81BEFB0F63D8EFCF297D517FAED6CC8B /* Resources */,
 				E24E1215342C8467339D5A9076EBAD6F /* Support Files */,
 				060BDE19D45DF6895744F92F353E8683 /* TagLayout */,
 				919A4E8641E361DBC0C1E4C04A7ABD62 /* TextField */,
 			);
 			name = TaggerKit;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		81BEFB0F63D8EFCF297D517FAED6CC8B /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				879FAF3BED8D74221EF57423E407A745 /* addIcon.png */,
-				94885D6F19E5854DE8C1CD2DCF66E406 /* removeIcon.png */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		83786974523C911BA6CC70A79A4641AE /* Extensions */ = {
@@ -477,8 +462,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43CE93CF5276FB5AE6D156A3480E5396 /* addIcon.png in Resources */,
-				CA16BC7D6E02C80307D37CF73D50C9B3 /* removeIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,8 +469,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D3341BBE4010249DFF2EA2C87C8E032 /* addIcon.png in Resources */,
-				8AF401F75C6FE7B4C01F8C1BE1189724 /* removeIcon.png in Resources */,
 				7827E14C90CBAB5C9ED1744253B48850 /* TaggerKit.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,8 +636,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

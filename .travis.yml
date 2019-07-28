@@ -1,14 +1,65 @@
-# references:
-# * https://www.objc.io/issues/6-build-tools/travis-ci/
-# * https://github.com/supermarin/xcpretty#usage
+language: swift
 
-osx_image: xcode7.3
-language: objective-c
-# cache: cocoapods
-# podfile: Example/Podfile
-# before_install:
-# - gem install cocoapods # Since Travis is not always on latest version
-# - pod install --project-directory=Example
-script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/TaggerKit.xcworkspace -scheme TaggerKit-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
-- pod lib lint
+stages:
+  - name: CocoapodsLint
+    if: NOT branch =~ ^\d+\.\d+\.\d+$
+  - name: CarthageBuild
+    if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
+  # - name: SwiftPMBuild
+  #   if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
+  - name: Test
+    if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
+  # - name: Deploy
+  #   if: branch = master
+
+jobs:
+  include:
+
+    - &pod
+      stage: CocoapodsLint
+      install: gem install cocoapods -v '~> 1.7.0'
+      script: pod lib lint --allow-warnings --fail-fast
+      osx_image: xcode10.2
+    - <<: *pod
+      osx_image: xcode11
+
+    - &carthage
+      stage: CarthageBuild
+      script: carthage build --no-skip-current
+      osx_image: xcode10.2
+      name: Xcode 10.2
+    - <<: *carthage
+      osx_image: xcode11
+      name: Xcode 11
+
+    # - &swiftpm
+    #   stage: SwiftPMBuild
+    #   osx_image: xcode10.2
+    #   name: 'swift-tools-version: 5.0 / Swift 5.0.0'
+    #   script: swift build
+    # - <<: *swiftpm
+    #   osx_image: xcode11
+    #   name: 'swift-tools-version: 5.0 / Swift 5.1.0'
+
+    - &test
+      stage: Test
+      name: iOS 12.2 / Xcode 10.2
+      xcode_workspace: Example/TaggerKit.xcworkspace
+      xcode_scheme: TaggerKit-Example
+      osx_image: xcode10.2
+      xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone SE
+    - <<: *test
+      name: iOS 13.0 / Xcode 11
+      osx_image: xcode11
+      xcode_destination: platform=iOS Simulator,OS=13.0,name=iPhone Xs
+
+    # - name: '`pod trunk push`'
+    #   stage: Deploy
+    #   install: gem install cocoapods -v '~> 1.7.0'
+    #   before_script: |
+    #     mv .github/TaggerKit.podspec .
+    #     sed -i '' "s/s.version = '0.0.1'/s.version = '$TRAVIS_TAG'/g" TaggerKit.podspec
+    #   script: |
+    #     set -exo pipefail
+    #     pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
+    #   after_failure: cat pod.log | grep error
