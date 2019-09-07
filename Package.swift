@@ -1,21 +1,16 @@
-// swift-tools-version:5.1
-
+// swift-tools-version:5.0
 import PackageDescription
 
 let package = Package(
     name: "TaggerKit",
-    platforms: [
-        .iOS(.v11)
-    ],
+    platforms: [.iOS(.v11)],
     products: [
-        .library(
-            name: "TaggerKit",
-            targets: ["TaggerKit"]),
+        .library(name: "TaggerKit", targets: ["TaggerKit"])
     ],
     targets: [
         .target(
             name: "TaggerKit",
-            path: "TaggerKit",
-            swiftLanguageVersions: [.v5])
+            path: "TaggerKit"
+        )
     ]
 )
