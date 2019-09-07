@@ -44,16 +44,16 @@ public class TKCollectionView: UIViewController {
     // MARK: - Class properties
     
     /// The actual collectionView inside the controller, where every cell is a tag
-    public var tagsCollectionView	: UICollectionView!
+    public var tagsCollectionView: UICollectionView!
     
     /// The custom cell layout of the single cell
-    public var tagCellLayout		: TagCellLayout!
+    public var tagCellLayout: TagCellLayout!
     
     /// If tags in the collection are given an action of type "add", a receiver can be automatically binded on this property
-    public var receiver 			: TKCollectionView?
+    public var receiver: TKCollectionView?
     
     /// A controller that confromed to be a delegate for the tags collection view
-    public var delegate 			: TKCollectionViewDelegate?
+    public var delegate: TKCollectionViewDelegate?
     
     lazy var oneLineHeight: CGFloat = { customFont.pointSize * 2 }()
     
@@ -63,6 +63,14 @@ public class TKCollectionView: UIViewController {
     public var tags = [String]()
     
     // MARK: - Lifecycle methods
+    
+    public convenience init(tags: [String], action: ActionType, receiver: TKCollectionView?) {
+        self.init()
+        
+        self.action   = action
+        self.receiver = receiver
+        self.tags     = tags
+    }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,21 +84,56 @@ public class TKCollectionView: UIViewController {
         tagsCollectionView.frame = view.bounds
     }
     
+    // MARK - Public Methods
+    
+    /// Adds a tag to the tag view
+    /// - Parameter tag: the name of the tag to add
+    public func addNewTag(named tag: String) {
+        guard
+            receiver != nil,
+            !tag.isEmpty
+            else { return }
+        
+        if receiver!.tags.contains(tag) {
+            return
+        } else {
+            receiver!.tags.insert(tag, at: 0)
+            let indexPath = IndexPath(item: 0, section: 0)
+            receiver!.tagsCollectionView.performBatchUpdates({
+                receiver!.tagsCollectionView.insertItems(at: [indexPath])
+            }, completion: nil)
+        }
+    }
+    
+    /// Removes a tag from the tag view
+    /// - Parameter tag: the name of the tag to remove
+    public func removeOldTag(named tag: String) {
+        guard tags.contains(tag) else { return }
+        
+        if let index = tags.firstIndex(of: tag) {
+            tags.remove(at: index)
+            
+            let indexPath = IndexPath(item: index, section: 0)
+            
+            tagsCollectionView.performBatchUpdates({
+                self.tagsCollectionView?.deleteItems(at: [indexPath])
+            }, completion: nil)
+        }
+    }
+    
     // MARK: - Class Methods
     
     private func setupView() {
-        tagCellLayout 			= TagCellLayout(alignment: .left, delegate: self)
-        tagCellLayout.delegate 	= self
+        tagCellLayout             = TagCellLayout(alignment: .left, delegate: self)
+        tagCellLayout.delegate     = self
         
-        tagsCollectionView 							= UICollectionView(frame: view.bounds, collectionViewLayout: tagCellLayout)
-        tagsCollectionView.dataSource 				= self
-        tagsCollectionView.delegate 				= self
-        tagsCollectionView.alwaysBounceVertical 	= true
-        tagsCollectionView.backgroundColor			= UIColor.clear
+        tagsCollectionView                             = UICollectionView(frame: view.bounds, collectionViewLayout: tagCellLayout)
+        tagsCollectionView.dataSource                 = self
+        tagsCollectionView.delegate                 = self
+        tagsCollectionView.alwaysBounceVertical     = true
+        tagsCollectionView.backgroundColor            = UIColor.clear
         tagsCollectionView.register(TKTagCell.self, forCellWithReuseIdentifier: "TKCell")
         
         view.addSubview(tagsCollectionView)
     }
-    
 }
-
