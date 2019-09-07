@@ -17,8 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet var testContainer		: UIView!
     
     // We want the whole experience, let's create two TKCollectionViews
-    let productTags = TKCollectionView()
-    let allTags 	= TKCollectionView()
+    var productTags: TKCollectionView!
+    var allTags: TKCollectionView!
     
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
@@ -29,6 +29,9 @@ class ViewController: UIViewController {
         //		testCollection.customCornerRadius = 14.0							// Corner radius of tags
         //		testCollection.customSpacing = 20.0									// Spacing between cells
         //		testCollection.customBackgroundColor = UIColor.red					// Background of cells
+        
+        productTags = TKCollectionView(action: .removeTag, receiver: nil)
+        allTags = TKCollectionView(action: .addTag, receiver: productTags)
         
         // These are the tags already added by the user, give an aray of strings to the collection
         productTags.tags = ["Tech", "Design", "Writing", "Social Media"]
@@ -59,7 +62,6 @@ class ViewController: UIViewController {
         add(productTags, toView: testContainer)
         add(allTags, toView: searchContainer)
     }
-    
 }
 
 // MARK: - Extension to TKCollectionViewDelegate
@@ -79,6 +81,4 @@ extension ViewController: TKCollectionViewDelegate {
     func tagIsBeingRemoved(name: String?) {
         print("removed \(name!)")
     }
-    
 }
-

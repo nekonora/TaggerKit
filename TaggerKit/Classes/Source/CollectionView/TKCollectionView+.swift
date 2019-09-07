@@ -24,7 +24,7 @@ extension TKCollectionView: UICollectionViewDataSource {
 	}
 	
 	public func addNewTag(named tag: String) {
-		guard let receiver = receiver, !tag.isEmpty, receiver.tags.contains(tag) else { return }
+        guard let receiver = self.receiver, !tag.isEmpty, receiver.tags.contains(tag) else { return }
 
 		receiver.tags.insert(tag, at: 0)
 		

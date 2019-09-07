@@ -64,6 +64,13 @@ public class TKCollectionView: UIViewController {
     
     // MARK: - Lifecycle methods
     
+    public convenience init(action: ActionType, receiver: TKCollectionView?) {
+        self.init()
+        
+        self.action   = action
+        self.receiver = receiver
+    }
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         
