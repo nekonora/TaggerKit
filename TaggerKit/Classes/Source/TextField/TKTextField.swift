@@ -16,10 +16,10 @@ public class TKTextField: UITextField {
     // Objects to operate - obviously should not be the same
     
     /// A collection view of tags that can be sent to a receiver collection
-    public var sender 	: TKCollectionView? { didSet { allTags = sender?.tags } }
+    public var sender: TKCollectionView? { didSet { allTags = sender?.tags } }
     
     /// A collection view of tags that receives tags from other senders
-    public var receiver	: TKCollectionView?
+    public var receiver: TKCollectionView?
     
     var allTags: [String]!
     
