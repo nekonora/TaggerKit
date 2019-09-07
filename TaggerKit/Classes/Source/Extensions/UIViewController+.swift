@@ -27,18 +27,7 @@ public extension UIViewController {
         view.removeFromSuperview()
         removeFromParent()
     }
-    
 }
-
-// MARK: - Extension to TKCollectionViewDelegate
-
-//extension UIViewController: TKCollectionViewDelegate {
-//
-//	@objc open func tagIsBeingAdded(name: String?) { }
-//
-//	@objc open func tagIsBeingRemoved(name: String?) { }
-//
-//}
 
 extension UIBezierPath {
     

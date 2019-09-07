@@ -22,32 +22,6 @@ extension TKCollectionView: UICollectionViewDataSource {
 		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TKCell", for: indexPath) as? TKTagCell else { return UICollectionViewCell() }
 		return cell
 	}
-	
-	public func addNewTag(named tag: String) {
-        guard let receiver = self.receiver, !tag.isEmpty, receiver.tags.contains(tag) else { return }
-
-		receiver.tags.insert(tag, at: 0)
-		
-		let indexPath = IndexPath(item: 0, section: 0)
-		
-		receiver.tagsCollectionView.performBatchUpdates({
-			receiver.tagsCollectionView.insertItems(at: [indexPath])
-		}, completion: nil)
-	}
-	
-	public func removeOldTag(named tag: String) {
-		guard tags.contains(tag) else { return }
-		
-		if let index = tags.firstIndex(of: tag) {
-			tags.remove(at: index)
-			
-			let indexPath = IndexPath(item: index, section: 0)
-			
-			tagsCollectionView.performBatchUpdates({
-				self.tagsCollectionView?.deleteItems(at: [indexPath])
-			}, completion: nil)
-		}
-	}
 }
 
 // MARK: - Extension to UICollectionViewDelegate

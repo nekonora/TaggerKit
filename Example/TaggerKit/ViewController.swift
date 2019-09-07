@@ -30,30 +30,21 @@ class ViewController: UIViewController {
         //		testCollection.customSpacing = 20.0									// Spacing between cells
         //		testCollection.customBackgroundColor = UIColor.red					// Background of cells
         
-        productTags = TKCollectionView(action: .removeTag, receiver: nil)
-        allTags = TKCollectionView(action: .addTag, receiver: productTags)
+        productTags = TKCollectionView(tags: [
+                                        "Tech", "Design", "Writing", "Social Media"
+                                       ],
+                                       action: .removeTag,
+                                       receiver: nil)
         
-        // These are the tags already added by the user, give an aray of strings to the collection
-        productTags.tags = ["Tech", "Design", "Writing", "Social Media"]
-        
-        // These are intended to be all the tags the user has added in the app, which are going to be filtered
-        allTags.tags = ["Cars", "Skateboard", "Freetime", "Humor", "Travel", "Music", "Places", "Journalism", "Music", "Sports"]
-        
-        /*
-         We set this collection's action to .removeTag,
-         becasue these are supposed to be the tags the user has already added
-         */
-        productTags.action = .removeTag
+        allTags = TKCollectionView(tags: [
+                                    "Cars", "Skateboard", "Freetime", "Humor", "Travel", "Music", "Places", "Journalism", "Music", "Sports"
+                                   ],
+                                   action: .addTag,
+                                   receiver: productTags)
         
         // Set the current controller as the delegate of both collections
         productTags.delegate = self
         allTags.delegate = self
-        
-        // "testCollection" takes the tags sent by "searchCollection"
-        allTags.receiver = productTags
-        
-        // The tags in "searchCollection" are going to be added, so we set the action to addTag
-        allTags.action = .addTag
         
         // Set the sender and receiver of the TextField
         addTagsTextField.sender 	= allTags
@@ -67,12 +58,7 @@ class ViewController: UIViewController {
 // MARK: - Extension to TKCollectionViewDelegate
 
 extension ViewController: TKCollectionViewDelegate {
-    
-    /*
-     These methods come from UIViewController now conforming to TKCollectionViewDelegate,
-     You use these to do whatever you want when a tag is added or removed (e.g. save to file, etc)
-     */
-    
+
     func tagIsBeingAdded(name: String?) {
         // Example: save testCollection.tags to UserDefault
         print("added \(name!)")
