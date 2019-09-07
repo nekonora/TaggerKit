@@ -37,7 +37,7 @@ class ViewController: UIViewController {
                                        receiver: nil)
         
         allTags = TKCollectionView(tags: [
-                                    "Cars", "Skateboard", "Freetime", "Humor", "Travel", "Music", "Places", "Journalism", "Music", "Sports"
+                                    "Cars", "Skateboard", "Freetime", "Humor", "Travel", "Music", "Places", "Journalism", "Sports"
                                    ],
                                    action: .addTag,
                                    receiver: productTags)

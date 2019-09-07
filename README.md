@@ -18,6 +18,11 @@ TaggerKit is writtern is compatible with Swift 4.2/5 and runs on iOS 11+.
 
 ## Changelog
 
+### 0.6.1
+• Added support for Swift Package Manager;
+• Fixed a bug that was causing a tag view to not send tags to another one by tapping the button;
+• Added a convenience init method to create a tag view more quickly;
+
 ### 0.6
 • `tagIsBeingAdded` and `tagIsBeingRemoved` methods are not accessible by override from UIViewControllers. This is because UIViewController is not a delegate of TKViewController anymore. If you want to use these methods you can still make your controller conform to the TKCollectionViewDelegate protocol;
 • Custom properties `customTagBorderWidth` and `customTagBorderColor` can now be set;
@@ -27,18 +32,21 @@ TaggerKit is writtern is compatible with Swift 4.2/5 and runs on iOS 11+.
 
 ## Installation
 
-TaggerKit is available through [CocoaPods](https://cocoapods.org). To install the latest version (updated for Swift 5)
-, just add the following line to your Podfile:
+TaggerKit is available through [CocoaPods](https://cocoapods.org), Carthage or SPM. 
+
+To install the latest version, just add the following line to your Podfile:
 
 ```ruby
 pod 'TaggerKit'
 ```
 
-Or in your Cartfile:
+In your Cartfile:
 
 ```ruby
 github "nekonora/TaggerKit" ~> 0.6.0
 ```
+
+Or add this repo as a swift package inside of Xcode 11.
 
 ## Setup
 
