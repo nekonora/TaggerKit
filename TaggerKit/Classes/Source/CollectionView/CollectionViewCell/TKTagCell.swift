@@ -251,8 +251,11 @@ class TKTagCell: UICollectionViewCell {
         bezier2Path.addCurve(to: CGPoint(x: 12, y: 0), controlPoint1: CGPoint(x: 6.76, y: 0.91), controlPoint2: CGPoint(x: 9.28, y: 0))
         bezier2Path.addCurve(to: CGPoint(x: 24, y: 12), controlPoint1: CGPoint(x: 18.63, y: 0), controlPoint2: CGPoint(x: 24, y: 5.37))
         bezier2Path.close()
+        
+        UIGraphicsBeginImageContextWithOptions(button.bounds.size, false, 0.0)
         color.setFill()
         bezier2Path.fill()
+        UIGraphicsEndImageContext()
 
         bezier2Path.apply(CGAffineTransform(translationX: 2, y: 2))
         
