@@ -17,17 +17,17 @@ jobs:
 
     - &pod
       stage: CocoapodsLint
-      install: gem install cocoapods -v '~> 1.7.0'
+      install: gem install cocoapods -v '~> 1.8.1'
       script: pod lib lint --allow-warnings --fail-fast
-      osx_image: xcode10.2
+      osx_image: xcode10.3
     - <<: *pod
       osx_image: xcode11
 
     - &carthage
       stage: CarthageBuild
       script: carthage build --no-skip-current
-      osx_image: xcode10.2
-      name: Xcode 10.2
+      osx_image: xcode10.3
+      name: Xcode 10.3
     - <<: *carthage
       osx_image: xcode11
       name: Xcode 11
@@ -43,10 +43,10 @@ jobs:
 
     - &test
       stage: Test
-      name: iOS 12.2 / Xcode 10.2
+      name: iOS 12.2 / Xcode 10.3
       xcode_workspace: Example/TaggerKit.xcworkspace
       xcode_scheme: TaggerKit-Example
-      osx_image: xcode10.2
+      osx_image: xcode10.3
       xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone SE
     - <<: *test
       name: iOS 13.0 / Xcode 11
