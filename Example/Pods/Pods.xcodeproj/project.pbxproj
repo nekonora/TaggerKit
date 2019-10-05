@@ -28,6 +28,9 @@
 		E9941AE5389DC59BCC0042D20DAC752B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
 		EEF6D0C5499C1CDE7E842A9D92CA95DC /* Pods-TaggerKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7DD3DB540F74FF9ABAC62432AA96A /* Pods-TaggerKit_Example-dummy.m */; };
 		F3A89321E5D993C19AB8032E7996525D /* Pods-TaggerKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA043D47D3353563BF0B661420B0369A /* Pods-TaggerKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA20914B234906B900949301 /* TKTagsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20914A234906B900949301 /* TKTagsCollection.swift */; };
+		FA20914D2349095300949301 /* TKTagStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20914C2349095300949301 /* TKTagStyle.swift */; };
+		FA20914F2349239B00949301 /* TKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20914E2349239B00949301 /* TKView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,9 @@
 		ECA504AD23103B48D89761712DB84E76 /* TaggerKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaggerKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		F634FFE07861587FC11384E547CE78A3 /* Pods-TaggerKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaggerKit_Tests-dummy.m"; sourceTree = "<group>"; };
 		F9CC336EE12985730894A5F3EC3660BC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		FA20914A234906B900949301 /* TKTagsCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKTagsCollection.swift; sourceTree = "<group>"; };
+		FA20914C2349095300949301 /* TKTagStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKTagStyle.swift; sourceTree = "<group>"; };
+		FA20914E2349239B00949301 /* TKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKView.swift; sourceTree = "<group>"; };
 		FABBDE3022ECAC9B00454A68 /* TaggerKit.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TaggerKit.xctestplan; sourceTree = "<group>"; };
 		FF05A3C76462433CFE1C2E74F43F3AF8 /* TaggerKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TaggerKit-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -249,6 +255,9 @@
 				E24E1215342C8467339D5A9076EBAD6F /* Support Files */,
 				060BDE19D45DF6895744F92F353E8683 /* TagLayout */,
 				919A4E8641E361DBC0C1E4C04A7ABD62 /* TextField */,
+				FA20914A234906B900949301 /* TKTagsCollection.swift */,
+				FA20914E2349239B00949301 /* TKView.swift */,
+				FA20914C2349095300949301 /* TKTagStyle.swift */,
 			);
 			name = TaggerKit;
 			path = ../..;
@@ -488,16 +497,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				673FE32E8E075CAF71C72CFBD536FEDA /* LayoutAlignment.swift in Sources */,
+				FA20914F2349239B00949301 /* TKView.swift in Sources */,
 				4A9A9B4EE9C9B73D6F7B8BC78AFC895B /* LayoutInfo.swift in Sources */,
 				CEF766B54745E767E36C644B1B34BAED /* TagCellLayout.swift in Sources */,
 				2702E264146825CA6077E8D6F53C17E8 /* TagCellLayoutDelegate.swift in Sources */,
 				2964385411CB7ED0872F5AAE87EE3E5A /* TaggerKit-dummy.m in Sources */,
 				222EA7433D311D42BEED9886D5674FA2 /* TKCollectionView+.swift in Sources */,
 				00BC1B1D68E7AB908E7E9C79F2E45428 /* TKCollectionView.swift in Sources */,
+				FA20914D2349095300949301 /* TKTagStyle.swift in Sources */,
 				CEE25A6F5A5C7A098DF57076745C7469 /* TKTagButton.swift in Sources */,
 				3FC4F28C4AB5868EB32BBE1931686B9F /* TKTagCell.swift in Sources */,
 				55367B82993AD63BE377CF438E8F7C40 /* TKTextField.swift in Sources */,
 				B27C5152C20E2ACCFF97EC73D15C547C /* UIViewController+.swift in Sources */,
+				FA20914B234906B900949301 /* TKTagsCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

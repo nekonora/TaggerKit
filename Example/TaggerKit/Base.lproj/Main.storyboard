@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15508"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,43 +20,49 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add tags:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30f-72-RIu">
-                                <rect key="frame" x="30" y="69" width="73" height="21"/>
+                                <rect key="frame" x="30" y="49" width="73" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rOM-Nc-khN" customClass="TKTextField" customModule="TaggerKit">
-                                <rect key="frame" x="30" y="100" width="315" height="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="30" y="80" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIh-bh-hws">
-                                <rect key="frame" x="30" y="138" width="315" height="150"/>
+                                <rect key="frame" x="30" y="122" width="315" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="9QK-h0-PaS"/>
                                 </constraints>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User's tags:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMm-Wl-c8u">
-                                <rect key="frame" x="30" y="353" width="91" height="21"/>
+                                <rect key="frame" x="30" y="337" width="91" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mzu-xc-IBu">
-                                <rect key="frame" x="30" y="384" width="315" height="150"/>
+                                <rect key="frame" x="30" y="368" width="315" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="YDd-BM-D8j"/>
                                 </constraints>
                             </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MxY-8V-fFk" customClass="TKView" customModule="TaggerKit">
+                                <rect key="frame" x="67" y="539" width="240" height="103"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Mzu-xc-IBu" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="10F-SH-l1R"/>
                             <constraint firstItem="QMm-Wl-c8u" firstAttribute="leading" secondItem="Mzu-xc-IBu" secondAttribute="leading" id="3Bw-fW-KfU"/>
                             <constraint firstItem="rOM-Nc-khN" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" constant="-60" id="4Yp-Qt-9QJ"/>
+                            <constraint firstItem="MxY-8V-fFk" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="539" id="8jI-Yh-LfF"/>
+                            <constraint firstAttribute="trailing" secondItem="MxY-8V-fFk" secondAttribute="trailing" constant="68" id="DuV-dp-l4o"/>
                             <constraint firstItem="rOM-Nc-khN" firstAttribute="top" secondItem="30f-72-RIu" secondAttribute="bottom" constant="10" id="Frt-fL-AoQ"/>
                             <constraint firstItem="rOM-Nc-khN" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="80" id="S8d-G3-EIl"/>
+                            <constraint firstItem="MxY-8V-fFk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="67" id="XVk-aR-LmR"/>
                             <constraint firstItem="Mzu-xc-IBu" firstAttribute="top" secondItem="QMm-Wl-c8u" secondAttribute="bottom" constant="10" id="Znx-Md-ns3"/>
                             <constraint firstItem="cIh-bh-hws" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="dOv-0W-SkH"/>
                             <constraint firstItem="30f-72-RIu" firstAttribute="leading" secondItem="rOM-Nc-khN" secondAttribute="leading" id="ejL-DP-6Ea"/>
@@ -65,6 +70,7 @@
                             <constraint firstItem="cIh-bh-hws" firstAttribute="top" secondItem="rOM-Nc-khN" secondAttribute="bottom" constant="8" id="ouD-Ww-O0o"/>
                             <constraint firstItem="rOM-Nc-khN" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="xq3-gX-6C4"/>
                             <constraint firstItem="Mzu-xc-IBu" firstAttribute="top" secondItem="cIh-bh-hws" secondAttribute="bottom" constant="96" id="yK1-4K-Pe0"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="MxY-8V-fFk" secondAttribute="bottom" constant="25" id="ylW-pF-cXo"/>
                             <constraint firstItem="cIh-bh-hws" firstAttribute="width" secondItem="rOM-Nc-khN" secondAttribute="width" id="zVe-VC-yAb"/>
                         </constraints>
                     </view>
@@ -76,6 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

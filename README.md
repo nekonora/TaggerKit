@@ -4,6 +4,8 @@
 [![License](https://img.shields.io/cocoapods/l/TaggerKit.svg?style=flat)](https://cocoapods.org/pods/TaggerKit)
 [![Platform](https://img.shields.io/cocoapods/p/TaggerKit.svg?style=flat)](https://cocoapods.org/pods/TaggerKit)
 
+![](https://i.imgur.com/EMKyCgU.png)
+
 ![](https://media.giphy.com/media/ReBiPS298yk3MlXqTg/giphy.gif)
 
 TaggerKit helps you quickly integrate tags into your iOS projects. It provides a collection view for displaying tags and a text field for adding them to another collection view. The custom layout used by TaggerKit is based on [TagCellLayout](https://github.com/riteshhgupta/TagCellLayout) by Ritesh Gupta.
