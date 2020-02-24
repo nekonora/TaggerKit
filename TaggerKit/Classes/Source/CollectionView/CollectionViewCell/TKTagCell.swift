@@ -100,8 +100,23 @@ class TKTagCell: UICollectionViewCell {
 	}
 	
 	private func setupButton(action: ActionType) {
-		var computedPadding: CGFloat = 10
+        let computedPadding: CGFloat = 10
+        let buttonWidth: CGFloat = 28
 		button.alpha = 0.3
+        let centerXLabelConstraint = NSLayoutConstraint(item: nameLabel,
+                                                    attribute: .centerX,
+                                                    relatedBy: .equal,
+                                                    toItem: self,
+                                                    attribute: .centerX,
+                                                    multiplier: 1.0,
+                                                    constant: 0 - computedPadding)
+        let buttonWidthConstraint = NSLayoutConstraint(item: button,
+                                             attribute: .width,
+                                             relatedBy: .equal,
+                                             toItem: nil,
+                                             attribute: .notAnAttribute,
+                                             multiplier: 1.0,
+                                             constant: buttonWidth)
 		
 		self.addConstraints([
 			NSLayoutConstraint(item: nameLabel,
@@ -118,13 +133,7 @@ class TKTagCell: UICollectionViewCell {
 							   attribute: .height,
 							   multiplier: 1.0,
 							   constant: 0),
-			NSLayoutConstraint(item: nameLabel,
-							   attribute: .centerX,
-							   relatedBy: .equal,
-							   toItem: self,
-							   attribute: .centerX,
-							   multiplier: 1.0,
-							   constant: 0 - computedPadding),
+			centerXLabelConstraint,
 			NSLayoutConstraint(item: nameLabel,
 							   attribute: .centerY,
 							   relatedBy: .equal,
@@ -132,14 +141,7 @@ class TKTagCell: UICollectionViewCell {
 							   attribute: .centerY,
 							   multiplier: 1.0,
 							   constant: 0),
-			
-			NSLayoutConstraint(item: button,
-							   attribute: .width,
-							   relatedBy: .equal,
-							   toItem: nil,
-							   attribute: .notAnAttribute,
-							   multiplier: 1.0,
-							   constant: 28),
+			buttonWidthConstraint,
 			NSLayoutConstraint(item: button,
 							   attribute: .height,
 							   relatedBy: .equal,
@@ -167,13 +169,17 @@ class TKTagCell: UICollectionViewCell {
         case .addTag:
             let icon = drawAddImagePath().shapeImage(view: button)
             button.setImage(icon, for: .normal)
+            centerXLabelConstraint.constant = 0 - computedPadding
+            buttonWidthConstraint.constant = buttonWidth
         case .removeTag:
             let icon = drawCloseImagePath().shapeImage(view: button)
             button.setImage(icon, for: .normal)
+            centerXLabelConstraint.constant = 0 - computedPadding
+            buttonWidthConstraint.constant = buttonWidth
         case .noAction:
-            computedPadding = 0
             button.setImage(UIImage(), for: .normal)
-            button.isHidden = true
+            centerXLabelConstraint.constant = 0
+            buttonWidthConstraint.constant = 0
         }
         
 		button.isEnabled = true
