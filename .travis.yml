@@ -2,13 +2,10 @@ language: swift
 
 stages:
   - name: CocoapodsLint
-    if: NOT branch =~ ^\d+\.\d+\.\d+$
   - name: CarthageBuild
-    if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
   - name: Test
-    if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
   - name: deploy
-    if: branch =~ ^\d+\.\d+\.\d+$
+    if: branch = master
 
 jobs:
   include:
