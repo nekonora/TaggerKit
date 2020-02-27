@@ -16,17 +16,12 @@ public extension TagCellLayout {
         case left
         case center
         case right
-    }
-}
-
-extension TagCellLayout.LayoutAlignment {
-    
-    var distributionDivisionFactor: CGFloat {
-        switch self {
-        case .center:
-            return 2
-        default:
-            return 1
+        
+        var distributionDivisionFactor: CGFloat {
+            switch self {
+            case .center: return 2
+            default:      return 1
+            }
         }
     }
 }

@@ -16,19 +16,23 @@ public class TKTagsCollection {
     
     // MARK - Properties
     
-    fileprivate var manager: TKTagsCollectionManager!
+    private var manager: TKTagsCollectionManager!
 
     /// The current tags in the collection
-    var tags: [String]! { didSet { manager.collectionDidUpdateTags() } }
+    var tags = [String]() { didSet { manager.collectionDidUpdateTags() } }
 
     /// The selected tag in a collection with selection mode = .single
     var selectedTag: String?
+    
     /// The selected tags in a collection with selection mode = .multiple
     var selectedTags = [String]()
+    
     /// The tags filtered by the method "filterFor:String"
     var filteredTags = [String]()
     
-    // MARK - Initialization
+    private var onTagsUpdated: (() -> ())?
+    
+    // MARK - Init
     
     /// Initializes a tag collection object with given parameters
     /// - Parameters:
@@ -36,12 +40,13 @@ public class TKTagsCollection {
     ///   - readOnly: (optional) if true the tags can not be added or removed, default false
     ///   - selectionMode: (optional) whether the user can select one, more than one or no tags, default none
     ///   - style: (optional) a style object that can customize the look of the tags in the collection
-    required init(initialTags: [String], manager: TKTagsCollectionManager) {
+    required init(initialTags: [String], manager: TKTagsCollectionManager, onUpdate: (() -> ())?) {
         self.manager       = manager
         self.tags          = initialTags
+        self.onTagsUpdated = onUpdate
     }
     
-    // MARK - Class Methods
+    // MARK - Methods
     
     /// Updates the collection's tags
     /// - Parameter string: the string that could be contained in some of the collection's tags
