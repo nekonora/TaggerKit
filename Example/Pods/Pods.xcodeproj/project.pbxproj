@@ -33,6 +33,8 @@
 		FA20914D2349095300949301 /* TKTagStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20914C2349095300949301 /* TKTagStyle.swift */; };
 		FA20914F2349239B00949301 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20914E2349239B00949301 /* TagsView.swift */; };
 		FA4F16F22408808D00A7A772 /* TagsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F16F12408808D00A7A772 /* TagsCollection.swift */; };
+		FA54DA0C24098B0F003410D5 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54DA0B24098B0F003410D5 /* TagCell.swift */; };
+		FA54DA0E24098BF6003410D5 /* TagCellStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54DA0D24098BF6003410D5 /* TagCellStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,8 @@
 		FA20914C2349095300949301 /* TKTagStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKTagStyle.swift; sourceTree = "<group>"; };
 		FA20914E2349239B00949301 /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
 		FA4F16F12408808D00A7A772 /* TagsCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollection.swift; sourceTree = "<group>"; };
+		FA54DA0B24098B0F003410D5 /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
+		FA54DA0D24098BF6003410D5 /* TagCellStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCellStyle.swift; sourceTree = "<group>"; };
 		FABBDE3022ECAC9B00454A68 /* TaggerKit.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TaggerKit.xctestplan; sourceTree = "<group>"; };
 		FF05A3C76462433CFE1C2E74F43F3AF8 /* TaggerKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TaggerKit-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -263,6 +267,8 @@
 				FA4F16F12408808D00A7A772 /* TagsCollection.swift */,
 				FA20914E2349239B00949301 /* TagsView.swift */,
 				FA12D30C2408845C00D8E2A4 /* TagsView+CV.swift */,
+				FA54DA0B24098B0F003410D5 /* TagCell.swift */,
+				FA54DA0D24098BF6003410D5 /* TagCellStyle.swift */,
 				FA20914C2349095300949301 /* TKTagStyle.swift */,
 			);
 			name = TaggerKit;
@@ -512,7 +518,9 @@
 				FA4F16F22408808D00A7A772 /* TagsCollection.swift in Sources */,
 				00BC1B1D68E7AB908E7E9C79F2E45428 /* TKCollectionView.swift in Sources */,
 				FA20914D2349095300949301 /* TKTagStyle.swift in Sources */,
+				FA54DA0E24098BF6003410D5 /* TagCellStyle.swift in Sources */,
 				FA12D30D2408845C00D8E2A4 /* TagsView+CV.swift in Sources */,
+				FA54DA0C24098B0F003410D5 /* TagCell.swift in Sources */,
 				CEE25A6F5A5C7A098DF57076745C7469 /* TKTagButton.swift in Sources */,
 				3FC4F28C4AB5868EB32BBE1931686B9F /* TKTagCell.swift in Sources */,
 				55367B82993AD63BE377CF438E8F7C40 /* TKTextField.swift in Sources */,

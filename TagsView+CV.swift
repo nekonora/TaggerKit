@@ -10,17 +10,19 @@ import Foundation
 extension TagsView: TagCellLayoutDelegate {
     
     public func tagCellLayoutInteritemHorizontalSpacing(layout: TagCellLayout) -> CGFloat {
-        return 10
+        return tagStyle.tagsSpacing ?? 0
     }
     
     public func tagCellLayoutInteritemVerticalSpacing(layout: TagCellLayout) -> CGFloat {
-        return 10
+        return tagStyle.tagsSpacing ?? 0
     }
     
     public func tagCellLayoutTagSize(layout: TagCellLayout, atIndex index: Int) -> CGSize {
         guard let tag = tagsCollection?.tags[index], let collectionView = collectionView  else { return .zero }
-        let font     = UIFont.systemFont(ofSize: 12)
-        let cellSize = textSize(text: tag, font: font, collectionView: collectionView)
+        let font: UIFont = tagStyle.font ?? UIFont.systemFont(ofSize: 10)
+        let cellSize     = textSize(text: tag,
+                                    font: font,
+                                    collectionView: collectionView)
         
         return cellSize
     }
@@ -31,21 +33,20 @@ extension TagsView: TagCellLayoutDelegate {
 
         let label: UILabel = {
             let _label           = UILabel()
-            _label.numberOfLines = 0
+            _label.numberOfLines = 1
             _label.text          = text
             _label.font          = font
             return _label
         }()
-
-        let oneLineHeight   = font.pointSize * 2
+        
         var sizeThatFits    = label.sizeThatFits(viewBounds.size)
-        sizeThatFits.height = oneLineHeight
+        sizeThatFits.height = tagStyle.tagCellHeight ?? 30
         
 //        switch action {
 //        case .addTag, .removeTag:
 //            sizeThatFits.width += 50
 //        case .noAction:
-            sizeThatFits.width += 30
+            sizeThatFits.width += 50
 //        }
 
         return sizeThatFits
@@ -59,25 +60,8 @@ extension TagsView: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TagCell", for: indexPath) as? TKTagCell else { return UICollectionViewCell() }
-        cell.backgroundColor = .red
-        
-        let label = UILabel()
-        label.text = tagsCollection?.tags[indexPath.item]
-        label.textAlignment = .center
-        
-        cell.contentView.addSubview(label)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        let anchors = [
-            label.topAnchor.constraint(equalTo: cell.contentView.topAnchor),
-            label.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor),
-            label.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor),
-            label.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor)
-        ]
-        
-        anchors.forEach { $0.isActive = true }
-        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TagCell", for: indexPath) as? TagCell else { return UICollectionViewCell() }
+        cell.setupWith(tagsCollection?.tags[indexPath.item] ?? "", tagStyle: tagStyle)
         return cell
     }
 }
