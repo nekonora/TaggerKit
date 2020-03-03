@@ -25,10 +25,10 @@ public class TagsView: UIView {
     
     // Settable
     
-    var isBouncingEnabled = true { didSet { updateBouncing() } }
+    var isBouncingEnabled = false { didSet { updateBouncing() } }
     var selectionMode     = SelectionMode.single
     var tagStyle          = TagCellStyle() { didSet { collectionView?.reloadData() } }
-    var tagsAlignment     = TagCellLayout.LayoutAlignment.center { didSet { updateLayout() } }
+    var tagsAlignment     = TagCellLayout.LayoutAlignment.left { didSet { updateLayout() } }
     
     // MARK: - Private properties
     

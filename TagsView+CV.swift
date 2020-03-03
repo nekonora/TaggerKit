@@ -23,13 +23,12 @@ extension TagsView: TagCellLayoutDelegate {
         let cellSize     = textSize(text: tag,
                                     font: font,
                                     collectionView: collectionView)
-        
         return cellSize
     }
     
     public func textSize(text: String, font: UIFont, collectionView: UICollectionView) -> CGSize {
-        var viewBounds             = collectionView.bounds
-        viewBounds.size.height     = 9999.0
+        var viewBounds         = collectionView.bounds
+        viewBounds.size.height = 9999.0
 
         let label: UILabel = {
             let _label           = UILabel()
@@ -39,15 +38,13 @@ extension TagsView: TagCellLayoutDelegate {
             return _label
         }()
         
-        var sizeThatFits    = label.sizeThatFits(viewBounds.size)
-        sizeThatFits.height = tagStyle.tagCellHeight ?? 30
-        
-//        switch action {
-//        case .addTag, .removeTag:
-//            sizeThatFits.width += 50
-//        case .noAction:
-            sizeThatFits.width += 50
-//        }
+        let sizeThatFits: CGSize = {
+            guard let height = tagStyle.tagCellHeight else { return label.sizeThatFits(viewBounds.size) }
+            var size    = label.sizeThatFits(viewBounds.size)
+            size.height = height
+            size.width += (tagStyle.action != nil ? height : 0) + (height * 0.8).rounded()
+            return size
+        }()
 
         return sizeThatFits
     }
