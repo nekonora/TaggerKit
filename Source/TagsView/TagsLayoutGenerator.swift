@@ -1,8 +1,9 @@
 //
-//  TagsCompositionalLayout.swift
+//  TagsLayoutGenerator.swift
 //  TaggerKit
 //
 //  Created by Filippo Zaffoni on 31/07/2020.
+//  Copyright © 2020 Filippo Zaffoni. All rights reserved.
 //
 
 import Foundation
@@ -29,24 +30,31 @@ internal class TagsLayoutGenerator {
 
         item.edgeSpacing = NSCollectionLayoutEdgeSpacing(
             leading: .fixed(0),
-            top: .fixed(8),
+            top: .fixed(0),
             trailing: .fixed(8),
-            bottom: .fixed(8)
+            bottom: .fixed(0)
         )
         
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1.0),
-                heightDimension: .estimated(tagDefaultSize.height)
+                heightDimension: .absolute(tagDefaultSize.height)
             ),
             subitems: [item]
         )
         
         group.contentInsets = NSDirectionalEdgeInsets(
             top: 0,
-            leading: 16,
+            leading: 0,
             bottom: 0,
-            trailing: 16
+            trailing: 0
+        )
+        
+        group.edgeSpacing = NSCollectionLayoutEdgeSpacing(
+            leading: .fixed(0),
+            top: .fixed(0),
+            trailing: .fixed(8),
+            bottom: .fixed(8)
         )
 
         let section = NSCollectionLayoutSection(group: group)
@@ -54,7 +62,7 @@ internal class TagsLayoutGenerator {
         section.contentInsets = NSDirectionalEdgeInsets(
             top: 0,
             leading: 0,
-            bottom: 20,
+            bottom: 0,
             trailing: 0
         )
         

@@ -3,7 +3,7 @@
 //  TaggerKit
 //
 //  Created by Filippo Zaffoni on 03/13/2019.
-//  Copyright (c) 2019 registration.fi.za@outlook.com. All rights reserved.
+//  Copyright © 2019 Filippo Zaffoni. All rights reserved.
 //
 
 import UIKit

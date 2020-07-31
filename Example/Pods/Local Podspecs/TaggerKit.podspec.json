@@ -1,8 +1,8 @@
 {
   "name": "TaggerKit",
-  "version": "0.6.0",
+  "version": "1.0.0",
   "summary": "TaggerKit is a straightforward library that helps you implement tags in your iOS project.",
-  "description": "This library helps you to quickly implement tags in your iOS apps, so you can go on and test your idea without having to worry about logic and custom collection layouts.",
+  "description": "TaggerKit helps you to quickly implement tags in your UIKit apps, so you can go on and test your idea without having to worry about logic and custom collection layouts.",
   "homepage": "https://github.com/nekonora/TaggerKit",
   "license": {
     "type": "MIT",
@@ -13,20 +13,16 @@
   },
   "source": {
     "git": "https://github.com/nekonora/TaggerKit.git",
-    "tag": "0.6.0"
+    "tag": "1.0.0"
   },
-  "social_media_url": "https://twitter.com/_nknr",
   "platforms": {
-    "ios": "11.0"
+    "ios": "13.0"
   },
-  "swift_versions": "5",
-  "source_files": "TaggerKit/Classes/**/*",
-  "resource_bundles": {
-    "TaggerKit": [
-      "TaggerKit/Assets/*.png"
-    ]
-  },
-  "resources": "TaggerKit/Assets/**/*.{png,storyboard}",
+  "swift_versions": [
+    "5.1",
+    "5.2"
+  ],
+  "source_files": "Source/**/*",
   "frameworks": "UIKit",
-  "swift_version": "5"
+  "swift_version": "5.2"
 }

@@ -3,35 +3,37 @@
 //  TaggerKit
 //
 //  Created by Filippo Zaffoni on 28/02/2020.
+//  Copyright © 2020 Filippo Zaffoni. All rights reserved.
 //
 
 import UIKit
 
+@available(iOS 13, *)
 internal class TagCell: UICollectionViewCell {
     
+    static let reuseId = "TagCell"
+    
     // MARK: - Properties
+    private var style: TagCellStyle?
+    private var tagConfig: Tag?
     
-    var style: TagCellStyle? { didSet { setupStyle() } }
-    
-    let nameLabel: UILabel = {
-        let label           = UILabel()
-        label.textColor     = .darkGray
+    private let nameLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .label
         label.textAlignment = .center
         return label
     }()
     
-    let actionButton: UIButton = {
+    private let actionButton: UIButton = {
         let button = UIButton()
-        button.addTarget(self, action: #selector(onButtonTapped), for: .touchUpInside)
+        button.isUserInteractionEnabled = false
         return button
     }()
     
     // MARK: - Lifecycle
-    
-    func setupWith(_ tagName: String, tagStyle: TagCellStyle? = nil) {
-        nameLabel.text = tagName
-        style          = tagStyle
-        
+    func setupWith(_ tag: Tag, tagStyle: TagCellStyle, onButtonTapped: ((Tag) -> Void)? = nil) {
+        tagConfig = tag
+        style = tagStyle
         setupUI()
     }
     
@@ -42,15 +44,14 @@ internal class TagCell: UICollectionViewCell {
 }
 
 // MARK: - Setup
-
 private extension TagCell {
     
     func setupUI() {
         guard let style = style else { return }
-        
-        let leftNamePadding: CGFloat = style.action != nil
-            ? ((style.tagCellHeight ?? 0) * 0.4).rounded()
-            : 0
+        nameLabel.text = tagConfig?.name
+        let rightNamePadding: CGFloat = style.action != nil
+            ? style.tagCellHeight.rounded()
+            : 10
         
         addSubview(nameLabel)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -58,27 +59,29 @@ private extension TagCell {
         let anchors = [
             nameLabel.topAnchor.constraint(equalTo: topAnchor),
             nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -1),
-            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: leftNamePadding),
-            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
+            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -rightNamePadding)
         ]
         anchors.forEach { $0.isActive = true }
+        
+        setupStyle()
     }
     
     func setupStyle() {
-        setupTagName()
+        setupNameLayout()
         setupTagButton()
     }
     
-    func setupTagName() {
+    func setupNameLayout() {
         guard let style = style else { return }
         backgroundColor = style.backgroundColor
         
-        layer.cornerRadius = style.cornerRadius ?? 0
-        layer.borderColor  = style.borderColor?.cgColor ?? UIColor.clear.cgColor
-        layer.borderWidth  = style.borderSize ?? 0
+        layer.cornerRadius = style.cornerRadius
+        layer.borderColor = style.borderColor.cgColor
+        layer.borderWidth = style.borderSize
         
-        nameLabel.textColor     = style.fontColor
-        nameLabel.font          = style.font
+        nameLabel.textColor = style.fontColor
+        nameLabel.font = style.font
         nameLabel.textAlignment = style.action != nil ? .left : .center
         
         clipsToBounds = true
@@ -106,18 +109,8 @@ private extension TagCell {
         
         if style.customActionImage == nil {
             switch action {
-            case .add:
-                if #available(iOS 13.0, *) {
-                    actionButton.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal)
-                } else {
-                    #warning("handle images pre-iOS13")
-                }
-            case .remove:
-                if #available(iOS 13.0, *) {
-                    actionButton.setImage(UIImage(systemName: "minus.circle.fill"), for: .normal)
-                } else {
-                    #warning("handle images pre-iOS13")
-                }
+            case .add:    actionButton.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal)
+            case .remove: actionButton.setImage(UIImage(systemName: "minus.circle.fill"), for: .normal)
             }
         } else if let customImage = style.customActionImage {
             actionButton.setImage(customImage, for: .normal)
@@ -126,14 +119,9 @@ private extension TagCell {
     
     func cleanUp() {
         nameLabel.removeFromSuperview()
-    }
-}
-
-// MARK: - Action
-
-private extension TagCell {
-    
-    @objc func onButtonTapped() {
-        
+        actionButton.removeFromSuperview()
+        nameLabel.text = nil
+        actionButton.setImage(nil, for: .normal)
+        tagConfig = nil
     }
 }

@@ -28,7 +28,7 @@ TaggerKit helps you to quickly implement tags in your UIKit apps, so you can go 
   s.source           = { :git => 'https://github.com/nekonora/TaggerKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/_nknr'
 
-  s.ios.deployment_target = '12.0'
+  s.ios.deployment_target = '13.0'
   s.swift_versions = ['5.1', '5.2']
 
   s.source_files = 'Source/**/*'

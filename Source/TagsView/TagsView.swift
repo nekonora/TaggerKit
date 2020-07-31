@@ -7,40 +7,30 @@
 //
 
 import UIKit
+import Combine
 
 @available(iOS 13, *)
 public class TagsView: UIView {
     
-    // MARK - Types
-    enum SelectionMode { case none, single, multiple }
+    // MARK: - Types
+    public enum SelectionMode { case none, single, multiple }
     
     // MARK: - Public properties
-    // Read only
-    var tags: [String] { tagsCollection?.tags ?? [] }
-    var selectedTag: String? { tagsCollection?.selectedTag }
-    var selectedTags: [String] { tagsCollection?.selectedTags ?? [] }
-    var filteredTags: [String] { tagsCollection?.filteredTags ?? [] }
+    @Published public private(set) var tags = [Tag]()
+    @Published public private(set) var selectedTag: Tag?
+    @Published public private(set) var selectedTags = [Tag]()
+    @Published public private(set) var filteredTags = [Tag]()
     
-    // Settable
-    var isBouncingEnabled = false { didSet { updateBouncing() } }
-    var selectionMode = SelectionMode.single
+    public var isBouncingEnabled = false { didSet { updateBouncing() } }
+    public var selectionMode = SelectionMode.single
     
-    var tagStyle = TagCellStyle() { didSet { collectionView?.reloadData() } }
-    var tagsAlignment = TagCellLayout.LayoutAlignment.left { didSet { updateLayout() } }
+    public var tagStyle = TagCellStyle() { didSet { updateLayout() } }
+    public var tagsAlignment = TagCellLayout.LayoutAlignment.left { didSet { updateLayout() } }
     
     // MARK: - Private properties
-    private var tagCellLayout: TagCellLayout?
-    
-    internal var collectionView: UICollectionView?
-    internal var tagsCollection: TagsCollection?
-    
-    // MARK: - Actions
-    var onTagButtonTapped: ((String) -> ())?
-    var onTagSelected: ((String) -> ())?
-    var onTagDeselected: ((String) -> ())?
-    
-    var onTagAdded: ((String) -> ())?
-    var onTagRemoved: ((String) -> ())?
+    private var dataSource: UICollectionViewDiffableDataSource<Int, Tag>?
+    private var collectionView: UICollectionView?
+    private var cancellables = Set<AnyCancellable>()
     
     // MARK: - Lifecycle
     override init(frame: CGRect) {
@@ -54,13 +44,16 @@ public class TagsView: UIView {
     }
     
     // MARK: - Methods
-    
-    public func addTag(_ tag: String) {
-        tagsCollection?.tags.append(tag)
+    public func addTags(_ tagsToAdd: [Tag]) {
+        tags.append(contentsOf: tagsToAdd)
     }
     
-    public func removeTag(_ tag: String) {
-        tagsCollection?.tags.removeAll { $0 == tag }
+    public func removeTags(_ tagsToRemove: [Tag]) {
+        tags.removeAll { tagsToRemove.contains($0) }
+    }
+    
+    func filterFor(_ name: String) {
+        filteredTags = tags.filter { $0.name.contains(name) }
     }
 }
 
@@ -68,13 +61,11 @@ public class TagsView: UIView {
 private extension TagsView {
     
     func updateLayout() {
-        let layout: TagCellLayout = {
-            let _layout = TagCellLayout(alignment: tagsAlignment, delegate: self)
-            _layout.delegate = self
-            return _layout
-        }()
-        
+        guard let collection = collectionView else { return }
+        let layout = TagsLayoutGenerator(tagHeight: 30).generateLayout()
+        configureDataSource(for: collection, cellStyle: tagStyle)
         collectionView?.setCollectionViewLayout(layout, animated: true)
+        updateSnapShot(with: tags)
     }
     
     func updateBouncing() {
@@ -86,21 +77,16 @@ private extension TagsView {
 private extension TagsView {
     
     func commonInit() {
-        let layout: TagCellLayout = {
-            let _layout = TagCellLayout(alignment: tagsAlignment, delegate: self)
-            _layout.delegate = self
-            return _layout
-        }()
-        
         let collection: UICollectionView = {
-            let _collectionView = UICollectionView(frame: bounds, collectionViewLayout: layout)
-            _collectionView.dataSource = self
+            let _collectionView = UICollectionView(frame: bounds, collectionViewLayout: TagsLayoutGenerator(tagHeight: 30).generateLayout())
             _collectionView.delegate = self
+            _collectionView.allowsMultipleSelection = selectionMode == .multiple
             _collectionView.alwaysBounceVertical = isBouncingEnabled
             _collectionView.backgroundColor = UIColor.clear
-            _collectionView.register(TagCell.self, forCellWithReuseIdentifier: "TagCell")
+            _collectionView.register(TagCell.self, forCellWithReuseIdentifier: TagCell.reuseId)
             return _collectionView
         }()
+        collectionView = collection
         
         addSubview(collection)
         collection.translatesAutoresizingMaskIntoConstraints = false
@@ -113,30 +99,44 @@ private extension TagsView {
         ]
         
         anchors.forEach { $0.isActive = true }
-        collectionView = collection
+        configureDataSource(for: collection, cellStyle: tagStyle)
+        
+        $tags
+            .dropFirst()
+            .sink { [weak self] in self?.updateSnapShot(with: $0) }
+            .store(in: &cancellables)
     }
     
-    func setupLayout() -> UICollectionViewLayout {
-        let estimatedHeight: CGFloat = topicsCellCollectionHeight
-        let estimatedWidth: CGFloat = 200
-        
-        let itemSize = NSCollectionLayoutSize(widthDimension: .estimated(estimatedWidth),
-                                              heightDimension: .absolute(estimatedHeight))
-        //height is absolute because I know it, and in some cases-not in this one, though-I have to calculate the height of UICollectionView
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        
-        item.edgeSpacing = NSCollectionLayoutEdgeSpacing(leading: .fixed(0), top: .fixed(8), trailing: .fixed(8), bottom: .fixed(8))
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .estimated(estimatedHeight))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
-                                                       subitems: [item])
-        group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
-        
-        let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0)
-        
-        let layout = UICollectionViewCompositionalLayout(section: section)
-        return layout
+    func configureDataSource(for collectionView: UICollectionView, cellStyle: TagCellStyle) {
+        dataSource = UICollectionViewDiffableDataSource<Int, Tag>(collectionView: collectionView) { (collectionView: UICollectionView, indexPath: IndexPath, tag: Tag) -> UICollectionViewCell? in
+            let cell: TagCell = collectionView.dequeueReusableCell(withReuseIdentifier: TagCell.reuseId, for: indexPath) as! TagCell
+            cell.setupWith(tag, tagStyle: cellStyle)
+            return cell
+        }
+    }
+    
+    func updateSnapShot(with newTags: [Tag]) {
+        var snapshot = NSDiffableDataSourceSnapshot<Int, Tag>()
+        snapshot.appendSections([0])
+        snapshot.appendItems(newTags)
+        dataSource?.apply(snapshot, animatingDifferences: true)
+    }
+}
+
+extension TagsView: UICollectionViewDelegate {
+    
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard tags.count > indexPath.item else { return }
+        let tag = tags[indexPath.item]
+        switch selectionMode {
+        case .none, .single:
+            selectedTag = tag
+        case .multiple:
+            if selectedTags.contains(tag) {
+                selectedTags.removeAll { $0.id == tag.id }
+            } else {
+                selectedTags.append(tag)
+            }
+        }
     }
 }
