@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TaggerKit'
-  s.version          = '0.6.1'
+  s.version          = '1.0.0'
   s.summary          = 'TaggerKit is a straightforward library that helps you implement tags in your iOS project.'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-This library helps you to quickly implement tags in your iOS apps, so you can go on and test your idea without having to worry about logic and custom collection layouts.
+TaggerKit helps you to quickly implement tags in your UIKit apps, so you can go on and test your idea without having to worry about logic and custom collection layouts.
                        DESC
 
   s.homepage         = 'https://github.com/nekonora/TaggerKit'
@@ -28,10 +28,10 @@ This library helps you to quickly implement tags in your iOS apps, so you can go
   s.source           = { :git => 'https://github.com/nekonora/TaggerKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/_nknr'
 
-  s.ios.deployment_target = '11.0'
-  s.swift_versions = ['4.2', '4.3', '4.4', '5.0', '5.1']
+  s.ios.deployment_target = '13.0'
+  s.swift_versions = ['5.1', '5.2']
 
-  s.source_files = 'TaggerKit/Classes/**/*'
+  s.source_files = 'Source/**/*'
   
   s.frameworks = 'UIKit'
 end

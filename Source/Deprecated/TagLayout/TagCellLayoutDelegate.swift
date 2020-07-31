@@ -14,5 +14,4 @@ public protocol TagCellLayoutDelegate: NSObjectProtocol {
     func tagCellLayoutTagSize(layout: TagCellLayout, atIndex index:Int) -> CGSize
     func tagCellLayoutInteritemHorizontalSpacing(layout: TagCellLayout) -> CGFloat
     func tagCellLayoutInteritemVerticalSpacing(layout: TagCellLayout) -> CGFloat
-    
 }
