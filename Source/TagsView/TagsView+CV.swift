@@ -42,7 +42,7 @@ extension TagsView: TagCellLayoutDelegate {
             guard let height = tagStyle.tagCellHeight else { return label.sizeThatFits(viewBounds.size) }
             var size    = label.sizeThatFits(viewBounds.size)
             size.height = height
-            size.width += (tagStyle.action != nil ? height : 0) + (height * 0.8).rounded()
+            size.width += (tagStyle.action != nil ? (height * 0.8) : 0) + (height * 0.8).rounded()
             return size
         }()
 

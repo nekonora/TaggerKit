@@ -9,7 +9,6 @@
 import UIKit
 
 // MARK: - Extension to implement easy child controllers functionality
-
 public extension UIViewController {
     
     func add(_ child: UIViewController, toView view: UIView) {

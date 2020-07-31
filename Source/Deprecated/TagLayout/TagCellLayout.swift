@@ -1,4 +1,4 @@
-//
+ //
 //  TagCellLayout.swift
 //  TagCellLayout
 //
@@ -20,7 +20,6 @@ public class TagCellLayout: UICollectionViewLayout {
     weak var delegate: TagCellLayoutDelegate?
     
     //MARK: - Init Methods
-    
     public init(alignment: LayoutAlignment = .left, delegate: TagCellLayoutDelegate?) {
         self.delegate = delegate
         self.alignment = alignment
@@ -37,11 +36,11 @@ public class TagCellLayout: UICollectionViewLayout {
     }
     
     //MARK: - Override Methods
-    
     override public func prepare() {
         resetLayoutState()
         setupTagCellLayout()
     }
+    
     public override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         guard layoutInfoList.count > indexPath.row else { return nil }
         return layoutInfoList[indexPath.row].layoutAttribute
@@ -65,7 +64,6 @@ public class TagCellLayout: UICollectionViewLayout {
 }
 
 //MARK: - Private Methods
-
 private extension TagCellLayout {
     
     var currentTagFrame: CGRect {
@@ -108,9 +106,6 @@ private extension TagCellLayout {
     }
     
     func basicLayoutSetup() {
-        // asking the client for a fixed tag height
-        
-        // iterating over every tag and constructing its layout attribute
         (0 ..< tagsCount).forEach {
             currentTagIndex = $0
             

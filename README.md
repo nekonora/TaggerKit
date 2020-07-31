@@ -8,7 +8,7 @@
 
 ![](https://media.giphy.com/media/ReBiPS298yk3MlXqTg/giphy.gif)
 
-TaggerKit helps you quickly integrate tags into your iOS projects. It provides a collection view for displaying tags and a text field for adding them to another collection view. The custom layout used by TaggerKit is based on [TagCellLayout](https://github.com/riteshhgupta/TagCellLayout) by Ritesh Gupta.
+TaggerKit helps you to quickly implement tags in your UIKit apps, so you can go on and test your idea without having to worry about logic and custom collection layouts.
 
 ## Example
 
@@ -16,7 +16,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-TaggerKit is writtern is compatible with Swift 4.2/5 and runs on iOS 11+.
+TaggerKit is compatible with Swift 4.2+ and runs on iOS 11+.
 
 ## Changelog
 

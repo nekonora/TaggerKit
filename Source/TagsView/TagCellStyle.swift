@@ -21,8 +21,8 @@ public struct TagCellStyle {
     var tagsSpacing: CGFloat?   = 8
     var cornerRadius: CGFloat?  = 15
     var borderSize: CGFloat?    = 0
-    var borderColor: UIColor?   = .black
+    var borderColor: UIColor?   = .white
     
-    var action: TagActionType? = .add
+    var action: TagActionType?
     var customActionImage: UIImage? 
 }

@@ -7,26 +7,24 @@
 
 internal class TagsCollection {
     
-    // MARK - Properties
-
-    var tags = [String]() { didSet { onTagsUpdated?() } }
+    // MARK: - Properties
+    var tags = [String]()
 
     var selectedTag: String?
     var selectedTags = [String]()
     var filteredTags = [String]()
     
-    private var onTagsUpdated: (() -> ())?
-    
-    // MARK - Init
-    
-    required init(initialTags: [String], onUpdate: (() -> ())? = nil) {
-        self.tags          = initialTags
-        self.onTagsUpdated = onUpdate
+    // MARK: - Init
+    required init(initialTags: [String]) {
+        self.tags = initialTags
     }
     
-    // MARK - Methods
-    
+    // MARK: - Methods
     func filterFor(_ string: String) {
         filteredTags = tags.filter { $0.contains(string) }
+    }
+    
+    func selectTag(_ tag: String) {
+        
     }
 }
