@@ -44,6 +44,7 @@ internal class TagCell: UICollectionViewCell {
 }
 
 // MARK: - Setup
+@available(iOS 13, *)
 private extension TagCell {
     
     func setupUI() {

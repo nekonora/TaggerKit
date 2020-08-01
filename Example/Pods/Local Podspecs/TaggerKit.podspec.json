@@ -9,20 +9,22 @@
     "file": "LICENSE"
   },
   "authors": {
-    "registration.fi.za@outlook.com": "registration.fi.za@outlook.com"
+    "Filippo Zaffoni": "registration.fi.za@outlook.com"
   },
   "source": {
     "git": "https://github.com/nekonora/TaggerKit.git",
     "tag": "1.0.0"
   },
+  "social_media_url": "https://twitter.com/_nknr",
   "platforms": {
-    "ios": "13.0"
+    "ios": "12.0"
   },
   "swift_versions": [
     "5.1",
-    "5.2"
+    "5.2",
+    "5.3"
   ],
   "source_files": "Source/**/*",
   "frameworks": "UIKit",
-  "swift_version": "5.2"
+  "swift_version": "5.3"
 }

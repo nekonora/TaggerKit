@@ -24,12 +24,12 @@ TaggerKit helps you to quickly implement tags in your UIKit apps, so you can go 
   s.homepage         = 'https://github.com/nekonora/TaggerKit'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'registration.fi.za@outlook.com' => 'registration.fi.za@outlook.com' }
+  s.author           = { 'Filippo Zaffoni' => 'registration.fi.za@outlook.com' }
   s.source           = { :git => 'https://github.com/nekonora/TaggerKit.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/_nknr'
+  s.social_media_url = 'https://twitter.com/_nknr'
 
-  s.ios.deployment_target = '13.0'
-  s.swift_versions = ['5.1', '5.2']
+  s.ios.deployment_target = '12.0'
+  s.swift_versions = ['5.1', '5.2', '5.3']
 
   s.source_files = 'Source/**/*'
   

@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		239BD674F021B101F00EA406 /* Pods_TaggerKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AAF459782120205588B1F6 /* Pods_TaggerKit_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACD81AFB9204008FA782 /* SingleTagViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* SingleTagViewVC.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		949CCDF7151352B16628801A /* Pods_TaggerKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB3FD6BA656DC766D9ECA5E /* Pods_TaggerKit_Tests.framework */; };
 		FA78063922391C2900EFB195 /* TaggerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA78063822391C2900EFB195 /* TaggerKit.framework */; };
+		FA9F0FD224D55280007D5DB4 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F0FD124D55280007D5DB4 /* RootViewController.swift */; };
+		FA9F0FD424D557A3007D5DB4 /* TKCollectionViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F0FD324D557A3007D5DB4 /* TKCollectionViewVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,7 @@
 		607FACD01AFB9204008FA782 /* TaggerKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaggerKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* SingleTagViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTagViewVC.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		BA78CD63739562BDDF6624B6 /* Pods-TaggerKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaggerKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaggerKit_Tests/Pods-TaggerKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		FA0CE1FE9309D84062799CB7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		FA78063822391C2900EFB195 /* TaggerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TaggerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA9F0FD124D55280007D5DB4 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		FA9F0FD324D557A3007D5DB4 /* TKCollectionViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKCollectionViewVC.swift; sourceTree = "<group>"; };
 		FAAE940C24D4880800E6851E /* TaggerKit_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TaggerKit_Example.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				FA9F0FD124D55280007D5DB4 /* RootViewController.swift */,
+				607FACD71AFB9204008FA782 /* SingleTagViewVC.swift */,
+				FA9F0FD324D557A3007D5DB4 /* TKCollectionViewVC.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -336,8 +342,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				607FACD81AFB9204008FA782 /* SingleTagViewVC.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				FA9F0FD424D557A3007D5DB4 /* TKCollectionViewVC.swift in Sources */,
+				FA9F0FD224D55280007D5DB4 /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +434,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -474,7 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -491,7 +499,7 @@
 				CODE_SIGN_ENTITLEMENTS = TaggerKit_Example.entitlements;
 				DEVELOPMENT_TEAM = 55SRM36F8Y;
 				INFOPLIST_FILE = TaggerKit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -514,7 +522,7 @@
 				CODE_SIGN_ENTITLEMENTS = TaggerKit_Example.entitlements;
 				DEVELOPMENT_TEAM = 55SRM36F8Y;
 				INFOPLIST_FILE = TaggerKit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -10,22 +10,44 @@ import UIKit
 import Combine
 
 @available(iOS 13, *)
+/// A view capable of displaying tags
 public class TagsView: UIView {
     
     // MARK: - Types
-    public enum SelectionMode { case none, single, multiple }
+    /// Type indicating the desired selection mode for a `TagsView` instance
+    public enum SelectionMode {
+        /// Selecting a tag will only act as the tap of a button, selection is not persistent
+        /// Observe the `$selectedTag` publisher to act on the selection
+        case none
+        /// Selecting a tag will act as classic selection, selection is persistent.
+        /// When another tag will be selected, the previous will be unselected
+        /// Observe the `$selectedTag` publisher to act on the selection
+        case single
+        /// Selecting a tag will add it to the `selectedTags` array if not already present,
+        /// otherwise it will be removed from the array.
+        /// Observe the `$selectedTags` publisher to act on the selection
+        case multiple
+    }
     
     // MARK: - Public properties
+    /// The currently displayed tags
     @Published public private(set) var tags = [Tag]()
+    /// The currently selected tag if present. Only for `selectionMode` `.none` or `.single`
     @Published public private(set) var selectedTag: Tag?
+    /// The currently selected tags. Only for `selectionMode` `.multiple`
     @Published public private(set) var selectedTags = [Tag]()
-    @Published public private(set) var filteredTags = [Tag]()
     
+    /// Defines if the tags collection always bounces
     public var isBouncingEnabled = false { didSet { updateBouncing() } }
+    
+    /// Desidered selection mode for the tags in the collection
     public var selectionMode = SelectionMode.single
     
+    /// Indicates the style applied to the tag cell in the collection
     public var tagStyle = TagCellStyle() { didSet { updateLayout() } }
-    public var tagsAlignment = TagCellLayout.LayoutAlignment.left { didSet { updateLayout() } }
+    
+    /// Alignment of the tag cells inside of the collection
+//    public var tagsAlignment = TagCellLayout.LayoutAlignment.left { didSet { updateLayout() } }
     
     // MARK: - Private properties
     private var dataSource: UICollectionViewDiffableDataSource<Int, Tag>?
@@ -44,20 +66,25 @@ public class TagsView: UIView {
     }
     
     // MARK: - Methods
+    /// Clears the tags array and re-sets a new array of tags
+    public func setTags(_ newTags: [Tag]) {
+        tags = newTags
+    }
+    
+    /// Appends tags to the existing tags array if not already added
     public func addTags(_ tagsToAdd: [Tag]) {
-        tags.append(contentsOf: tagsToAdd)
+        let safeAppendingArray = tagsToAdd.filter { !self.tags.contains($0) }
+        tags.append(contentsOf: safeAppendingArray)
     }
     
+    /// Removes tags from the existing tags array if present
     public func removeTags(_ tagsToRemove: [Tag]) {
-        tags.removeAll { tagsToRemove.contains($0) }
-    }
-    
-    func filterFor(_ name: String) {
-        filteredTags = tags.filter { $0.name.contains(name) }
+        tags.removeAll { self.tags.contains($0) }
     }
 }
 
 // MARK: - Updates
+@available(iOS 13, *)
 private extension TagsView {
     
     func updateLayout() {
@@ -74,6 +101,7 @@ private extension TagsView {
 }
 
 // MARK: - Setup
+@available(iOS 13, *)
 private extension TagsView {
     
     func commonInit() {
@@ -116,6 +144,7 @@ private extension TagsView {
     }
     
     func updateSnapShot(with newTags: [Tag]) {
+        guard newTags != tags else { return }
         var snapshot = NSDiffableDataSourceSnapshot<Int, Tag>()
         snapshot.appendSections([0])
         snapshot.appendItems(newTags)
@@ -123,6 +152,7 @@ private extension TagsView {
     }
 }
 
+@available(iOS 13, *)
 extension TagsView: UICollectionViewDelegate {
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
