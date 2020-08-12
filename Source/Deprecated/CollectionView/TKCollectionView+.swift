@@ -9,7 +9,6 @@
 import UIKit
 
 // MARK: - Extension to UICollectionViewDataSource
-
 extension TKCollectionView: UICollectionViewDataSource {
 	
 	public func numberOfSections(in collectionView: UICollectionView) -> Int { return 1 }
@@ -25,7 +24,6 @@ extension TKCollectionView: UICollectionViewDataSource {
 }
 
 // MARK: - Extension to UICollectionViewDelegate
-
 extension TKCollectionView: UICollectionViewDelegate {
 	
 	public func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

@@ -9,6 +9,7 @@
 import UIKit
 
 /// This text field can be used to create new tags (send them to a receiver) or filter tags in a (sender) collection of tags
+@available(iOS, deprecated: 13.0, message: "Please refer on how to use the new 'TagsView' with your own text fields")
 public class TKTextField: UITextField {
     
     // MARK: - Properties

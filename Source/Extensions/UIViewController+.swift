@@ -11,6 +11,7 @@ import UIKit
 // MARK: - Extension to implement easy child controllers functionality
 public extension UIViewController {
     
+    @available(iOS, deprecated: 13.0, message: "")
     func add(_ child: UIViewController, toView view: UIView) {
         addChild(child)
         child.view.frame = view.bounds
@@ -19,6 +20,7 @@ public extension UIViewController {
         child.didMove(toParent: self)
     }
     
+    @available(iOS, deprecated: 13.0, message: "")
     func remove() {
         guard parent != nil else { return }
         

@@ -9,6 +9,7 @@
 import UIKit
 
 /// The type of action that can be done on a tag
+@available(iOS, deprecated: 13.0, message: "'TagActionType' is now used as a type of action for 'TagCellStyle'")
 public enum ActionType {
     case addTag
     case removeTag

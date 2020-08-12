@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+@available(iOS, deprecated: 13.0, message: "")
 public protocol TagCellLayoutDelegate: NSObjectProtocol {
     
     func tagCellLayoutTagSize(layout: TagCellLayout, atIndex index:Int) -> CGSize

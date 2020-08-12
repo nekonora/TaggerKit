@@ -10,12 +10,14 @@ import UIKit
 
 /// Conforming to this protocol enables a controller to be notified and act upon
 /// the life of a tag (added or removed from a collection)
+@available(iOS, deprecated: 13.0, message: "'TagsView' is now available, which does not require protocol conformance.")
 public protocol TKCollectionViewDelegate: UIViewController {
     func tagIsBeingAdded(name: String?)
     func tagIsBeingRemoved(name: String?)
 }
 
 /// This collection view is a container that displays and manages tags
+@available(iOS, deprecated: 13.0, message: "'TagsView' is now available.")
 public class TKCollectionView: UIViewController {
     
     // MARK: - Customasible properties

@@ -12,6 +12,7 @@ protocol TKTagsCollectionManager: class {
 }
 
 /// An object managing a collection of tags
+@available(iOS, deprecated: 13.0, message: "'TagsView' is now available.")
 public class TKTagsCollection {
     
     // MARK - Properties

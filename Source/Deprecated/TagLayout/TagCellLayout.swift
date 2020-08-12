@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+@available(iOS, deprecated: 13.0, message: "'TagsView' is now available, which does not require this specific layout.")
 public class TagCellLayout: UICollectionViewLayout {
     
     let alignment: LayoutAlignment
