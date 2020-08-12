@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// An object defining the style for a tag cell in a tag collection
+/// An object defining the style for a tag cell in a `TagsView` instance
 @available(iOS 13, *)
 public struct TagCellStyle {
     

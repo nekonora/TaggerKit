@@ -7,7 +7,8 @@
 
 import Foundation
 
-// Providing String conformance to TagExpressable makes it easy to use array of strings as tags
+/// Providing String conformance to `TagExpressable` makes it easy to create an array of tags
+/// from an array of strings
 extension String: TagExpressable {
     
     public var tagName: String {
