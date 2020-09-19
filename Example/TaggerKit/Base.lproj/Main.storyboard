@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qgk-si-1b6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qgk-si-1b6">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment version="4608" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +16,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="E57-rV-1km">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
                             <tableViewSection id="46K-Ji-ZnI">
                                 <cells>
@@ -27,14 +28,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Single TagView functionality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DSm-G5-m6m">
-                                                    <rect key="frame" x="16" y="10" width="215" height="20.5"/>
+                                                    <rect key="frame" x="16" y="10" width="213.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="iOS 13+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HBt-am-pGG">
-                                                    <rect key="frame" x="16" y="31.5" width="44.5" height="14.5"/>
+                                                    <rect key="frame" x="16" y="31.5" width="44" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -51,14 +52,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="TagView in UITableViewCells" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pHm-Bx-WiR">
-                                                    <rect key="frame" x="16" y="10" width="217.5" height="20.5"/>
+                                                    <rect key="frame" x="16" y="10" width="216.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="iOS 13+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eOV-kT-Mb1">
-                                                    <rect key="frame" x="16" y="31.5" width="44.5" height="14.5"/>
+                                                    <rect key="frame" x="16" y="31.5" width="44" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -75,7 +76,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="TKCollectionView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gob-jJ-RGA">
-                                                    <rect key="frame" x="16" y="10" width="133.5" height="20.5"/>
+                                                    <rect key="frame" x="16" y="10" width="133" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -108,18 +109,30 @@
         <!--Cells with TagViews-->
         <scene sceneID="TRa-9s-t1G">
             <objects>
-                <tableViewController id="gPe-NL-DPb" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Dpf-vf-ede">
+                <tableViewController storyboardIdentifier="TagsInTableViewCells" id="gPe-NL-DPb" customClass="TagsInTableViewCells" customModule="TaggerKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="Dpf-vf-ede">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellWithTags" id="2z2-wB-NAr">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CellWithTags" id="2z2-wB-NAr">
+                                <rect key="frame" x="0.0" y="28" width="375" height="20.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2z2-wB-NAr" id="5QP-vh-A3H">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view tag="101" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" verticalCompressionResistancePriority="800" translatesAutoresizingMaskIntoConstraints="NO" id="eLv-Lv-QMs" customClass="TagsView" customModule="TaggerKit">
+                                            <rect key="frame" x="10" y="10" width="355" height="0.5"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="eLv-Lv-QMs" firstAttribute="leading" secondItem="5QP-vh-A3H" secondAttribute="leading" constant="10" id="TRp-Xt-S4Q"/>
+                                        <constraint firstItem="eLv-Lv-QMs" firstAttribute="top" secondItem="5QP-vh-A3H" secondAttribute="top" constant="10" id="YBG-7f-CvA"/>
+                                        <constraint firstAttribute="bottom" secondItem="eLv-Lv-QMs" secondAttribute="bottom" constant="10" id="cAE-LE-DWM"/>
+                                        <constraint firstAttribute="trailing" secondItem="eLv-Lv-QMs" secondAttribute="trailing" constant="10" id="hY3-7R-sKR"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -149,20 +162,21 @@
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twU-37-YES">
                                 <rect key="frame" x="20" y="94" width="335" height="150"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="T0h-Pa-zFQ"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOA-2Q-IjS">
                                 <rect key="frame" x="20" y="264" width="335" height="150"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="aGa-Ki-pcQ"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="tgi-5K-6hO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="twU-37-YES" firstAttribute="top" secondItem="R2D-IA-5m4" secondAttribute="bottom" constant="30" id="58L-7T-7NK"/>
                             <constraint firstItem="tgi-5K-6hO" firstAttribute="trailing" secondItem="ZOA-2Q-IjS" secondAttribute="trailing" constant="20" id="7L0-rQ-aXP"/>
@@ -174,7 +188,6 @@
                             <constraint firstItem="ZOA-2Q-IjS" firstAttribute="top" secondItem="twU-37-YES" secondAttribute="bottom" constant="20" id="fqe-e7-kkU"/>
                             <constraint firstItem="twU-37-YES" firstAttribute="leading" secondItem="tgi-5K-6hO" secondAttribute="leading" constant="20" id="p1w-Sq-D6M"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="tgi-5K-6hO"/>
                     </view>
                     <navigationItem key="navigationItem" title="TKCollectionView" id="eaQ-1m-7zB"/>
                     <connections>
@@ -205,20 +218,21 @@
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QAL-MP-v1W" customClass="TagsView" customModule="TaggerKit">
                                 <rect key="frame" x="20" y="94" width="335" height="150"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="YME-Cb-1u8"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xi8-uX-AWv" customClass="TagsView" customModule="TaggerKit">
                                 <rect key="frame" x="20" y="274" width="335" height="150"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="lbH-Bg-ftN"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="5Zb-Kx-mhD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5Zb-Kx-mhD" firstAttribute="trailing" secondItem="QAL-MP-v1W" secondAttribute="trailing" constant="20" id="0Z2-NK-DqR"/>
                             <constraint firstItem="pic-5q-IzJ" firstAttribute="leading" secondItem="5Zb-Kx-mhD" secondAttribute="leading" constant="20" id="2Cd-N4-WuC"/>
@@ -230,7 +244,6 @@
                             <constraint firstItem="xi8-uX-AWv" firstAttribute="leading" secondItem="5Zb-Kx-mhD" secondAttribute="leading" constant="20" id="sBi-6r-xmc"/>
                             <constraint firstItem="QAL-MP-v1W" firstAttribute="top" secondItem="pic-5q-IzJ" secondAttribute="bottom" constant="30" id="tfj-YG-QFH"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="5Zb-Kx-mhD"/>
                     </view>
                     <navigationItem key="navigationItem" title="Single TagView" largeTitleDisplayMode="always" id="R5d-mk-LMn"/>
                     <connections>
@@ -262,4 +275,9 @@
             <point key="canvasLocation" x="-351.19999999999999" y="24.7376311844078"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
