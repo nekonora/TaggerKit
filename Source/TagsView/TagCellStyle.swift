@@ -15,6 +15,7 @@ public struct TagCellStyle {
     public var font: UIFont
     public var fontColor: UIColor
     public var backgroundColor: UIColor
+    public var highlightedBackgroundColor: UIColor
     
     public var tagCellHeight: CGFloat
     public var tagsSpacing: CGFloat
@@ -27,6 +28,7 @@ public struct TagCellStyle {
     public init(font: UIFont = .boldSystemFont(ofSize: 14),
                 fontColor: UIColor = .systemBackground,
                 backgroundColor: UIColor = .systemRed,
+                highlightedBackgroundColor: UIColor = UIColor.systemRed.withAlphaComponent(0.6),
                 tagCellHeight: CGFloat = 30,
                 tagsSpacing: CGFloat = 8,
                 cornerRadius: CGFloat = 15,
@@ -36,6 +38,7 @@ public struct TagCellStyle {
         self.font = font
         self.fontColor = fontColor
         self.backgroundColor = backgroundColor
+        self.highlightedBackgroundColor = highlightedBackgroundColor
         self.tagCellHeight = tagCellHeight
         self.tagsSpacing = tagsSpacing
         self.cornerRadius = cornerRadius

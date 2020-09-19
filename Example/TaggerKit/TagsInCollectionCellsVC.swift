@@ -26,7 +26,7 @@ class TagsInCollectionCellsVC: UICollectionViewController {
         
         let layout: UICollectionViewFlowLayout = {
             let flowLayout = UICollectionViewFlowLayout()
-            flowLayout.itemSize = CGSize(width: collectionView.bounds.width, height: 200)
+            flowLayout.itemSize = CGSize(width: collectionView.bounds.width, height: 180)
             return flowLayout
         }()
         

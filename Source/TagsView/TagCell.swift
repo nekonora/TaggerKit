@@ -30,6 +30,12 @@ internal class TagCell: UICollectionViewCell {
         return button
     }()
     
+    private let selectionButton: UIButton = {
+        let button = UIButton()
+        button.alpha = 0
+        return button
+    }()
+    
     // MARK: - Lifecycle
     func setupWith(_ tag: Tag, tagStyle: TagCellStyle, onButtonTapped: ((Tag) -> Void)? = nil) {
         tagConfig = tag
@@ -56,14 +62,26 @@ private extension TagCell {
         
         addSubview(nameLabel)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
-
+        
+        addSubview(selectionButton)
+        selectionButton.translatesAutoresizingMaskIntoConstraints = false
+        
         let anchors = [
             nameLabel.topAnchor.constraint(equalTo: topAnchor),
             nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -1),
             nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -rightNamePadding)
+            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -rightNamePadding),
+            
+            selectionButton.topAnchor.constraint(equalTo: topAnchor),
+            selectionButton.bottomAnchor.constraint(equalTo: bottomAnchor),
+            selectionButton.leadingAnchor.constraint(equalTo: leadingAnchor),
+            selectionButton.trailingAnchor.constraint(equalTo: trailingAnchor)
         ]
         anchors.forEach { $0.isActive = true }
+        
+        selectionButton.addTarget(self, action: #selector(onTouchDown), for: .touchDown)
+        selectionButton.addTarget(self, action: #selector(onTouchUp), for: .touchUpInside)
+        selectionButton.addTarget(self, action: #selector(onTouchUp), for: .touchCancel)
         
         setupStyle()
     }
@@ -119,5 +137,20 @@ private extension TagCell {
         nameLabel.text = nil
         actionButton.setImage(nil, for: .normal)
         tagConfig = nil
+    }
+}
+
+// MARK: - Actions
+@available(iOS 13, *)
+private extension TagCell {
+
+    @objc
+    func onTouchDown() {
+        print("Touch down")
+    }
+    
+    @objc
+    func onTouchUp() {
+        print("Touch up")
     }
 }
