@@ -27,7 +27,7 @@ class SingleTagViewVC: UIViewController {
     private var cancellables = Set<AnyCancellable>()
     
     /// Example array of tags
-    private let tags = ["Cars", "Skateboard", "Freetime", "Humor", "Travel", "Music", "Places", "Journalism", "Sports"].map { Tag(from: $0) }
+    private let tags = ["🚙 Cars", "🛹 Skateboard", "😎 Freetime", "😛 Humor", "🧭 Travel", "Music", "Places", "Journalism", "Sports"].map { Tag(from: $0) }
     
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
