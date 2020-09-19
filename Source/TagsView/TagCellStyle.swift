@@ -13,18 +13,40 @@ import UIKit
 public struct TagCellStyle {
     
     /// The action to execute when the button of tag is tapped
-    enum TagActionType { case add, remove }
+    public enum TagActionType { case add, remove }
     
-    var font: UIFont = .boldSystemFont(ofSize: 14)
-    var fontColor: UIColor = .systemBackground
-    var backgroundColor: UIColor = .systemRed
+    public var font: UIFont
+    public var fontColor: UIColor
+    public var backgroundColor: UIColor
     
-    var tagCellHeight: CGFloat = 30
-    var tagsSpacing: CGFloat = 8
-    var cornerRadius: CGFloat = 15
-    var borderSize: CGFloat = 0
-    var borderColor: UIColor = .systemBackground
+    public var tagCellHeight: CGFloat
+    public var tagsSpacing: CGFloat
+    public var cornerRadius: CGFloat
+    public var borderSize: CGFloat
+    public var borderColor: UIColor
     
-    var action: TagActionType?
-    var customActionImage: UIImage? 
+    public var action: TagActionType?
+    public var customActionImage: UIImage?
+    
+    public init(font: UIFont = .boldSystemFont(ofSize: 14),
+                fontColor: UIColor = .systemBackground,
+                backgroundColor: UIColor = .systemRed,
+                tagCellHeight: CGFloat = 30,
+                tagsSpacing: CGFloat = 8,
+                cornerRadius: CGFloat = 15,
+                borderSize: CGFloat = 0,
+                borderColor: UIColor = .systemBackground,
+                action: TagActionType? = nil,
+                customActionImage: UIImage? = nil) {
+        self.font = font
+        self.fontColor = fontColor
+        self.backgroundColor = backgroundColor
+        self.tagCellHeight = tagCellHeight
+        self.tagsSpacing = tagsSpacing
+        self.cornerRadius = cornerRadius
+        self.borderSize = borderSize
+        self.borderColor = borderColor
+        self.action = action
+        self.customActionImage = customActionImage
+    }
 }
