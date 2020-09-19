@@ -50,7 +50,7 @@ private extension TagCell {
     func setupUI() {
         guard let style = style else { return }
         nameLabel.text = tagConfig?.name
-        let rightNamePadding: CGFloat = style.action != nil
+        let rightNamePadding: CGFloat = style.customActionImage != nil
             ? style.tagCellHeight.rounded()
             : 10
         
@@ -83,13 +83,13 @@ private extension TagCell {
         
         nameLabel.textColor = style.fontColor
         nameLabel.font = style.font
-        nameLabel.textAlignment = style.action != nil ? .left : .center
+        nameLabel.textAlignment = style.customActionImage != nil ? .left : .center
         
         clipsToBounds = true
     }
     
     func setupTagButton() {
-        guard let style = style, let action = style.action else { return }
+        guard let style = style else { return }
         
         addSubview(actionButton)
         actionButton.translatesAutoresizingMaskIntoConstraints = false
@@ -102,18 +102,13 @@ private extension TagCell {
         ]
         anchors.forEach { $0.isActive = true }
         
-        setupButtonImage(style: style, action: action)
+        setupButtonImage(style: style)
     }
     
-    func setupButtonImage(style: TagCellStyle, action: TagCellStyle.TagActionType) {
+    func setupButtonImage(style: TagCellStyle) {
         actionButton.tintColor = style.fontColor
         
-        if style.customActionImage == nil {
-            switch action {
-            case .add:    actionButton.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal)
-            case .remove: actionButton.setImage(UIImage(systemName: "minus.circle.fill"), for: .normal)
-            }
-        } else if let customImage = style.customActionImage {
+        if let customImage = style.customActionImage {
             actionButton.setImage(customImage, for: .normal)
         }
     }

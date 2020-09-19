@@ -37,7 +37,7 @@ class SingleTagViewVC: UIViewController {
     
     private func setupTags() {
         // We specify a custom style, providing an image to be placed inside tags
-        tagsView.tagStyle = TagCellStyle(action: .add, customActionImage: UIImage(systemName: "plus.circle.fill"))
+        tagsView.tagStyle = TagCellStyle(customActionImage: UIImage(systemName: "plus.circle.fill"))
         
         tagsView.setTags(tags)
         

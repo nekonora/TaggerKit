@@ -12,9 +12,6 @@ import UIKit
 @available(iOS 13, *)
 public struct TagCellStyle {
     
-    /// The action to execute when the button of tag is tapped
-    public enum TagActionType { case add, remove }
-    
     public var font: UIFont
     public var fontColor: UIColor
     public var backgroundColor: UIColor
@@ -25,7 +22,6 @@ public struct TagCellStyle {
     public var borderSize: CGFloat
     public var borderColor: UIColor
     
-    public var action: TagActionType?
     public var customActionImage: UIImage?
     
     public init(font: UIFont = .boldSystemFont(ofSize: 14),
@@ -36,7 +32,6 @@ public struct TagCellStyle {
                 cornerRadius: CGFloat = 15,
                 borderSize: CGFloat = 0,
                 borderColor: UIColor = .systemBackground,
-                action: TagActionType? = nil,
                 customActionImage: UIImage? = nil) {
         self.font = font
         self.fontColor = fontColor
@@ -46,7 +41,6 @@ public struct TagCellStyle {
         self.cornerRadius = cornerRadius
         self.borderSize = borderSize
         self.borderColor = borderColor
-        self.action = action
         self.customActionImage = customActionImage
     }
 }
