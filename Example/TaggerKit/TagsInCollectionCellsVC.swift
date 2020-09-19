@@ -1,5 +1,5 @@
 //
-//  TagsInTableViewCells.swift
+//  TagsInCollectionCellsVC.swift
 //  TaggerKit_Example
 //
 //  Created by Filippo Zaffoni on 19/09/2020.
@@ -24,22 +24,20 @@ class TagsInCollectionCellsVC: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let layout: UICollectionViewFlowLayout = {
+            let flowLayout = UICollectionViewFlowLayout()
+            flowLayout.itemSize = CGSize(width: collectionView.bounds.width, height: 200)
+            return flowLayout
+        }()
+        
+        collectionView.setCollectionViewLayout(layout, animated: false)
         collectionView.reloadData()
-//        tableView.reloadData()
     }
 
-    // MARK: - Table view data source
-
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        1
-//    }
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         1
     }
-
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        tagsData.count
-//    }
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         tagsData.count
     }
@@ -48,22 +46,10 @@ class TagsInCollectionCellsVC: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellWithTags", for: indexPath)
         let tagsView = cell.contentView.viewWithTag(101) as? TagsView
         tagsView?.setTags(tagsData[indexPath.item])
+        
+        let label = cell.contentView.viewWithTag(102) as? UILabel
+        label?.text = "Cell #\(indexPath.item)"
         cell.contentView.layoutIfNeeded()
         return cell
     }
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "CellWithTags", for: indexPath)
-//        let tagsView = cell.contentView.viewWithTag(101) as? TagsView
-//        tagsView?.setTags(tagsData[indexPath.item])
-//        cell.contentView.layoutIfNeeded()
-//        return cell
-//    }
-    
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        UITableView.automaticDimension
-//    }
-//
-//    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        UITableView.automaticDimension
-//    }
 }

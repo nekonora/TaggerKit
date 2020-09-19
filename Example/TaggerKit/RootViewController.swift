@@ -25,7 +25,7 @@ class RootViewController: UITableViewController {
             }
         case 1:
             if #available(iOS 13, *) {
-                guard let vc = storyboard?.instantiateViewController(withIdentifier: "TagsInTableViewCells") else { return }
+                guard let vc = storyboard?.instantiateViewController(withIdentifier: "TagsInCollectionCellsVC") else { return }
                 navigationController?.pushViewController(vc, animated: true)
             } else {
                 showUnavailableAlert()
