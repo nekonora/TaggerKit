@@ -79,7 +79,7 @@ public class TagsView: UIView {
     
     /// Removes tags from the existing tags array if present
     public func removeTags(_ tagsToRemove: [Tag]) {
-        tags.removeAll { self.tags.contains($0) }
+        tags = tags.filter { !tagsToRemove.contains($0) }
     }
 }
 
