@@ -132,7 +132,10 @@ class TKTagCell: UICollectionViewCell {
 							   attribute: .centerY,
 							   multiplier: 1.0,
 							   constant: 0),
-			
+
+        let isRTL = UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft
+        let  constraintButtonTo: Attribute = isRTL ? .leading : .trailing
+
 			NSLayoutConstraint(item: button,
 							   attribute: .width,
 							   relatedBy: .equal,
@@ -148,10 +151,10 @@ class TKTagCell: UICollectionViewCell {
 							   multiplier: 1.0,
 							   constant: 28),
 			NSLayoutConstraint(item: button,
-							   attribute: .trailing,
+							   attribute: constraintButtonTo,
 							   relatedBy: .equal,
 							   toItem: self,
-							   attribute: .trailing,
+							   attribute: constraintButtonTo,
 							   multiplier: 1.0,
 							   constant: 0),
 			NSLayoutConstraint(item: button,
